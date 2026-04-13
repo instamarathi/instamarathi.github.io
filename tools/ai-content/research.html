@@ -39,25 +39,25 @@
     </div>
 
     <h2>हे का शिकायचं?</h2>
-    <p>समजा तुम्हाला एक नवा client मिळाला — एक dermatologist (skin doctor). तुम्ही कधी clinic मध्ये गेला नाही, Instagram वर skin content बघितला नाही, आणि audience काय विचारतो ते माहीत नाही. Traditional पद्धतीत: hours of YouTube, blogs, Quora — आणि तरी incomplete picture. LLM वापरून: 20 मिनिटांत त्या audience चे fears, questions, decision factors — सगळं तुमच्यासमोर. Content बनवणं त्यानंतर खूप सोपं होतं.</p>
+    <p>समजा तुम्हाला एक नवा client मिळाला — एक dermatologist (skin doctor). तुम्ही कधी clinic मध्ये गेला नाही, Instagram वर skin content बघितला नाही, आणि audience काय विचारतो ते माहीत नाही. जुन्या पद्धतीत: तासनतास YouTube, blogs, Quora — आणि तरी अर्धवट चित्र. LLM वापरून: 20 मिनिटांत त्या audience चे भय, प्रश्न, लोक का येतात ती कारणं — सगळं तुमच्यासमोर. Content बनवणं त्यानंतर खूप सोपं होतं.</p>
 
-    <p>इथे key insight आहे — LLM ला <strong>context देणं</strong> सगळ्यात महत्त्वाचं आहे. "Tell me about dentists" आणि "I'm creating Instagram content for a dentist in Pune — tell me what patients fear most" — यात जमीन-अस्मान फरक आहे.</p>
+    <p>इथे मुख्य गोष्ट आहे — LLM ला <strong>पूर्ण माहिती देणं</strong> सगळ्यात महत्त्वाचं आहे. "Tell me about dentists" आणि "I'm creating Instagram content for a dentist in Pune — tell me what patients fear most" — यात जमीन-अस्मान फरक आहे.</p>
 
-    <h2>Prompt Progression — Bad ते Best</h2>
+    <h2>Prompt सुधारणा — वाईट ते सगळ्यात चांगला</h2>
 
-    <p>तीन prompts बघा. प्रत्येकामध्ये काय बदललं ते notice करा:</p>
+    <p>तीन prompts बघा. प्रत्येकामध्ये काय बदललं ते बघा:</p>
 
-    <h3>Bad Prompt — खूप vague</h3>
-    <p>हा prompt LLM ला काहीच direction देत नाही. Output येईल — पण generic, textbook-level, unusable for Instagram.</p>
+    <h3>वाईट Prompt — खूप अस्पष्ट</h3>
+    <p>हा prompt LLM ला काहीच दिशा देत नाही. Output येईल — पण सामान्य, पुस्तकी, Instagram साठी वापरता न येणारं.</p>
 
     <div class="prompt-block">
       <span class="label">Bad Prompt</span>Tell me about the dental industry.
     </div>
 
-    <p>Problem: LLM ला माहीत नाही — कोणासाठी, कशासाठी, कुठल्या format साठी. Output म्हणजे Wikipedia entry असेल. Instagram content साठी completely useless.</p>
+    <p>समस्या: LLM ला माहीत नाही — कोणासाठी, कशासाठी, कुठल्या format साठी. Output म्हणजे Wikipedia सारखं असेल. Instagram content साठी पूर्णपणे कामाचं नाही.</p>
 
-    <h3>Better Prompt — context टाकला</h3>
-    <p>आता आपण LLM ला सांगतो: कोण आहे client, कुठे आहे, आणि आपल्याला नक्की काय हवं आहे. Output suddenly actionable होतो.</p>
+    <h3>चांगला Prompt — माहिती टाकली</h3>
+    <p>आता आपण LLM ला सांगतो: कोण आहे client, कुठे आहे, आणि आपल्याला नक्की काय हवं आहे. Output एकदम वापरण्यालायक होतो.</p>
 
     <div class="prompt-block">
       <span class="label">Better Prompt</span>I'm creating Instagram content for a dentist in Pune, India. Tell me:
@@ -68,10 +68,10 @@
 Be specific to an Indian urban audience aged 25-45.
     </div>
 
-    <p>हा prompt खूप better आहे कारण: specific geography (Pune), specific audience (Indian urban, 25-45), specific questions (3 clear asks). Output मध्ये तुम्हाला real fears मिळतील — "injection चा डर," "किती पैसे लागतील," "दुखेल का?" — हे directly carousel topics होतात.</p>
+    <p>हा prompt खूप चांगला आहे कारण: नक्की जागा (Pune), नक्की audience (Indian शहरी लोक, 25-45 वयाचे), नक्की प्रश्न (3 स्पष्ट विचारणा). Output मध्ये तुम्हाला खऱ्या भीती मिळतील — "injection चा डर," "किती पैसे लागतील," "दुखेल का?" — हे सरळ carousel topics होतात.</p>
 
-    <h3>Best Prompt — Instagram format context add केला</h3>
-    <p>आता एक शेवटचा layer — आपल्याला Instagram साठी specific output हवा आहे, हे LLM ला सांगतो. यामुळे output directly usable होतो.</p>
+    <h3>सगळ्यात चांगला Prompt — Instagram format ची माहिती टाकली</h3>
+    <p>आता एक शेवटचा थर — आपल्याला Instagram साठी नक्की output हवा आहे, हे LLM ला सांगतो. यामुळे output थेट वापरता येणारं होतं.</p>
 
     <div class="prompt-block">
       <span class="label">Best Prompt</span>I'm creating Instagram content for a dentist in Pune, India. My audience is urban Indians aged 25-45 who avoid going to the dentist because of fear, cost concerns, or not knowing what to expect.
@@ -86,25 +86,25 @@ Tell me:
 For each question/fear, suggest one emotional hook (a single line that would make someone stop scrolling on Instagram and read more). Make the hooks conversational, not clinical.
     </div>
 
-    <p>आता LLM ला पूर्ण picture आहे: audience कोण, platform कोणता, format काय, tone काय. Output मध्ये येईल: questions + emotions + scroll-stop hooks — हे directly slides मध्ये टाकता येतात.</p>
+    <p>आता LLM ला पूर्ण चित्र आहे: audience कोण, platform कोणता, format काय, बोलायची पद्धत काय. Output मध्ये येईल: प्रश्न + भावना + स्क्रोल थांबवणारे hooks — हे सरळ slides मध्ये टाकता येतात.</p>
 
-    <h2>Output Validate कसं करायचं?</h2>
+    <h2>Output तपासायचं कसं?</h2>
 
-    <p>LLM ने दिलेला output directly publish करू नका. Validate करा — पण हे validation 5 मिनिटांत होतं:</p>
+    <p>LLM ने दिलेला output सरळ publish करू नका. तपासा — पण ही तपासणी 5 मिनिटांत होते:</p>
 
     <ul>
-      <li><strong>Google Reviews:</strong> Client च्या clinic चे reviews वाचा. Patients काय लिहितात — "root canal खूप painless होता," "doctor ने explain केलं सगळं" — हे real language आहे. LLM output शी compare करा.</li>
-      <li><strong>Client ला विचारा:</strong> "तुमच्या patients ना सगळ्यात जास्त कशाचा प्रश्न पडतो?" — 5 मिनिटांच्या conversation मध्ये 10 real insights मिळतात. हे LLM पेक्षा valuable आहे.</li>
-      <li><strong>Quora / YouTube Comments:</strong> "Dentist visit India" Quora वर search करा. Real people चे real questions बघा. YouTube वर dental videos च्या comments मधला language notice करा — तोच language content मध्ये वापरा.</li>
+      <li><strong>Google Reviews:</strong> Client च्या clinic चे reviews वाचा. Patients काय लिहितात — "root canal खूप painless होता," "doctor ने सगळं समजावून सांगितलं" — ही खरी भाषा आहे. LLM output शी तुलना करा.</li>
+      <li><strong>Client ला विचारा:</strong> "तुमच्या patients ना सगळ्यात जास्त कशाचा प्रश्न पडतो?" — 5 मिनिटांच्या बोलण्यात 10 खऱ्या गोष्टी कळतात. हे LLM पेक्षा जास्त किंमतीचं आहे.</li>
+      <li><strong>Quora / YouTube Comments:</strong> "Dentist visit India" Quora वर search करा. खऱ्या लोकांचे खरे प्रश्न बघा. YouTube वर dental videos च्या comments मधली भाषा बघा — तीच भाषा content मध्ये वापरा.</li>
     </ul>
 
     <div class="tip">
-      <strong>Tip:</strong> LLM ने दिलेला output एक "first draft of understanding" आहे. Client conversation आणि Google reviews हे "ground truth" आहे. दोन्ही combine केल्यावर तुमचा content दुसऱ्यांपेक्षा genuinely different होतो.
+      <strong>Tip:</strong> LLM ने दिलेला output म्हणजे "पहिली समज" आहे. Client शी बोलणं आणि Google reviews ही "खरी माहिती" आहे. दोन्ही एकत्र केल्यावर तुमचा content दुसऱ्यांपेक्षा खरोखर वेगळा होतो.
     </div>
 
     <h2>हे किती niches साठी काम करतं?</h2>
 
-    <p>Same prompt structure कोणत्याही niche साठी work करते — फक्त "dentist" बदला:</p>
+    <p>सारखीच prompt मांडणी कोणत्याही niche साठी काम करते — फक्त "dentist" बदला:</p>
     <ul>
       <li>Dermatologist → "patients who worry about skin conditions but feel embarrassed"</li>
       <li>Gym trainer → "beginners who have tried and failed multiple times"</li>
@@ -113,7 +113,7 @@ For each question/fear, suggest one emotional hook (a single line that would mak
       <li>Pediatrician → "new parents anxious about their baby's first fever"</li>
     </ul>
 
-    <p>Pattern: Audience + Fear/Hesitation + Platform = great research prompt. हे formula लक्षात ठेवा.</p>
+    <p>नमुना: Audience + भीती/लाज + Platform = चांगला research prompt. हा formula लक्षात ठेवा.</p>
 
     <div class="exercise">
       <h4>Exercise — Gym Trainer Niche</h4>
