@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI वापरून Content Validate करा — 5 Quality Checks | InstaMarathi</title>
+  <meta name="description" content="LLM ला quality checker म्हणून वापरा. Hook strength, brand voice, audience relatability, comparison, factual accuracy — 5 validation prompts with examples.">
+  <meta name="keywords" content="content validation AI marathi, instagram quality check, chatgpt content review, brand voice check, hook strength test marathi">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">Insta<span>Marathi</span></a>
+      <ul class="nav-links">
+        <li><a href="/shika/business-kya-aahe.html">शिका</a></li>
+        <li><a href="/tools/canva.html" class="active">Tools</a></li>
+        <li><a href="/playbooks/">Playbooks</a></li>
+        <li><a href="/diy/niche-research.html">स्वतः बनवा</a></li>
+        <li><a href="/sales/">Sales</a></li>
+        <li><a href="/clients/kuthe-shodhayche.html">Clients</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <p class="breadcrumb"><a href="/">Home</a> / <a href="/tools/canva.html">Tools</a> / <a href="/tools/ai-content/research.html">AI Content</a> / Validation</p>
+      <h1>Content Validation — LLM ला Quality Checker बनवा</h1>
+      <p>Script तयार आहे — पण publish करण्यापूर्वी 5 checks. LLM ला reviewer म्हणून वापरा. Client ला deliver करण्यापूर्वी हे करा.</p>
+    </div>
+
+    <h2>Validation का करायचं?</h2>
+    <p>Content बनवताना आपण त्यात involved असतो — त्यामुळे obvious problems दिसत नाहीत. Hook weak आहे पण आपल्याला "ठीक वाटतो." Slide 3 confusing आहे पण आपण "सगळं माहीत असल्याने" confusing वाटत नाही. LLM ला fresh perspective असतो — तुमचा script paste करा, specific questions विचारा, honest feedback मिळतो. हे 5 validation prompts एक checklist म्हणून वापरा — एकही skip करू नका.</p>
+
+    <h2>Validation 1 — Hook Strength Check</h2>
+    <p>Scroll-stop hook नाही = post fail. हा check सगळ्यात आधी करा:</p>
+
+    <div class="prompt-block">
+      <span class="label">Validation Prompt 1 — Hook Strength</span>I'm going to share the hook line (first line) of my Instagram carousel. Rate it on 3 dimensions, each out of 5:
+
+1. Scroll-stop power: Would someone stop scrolling to read more? (1 = no reason to stop, 5 = irresistible)
+2. Curiosity gap: Does it make them want to know what comes next? (1 = tells everything upfront, 5 = creates strong desire to swipe)
+3. Specificity: Is it specific enough to feel real, not generic? (1 = could apply to anyone, 5 = feels written for exactly this audience)
+
+For each rating, give one sentence of reasoning.
+Then suggest one improved version of the hook that would score higher.
+
+My hook: [PASTE YOUR HOOK LINE HERE]
+
+Context: This is for a dental clinic carousel about root canal myths. Audience: urban Indians 25-45 who avoid dentists out of fear.
+    </div>
+
+    <p>Score 4+ on सगळ्या 3 dimensions तर proceed करा. Score 3 किंवा कमी असेल तर LLM ने दिलेला improved version वापरा, किंवा alternatives मागवा.</p>
+
+    <h2>Validation 2 — Brand Voice Compliance</h2>
+    <p>Client ने brand voice describe केला असेल — "warm but professional," "not salesy," "educational." हे actually content मध्ये reflect होतंय का? LLM ला check करायला सांगा:</p>
+
+    <div class="prompt-block">
+      <span class="label">Validation Prompt 2 — Brand Voice Check</span>I have defined brand voice rules for this client. Check my carousel script against each rule.
+
+Brand voice rules:
+- Warm and reassuring, not clinical or scary
+- Educational tone — inform, don't sell
+- Conversational — like a knowledgeable friend, not a doctor lecturing
+- Never use aggressive sales language ("Book now!" "Limited offer!")
+- Can mix Marathi/Hindi naturally, but don't force it
+
+My carousel script:
+[PASTE FULL CAROUSEL SCRIPT HERE]
+
+For each brand voice rule:
+- Does the script follow it? (Yes / Partially / No)
+- Which specific line or slide violates or weakens it?
+- Suggest a rewrite for any violations.
+
+Be honest. Flag even small mismatches.
+    </div>
+
+    <p>Output बघा: कोणत्या lines flagged आहेत? सगळ्या "Yes" असतील असं नाही — "Partially" असलेल्या lines rewrite करा. हे quality standard maintain करतं.</p>
+
+    <h2>Validation 3 — Audience Relatability</h2>
+    <p>Script technically correct आहे, brand voice आहे — पण audience ला relate होईल का? Outsider perspective महत्त्वाचं आहे:</p>
+
+    <div class="prompt-block">
+      <span class="label">Validation Prompt 3 — Audience Relatability</span>Imagine you are an urban Indian adult, 30 years old, living in Pune. You have been avoiding the dentist for 2 years because you're scared it will hurt and you don't know what to expect. You see this carousel on Instagram.
+
+Read this script as that person:
+[PASTE CAROUSEL SCRIPT HERE]
+
+Answer honestly:
+1. Does the hook make you stop? What emotion do you feel in the first 3 seconds?
+2. Does the content feel like it understands your situation — or does it feel generic?
+3. Is there any slide where you'd lose interest and not swipe further? Which one and why?
+4. After reading the full carousel, what action would you take — save, comment, DM, or nothing? Why?
+5. One thing the creator could do to make this more relatable for someone like you.
+    </div>
+
+    <p>हा prompt LLM ला persona मध्ये टाकतो — output जास्त honest येतो. "Slide 3 ला lose interest" असं सांगेल तर त्या slide ला improve करा.</p>
+
+    <h2>Validation 4 — Comparison Validation</h2>
+    <p>जर तुम्ही एकाच carousel साठी 3 different versions बनवल्या असतील (different hooks, different structures), तर comparison करा:</p>
+
+    <div class="prompt-block">
+      <span class="label">Validation Prompt 4 — Version Comparison</span>I have 3 versions of the same carousel hook. Rank them from best to worst for Instagram performance.
+
+For each, tell me:
+- Rank (1 = best)
+- Why it would perform better or worse
+- What specific word or phrase is making the difference
+
+Audience: urban Indians 25-45, fear dentists, see this on Instagram.
+
+Version A: [PASTE VERSION A HOOK]
+Version B: [PASTE VERSION B HOOK]
+Version C: [PASTE VERSION C HOOK]
+
+Be specific. Don't just say "Version A is more engaging" — say exactly why.
+    </div>
+
+    <p>Use Case: तुम्ही Step 2 (Carousel Script page) मध्ये 5 hook alternatives generate केल्या होत्या. त्यातल्या top 3 इथे compare करा. LLM चा ranking तुमच्या gut feeling शी match होतो का? मग proceed करा.</p>
+
+    <h2>Validation 5 — Factual Accuracy</h2>
+    <p>Medical, legal, financial niches साठी हे सगळ्यात critical check आहे. चुकीची माहिती = client चं reputation damage = तुमचा contract गेला.</p>
+
+    <div class="prompt-block">
+      <span class="label">Validation Prompt 5 — Factual Accuracy</span>Review this carousel script for factual accuracy. This is for a dental clinic's Instagram — content will be seen by the general public.
+
+[PASTE CAROUSEL SCRIPT HERE]
+
+Check:
+1. Are all medical/dental claims accurate? Flag anything that is exaggerated, misleading, or not evidence-based.
+2. Are there any statements that could cause harm if a patient follows them incorrectly?
+3. Are there claims that need a disclaimer (e.g., "consult your dentist before...")?
+4. Rate overall factual reliability: High / Medium / Needs Expert Review
+
+Note: I will also have the client's doctor review this before publishing. But flag anything that seems questionable.
+    </div>
+
+    <div class="warning">
+      <strong>Important:</strong> Factual validation खूप important आहे. Dental, medical, skincare, financial — या niches मध्ये चुकीची माहिती publish झाली तर client चं reputation damage होतं. LLM चा check हा first filter आहे — final approval नेहमी client / expert कडून घ्या. "Doctor ने approve केलं का?" हे delivery आधी विचारा.
+    </div>
+
+    <h2>5 Checks — Quick Reference</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Check</th>
+          <th>What it catches</th>
+          <th>Pass criteria</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Hook Strength</td>
+          <td>Weak, generic, no curiosity</td>
+          <td>4+ on all 3 dimensions</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Brand Voice</td>
+          <td>Off-tone lines, salesy language</td>
+          <td>All rules: Yes or Partially fixed</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Audience Relatability</td>
+          <td>Generic feeling, wrong language, irrelevant</td>
+          <td>Persona would save or comment</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Version Comparison</td>
+          <td>Chose weaker version intuitively</td>
+          <td>Best version confirmed</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Factual Accuracy</td>
+          <td>Wrong claims, missing disclaimers</td>
+          <td>High reliability + client review</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="exercise">
+      <h4>Exercise — Script ला 5 Checks मधून Pass करा</h4>
+      <p>Carousel Script page वर तुम्ही dental carousel script बनवला. तोच script घ्या आणि या 5 validation prompts मधून pass करा — एक-एक, same conversation मध्ये.</p>
+      <p>नोट करा: कोणत्या check मध्ये जास्त issues आले? Script publish ready आहे असं कधी वाटलं? हा exercise तुमचा "quality bar" set करतो — पुढे प्रत्येक script साठी हाच bar maintain करा.</p>
+    </div>
+
+    <div class="page-nav">
+      <a href="/tools/ai-content/captions-hashtags.html" class="prev">← Captions & Hashtags</a>
+      <a href="/tools/ai-content/iteration.html" class="next">Draft to Final →</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>InstaMarathi — मराठीत Instagram Business शिका. सगळं free, सगळं open.</p>
+  </footer>
+</body>
+</html>
