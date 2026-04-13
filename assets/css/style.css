@@ -130,6 +130,18 @@ nav .logo span {
   color: var(--color-accent);
 }
 
+/* Hamburger button — mobile only */
+.nav-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem;
+  color: var(--color-text);
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
 nav .nav-links {
   display: flex;
   flex-wrap: wrap;
@@ -415,6 +427,85 @@ footer {
 
 .theme-toggle:hover {
   border-color: var(--color-accent);
+}
+
+/* Mobile — up to 767px */
+@media (max-width: 767px) {
+  :root {
+    --spacing: 1rem;
+  }
+
+  h1 { font-size: 1.4rem; }
+  h2 { font-size: 1.2rem; }
+
+  .hero { padding: 2rem 0 1.5rem; }
+  .hero h1 { font-size: 1.5rem; }
+
+  /* Hamburger menu */
+  .nav-hamburger {
+    display: block;
+  }
+
+  nav .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    padding-top: 0.5rem;
+    order: 3;
+  }
+
+  nav .nav-links.open {
+    display: flex;
+  }
+
+  nav .nav-links li {
+    border-top: 1px solid var(--color-border);
+  }
+
+  nav .nav-links a {
+    display: block;
+    padding: 0.6rem 0.25rem;
+    font-size: 0.95rem;
+    border-radius: 0;
+  }
+
+  nav .nav-inner {
+    flex-wrap: wrap;
+  }
+
+  /* Tables scroll horizontally */
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  th, td {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  /* Page nav stacks vertically */
+  .page-nav {
+    flex-direction: column;
+  }
+
+  .page-nav .next {
+    text-align: left;
+  }
+
+  /* Prompt blocks */
+  .prompt-block {
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  /* Exercise, tip, warning */
+  .exercise, .tip, .warning {
+    padding: 0.75rem 1rem;
+  }
 }
 
 /* Desktop */
