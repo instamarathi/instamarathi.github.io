@@ -17,6 +17,9 @@
   </script>
 </head>
 <body>
+  <script>
+(function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t)})();
+</script>
   <nav>
     <div class="nav-inner">
       <a href="/" class="logo">Insta<span>Marathi</span></a>
@@ -28,6 +31,7 @@
         <li><a href="/sales/">Sales</a></li>
         <li><a href="/clients/kuthe-shodhayche.html">Clients</a></li>
       </ul>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">☀️</button>
     </div>
   </nav>
 
@@ -173,5 +177,10 @@
   <footer>
     <p>InstaMarathi — मराठीत Instagram Business शिका. सगळं free, सगळं open.</p>
   </footer>
+<script>
+function toggleTheme(){var r=document.documentElement,c=r.getAttribute('data-theme')==='dark'?'light':'dark';r.setAttribute('data-theme',c);localStorage.setItem('theme',c);updateToggleIcon()}
+function updateToggleIcon(){var b=document.querySelector('.theme-toggle');if(b)b.textContent=document.documentElement.getAttribute('data-theme')==='dark'?'☀️':'🌙'}
+updateToggleIcon();
+</script>
 </body>
 </html>
