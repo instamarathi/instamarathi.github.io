@@ -60,7 +60,7 @@ instamarathi.github.io/
 │   └── zero-budget-toolkit.html        # Free toolkit summary
 ├── playbooks/                          # Section 4: Ready-made niche playbooks
 │   ├── index.html                      # Playbook listing
-│   ├── dentist/                        # Dental niche playbook
+│   ├── dermatologist/                  # Dermatologist niche playbook
 │   │   ├── index.html                  # Niche overview
 │   │   ├── brand-voice.html            # Brand voice template
 │   │   ├── content-pillars.html        # Content pillars
@@ -68,8 +68,8 @@ instamarathi.github.io/
 │   │   ├── content-kits.html           # 10 ready-made content kits
 │   │   ├── hashtags.html               # Hashtag strategy
 │   │   └── pitch.html                  # Client pitch template
-│   ├── parenting/                      # Parenting niche playbook (same structure)
-│   └── [future niches]/                # gym, salon, cafe, etc.
+│   ├── gym/                            # Gym/fitness niche playbook (same structure)
+│   └── [future niches]/                # dentist, salon, cafe, etc.
 ├── diy/                                # Section 5: Build your own playbooks
 │   ├── niche-research.html             # Research any business
 │   ├── brand-voice.html                # Capture client's voice
@@ -80,6 +80,9 @@ instamarathi.github.io/
 ├── clients/                            # Section 6: Find and win clients
 │   ├── kuthe-shodhayche.html           # Where to find clients
 │   ├── pahila-contact.html             # How to approach
+│   ├── call-strategy.html              # Phone/video call strategy
+│   ├── meeting-tips.html               # In-person meeting etiquette
+│   ├── proposal-format.html            # Professional proposal format
 │   ├── pitch-and-pricing.html          # Close the deal
 │   ├── pahila-client.html              # First 30 days
 │   ├── grow-kara.html                  # Scale to 5 clients
@@ -262,17 +265,18 @@ Each playbook is a complete, copy-and-execute content system for one niche.
 7. **Client Pitch Template** — niche-specific approach script
 
 **Launch niches:**
-- Dentist (adapt from existing `/private/tmp/dentist/` dental playbook)
-- Parenting (adapt from existing parenting channel playbook)
+- Dermatologist (skin care clinic — high demand niche, visual-heavy content)
+- Gym / fitness trainer (aspirational content, transformation stories)
 
 **Phase 2 niches (add incrementally):**
-- Gym / fitness trainer
+- Dentist
 - Beauty parlour / salon
 - Restaurant / cafe
 - Coaching classes (tuition)
 - Home baker / tiffin service
 - Real estate agent
 - Wedding photographer
+- Parenting page
 - Doctor (general / specialist)
 - CA / accountant
 - Lawyer
@@ -343,7 +347,26 @@ Teaching the skill of building playbooks independently.
 - Handling rejection
 - Exercise: "1 business साठी free sample बनवा"
 
-#### 6.3 Pitch & Pricing (`clients/pitch-and-pricing.html`)
+#### 6.3 Call Strategy (`clients/call-strategy.html`)
+- Phone/video call structure: introduction → observation → value → offer → next step
+- Call scripts in Marathi
+- What to say vs what NOT to say
+- Handling objections on phone
+- Follow-up strategy: timing, frequency, medium
+
+#### 6.4 Meeting Tips (`clients/meeting-tips.html`)
+- Before meeting: preparation, what to carry, punctuality
+- During meeting: 7 rules — listen first, don't oversell, show don't tell, speak their language, be honest about timeline, ask questions, end with clear next step
+- Body language: eye contact, phone silent, notepad
+- After meeting: same-day thank you, 24-hour proposal, 3-day follow-up
+
+#### 6.5 Proposal Format (`clients/proposal-format.html`)
+- Why proposals matter over casual WhatsApp quotes
+- 1-page proposal template (Marathi + English): What You Get, How It Works, Investment, Terms
+- Google Docs / Canva template options
+- Tips: print for in-person, customize per client, include sample posts
+
+#### 6.6 Pitch & Pricing (`clients/pitch-and-pricing.html`)
 - What to show: sample posts + 1-page proposal
 - Pricing models: per post, monthly package, revenue share
 - Realistic pricing ranges
@@ -351,20 +374,20 @@ Teaching the skill of building playbooks independently.
 - Simple agreement template
 - Exercise: "1-page proposal बनवा"
 
-#### 6.4 पहिला Client (`clients/pahila-client.html`)
+#### 6.7 पहिला Client (`clients/pahila-client.html`)
 - Onboarding: what to collect (photos, logos, preferences, login)
 - First week: audit, present calendar
 - Communication rhythm: weekly updates, monthly reports
 - 30-day success expectations
 
-#### 6.5 Grow करा (`clients/grow-kara.html`)
+#### 6.8 Grow करा (`clients/grow-kara.html`)
 - Portfolio building — every client = case study
 - Referrals: when and how to ask
 - Testimonials: get early, use in pitches
 - Expanding services
 - Capacity: how many clients solo, when to say no
 
-#### 6.6 Common Problems (`clients/common-problems.html`)
+#### 6.9 Common Problems (`clients/common-problems.html`)
 - Client doesn't respond to approvals
 - Constant change requests — setting boundaries
 - Results not coming — honest conversation framework
@@ -393,8 +416,8 @@ Teaching the skill of building playbooks independently.
 | New section | Existing source | Adaptation needed |
 |---|---|---|
 | Tools / Canva, CapCut, voiceover | `instagram-tutorial-marathi.md` Bhag 5, 7, 10 | Reframe for client work, add exercises |
-| Playbooks / Dentist | `/private/tmp/dentist/content/`, `brand/`, `calendar/`, `growth/` | Translate brand voice to Marathi explanation, restructure into web pages |
-| Playbooks / Parenting | `parenting-channel-playbook.json`, `parenting-playbook-marathi.md` | Extract playbook structure, restructure for web |
+| Playbooks / Dermatologist | Created fresh — skin care is visual-heavy, high demand | Build from scratch with LLM-assisted research |
+| Playbooks / Gym | Created fresh — fitness content, transformation stories | Build from scratch with LLM-assisted research |
 | Tools / AI prompting | Dental playbook's B-roll prompts, image prompts | Use as examples in prompting exercises |
 
 ## Design Principles

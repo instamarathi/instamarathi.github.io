@@ -6,7 +6,7 @@
 
 **Architecture:** Static HTML site hosted on GitHub Pages. Single shared CSS stylesheet. No JavaScript frameworks. Each page follows a common HTML template with consistent navigation. Content written in Marathi-English mix, meta tags in English for SEO.
 
-**Tech Stack:** HTML5, CSS3, GitHub Pages. Source content adapted from existing dental playbook (`/private/tmp/dentist/`) and parenting playbook (`/private/tmp/dentist/parenting-channel-playbook.json`, `/private/tmp/dentist/instagram-tutorial-marathi.md`).
+**Tech Stack:** HTML5, CSS3, GitHub Pages. Playbooks (dermatologist, gym) created fresh. Tool tutorials adapted from existing Instagram tutorial (`/private/tmp/dentist/instagram-tutorial-marathi.md`) and production guide (`/private/tmp/dentist/brand/production-guide.md`).
 
 **Source repo:** `instamarathi/instamarathi.github.io` on GitHub (already created, user has write access).
 
@@ -17,14 +17,14 @@
 **Files:**
 - Create: `assets/css/style.css`
 - Create: `index.html`
-- Create: all directories (`shika/`, `tools/`, `tools/ai-content/`, `playbooks/`, `playbooks/dentist/`, `playbooks/parenting/`, `diy/`, `clients/`, `assets/css/`)
+- Create: all directories (`shika/`, `tools/`, `tools/ai-content/`, `playbooks/`, `playbooks/dermatologist/`, `playbooks/gym/`, `diy/`, `clients/`, `assets/css/`)
 
 This task creates the mobile-first CSS and the homepage. All subsequent pages copy the HTML structure from `index.html`.
 
 - [ ] **Step 1: Create directory structure**
 
 ```bash
-mkdir -p assets/css shika tools/ai-content playbooks/dentist playbooks/parenting diy clients
+mkdir -p assets/css shika tools/ai-content playbooks/dermatologist playbooks/gym diy clients
 ```
 
 - [ ] **Step 2: Create `assets/css/style.css`**
@@ -849,261 +849,269 @@ git commit -m "feat: add scheduling and zero-budget toolkit pages"
 
 ---
 
-## Task 6: Section 4 — Dentist Playbook
+## Task 6: Section 4 — Dermatologist Playbook
 
 **Files:**
 - Create: `playbooks/index.html`
-- Create: `playbooks/dentist/index.html`
-- Create: `playbooks/dentist/brand-voice.html`
-- Create: `playbooks/dentist/content-pillars.html`
-- Create: `playbooks/dentist/calendar.html`
-- Create: `playbooks/dentist/content-kits.html`
-- Create: `playbooks/dentist/hashtags.html`
-- Create: `playbooks/dentist/pitch.html`
+- Create: `playbooks/dermatologist/index.html`
+- Create: `playbooks/dermatologist/brand-voice.html`
+- Create: `playbooks/dermatologist/content-pillars.html`
+- Create: `playbooks/dermatologist/calendar.html`
+- Create: `playbooks/dermatologist/content-kits.html`
+- Create: `playbooks/dermatologist/hashtags.html`
+- Create: `playbooks/dermatologist/pitch.html`
 
-**Source material:**
-- `/private/tmp/dentist/brand/brand-identity.md` — brand voice, handle templates, bio templates
-- `/private/tmp/dentist/content/preventive-care/*.md` — content kits (5 posts)
-- `/private/tmp/dentist/content/treatment-demystified/*.md` — content kits (5 posts)
-- `/private/tmp/dentist/calendar/content-calendar.md` — 90-day calendar (adapt first 30 days)
-- `/private/tmp/dentist/growth/growth-playbook.md` — hashtag strategy, engagement tactics
-- `/private/tmp/dentist/brand/hashtag-strategy.md` — hashtag sets
+**Source material:** Created fresh — dermatology is a visual-heavy, high-demand niche. Use existing dental playbook structure as a template for format/layout, but all content is new.
 
 - [ ] **Step 1: Create `playbooks/index.html`**
 
-Playbook listing page. Shows available playbooks as cards. Currently 2: Dentist and Parenting.
+Playbook listing page. Shows available playbooks as cards. Currently 2: Dermatologist and Gym.
 
 Content:
 - Heading: "Ready-Made Playbooks"
 - Explanation: "प्रत्येक playbook एक complete content system आहे. Copy करा, client साठी customize करा, deliver करा."
 - Card for each playbook: name, one-line description, number of content kits included
-- Future niches listed as "लवकरच येत आहे" (coming soon) — gym, salon, cafe, etc.
+- Future niches listed as "लवकरच येत आहे" (coming soon) — dentist, salon, cafe, etc.
 
-- [ ] **Step 2: Create `playbooks/dentist/index.html`**
+- [ ] **Step 2: Create `playbooks/dermatologist/index.html`**
 
-Dental niche overview. Adapt from `/private/tmp/dentist/brand/brand-identity.md` and README.
+Dermatologist niche overview.
 
 Content:
-- Dentist niche म्हणजे काय — dental Instagram page कशासाठी
-- Target audience: patients (25-55), local area, scared of dentist, looking for trusted info
-- Why dentists need Instagram: trust building, patient education, local discovery
-- What this playbook contains: links to all sub-pages (brand voice, pillars, calendar, kits, hashtags, pitch)
+- Dermatologist niche म्हणजे काय — skin care clinic Instagram page कशासाठी
+- Why this niche is powerful: skin is visual, before/after content performs extremely well, everyone has skin concerns
+- Target audience: patients (18-45), urban India, skin concerns (acne, pigmentation, aging, hair loss), looking for trusted info before booking
+- Why dermatologists need Instagram: patients Google/Instagram skin issues before visiting, visual proof builds trust, local discovery
+- What this playbook contains: links to all sub-pages
 - Quick start: "हे 7 pages वाचा, client ला approach करा, content deliver करा"
 
-- [ ] **Step 3: Create `playbooks/dentist/brand-voice.html`**
+- [ ] **Step 3: Create `playbooks/dermatologist/brand-voice.html`**
 
-Adapt from `/private/tmp/dentist/brand/brand-identity.md`.
-
-Content (translated/adapted to Marathi explanation):
-- Handle suggestions: `@Dr[Name].Dentist`, `@[City].Dental.Tips`, etc.
-- Bio template: `[Who you are] + [What followers get] + [CTA]`
-- Tone: friendly, reassuring, educational. NOT preachy or scary.
-- Do's and Don'ts table
+Content:
+- Handle suggestions: `@Dr[Name].Skin`, `@[City].SkinClinic`, `@SkinFactsBy[Name]`, `@Dr[Name].Derm`, `@[Name]SkinCare`
+- Bio template: `[Who you are] + [What followers learn] + [CTA]`
+  - Example: "Dr. Priya Sharma | Dermatologist, Pune\nSkin science — simple मध्ये\nDM for appointment 📩"
+- Tone: science-backed but approachable. Confident but not salesy. Educational, busting myths.
+- What we are: Clear, Scientific, Reassuring, Practical, Visual
+- What we are NOT: Fear-mongering ("your skin is damaged!"), product-pushing, judgmental about skin conditions, making medical claims in content
+- Do's and Don'ts table:
+  - Do: "Acne होणं normal आहे — हे का होतं ते समजून घ्या"
+  - Don't: "तुमची skin खराब आहे — लगेच treatment घ्या!"
 - Example phrases: good vs bad versions
-- "हे client ला दाखवा आणि customize करा — त्यांचं नाव, शहर, specialty टाका"
+- `.warning` box: "Medical content sensitive आहे. Client (dermatologist) ने प्रत्येक post approve करणं mandatory आहे. चुकीची medical माहिती = serious problem."
 
-- [ ] **Step 4: Create `playbooks/dentist/content-pillars.html`**
+- [ ] **Step 4: Create `playbooks/dermatologist/content-pillars.html`**
 
-Content:
-- 2 content series from existing source: Preventive Care, Treatment Demystified
-- Expand to 6-8 pillars:
-  1. Preventive Care (brushing, flossing, diet)
-  2. Treatment Demystified (root canal, filling, extraction)
-  3. Patient Stories / Testimonials
-  4. Behind the Scenes (clinic, equipment, team)
-  5. Myth Busting (common dental myths)
-  6. Quick Tips (30-second actionable advice)
-  7. Seasonal (Diwali sweets and teeth, summer hydration)
-  8. Community (local health events, dental camps)
-- Each pillar: description, example topics, posting frequency suggestion
+Content — 8 pillars:
+1. **Skin Science Simplified** — how skin works, why problems happen (acne, pigmentation, dryness). Educational carousels.
+2. **Myth Busting** — "lemon लावलं तर glow येतो" = myth. High engagement, shareable.
+3. **Treatment Explainers** — what happens in a chemical peel, laser, microneedling. Demystify procedures.
+4. **Before/After** — real patient transformations (with consent). Most powerful content type for this niche.
+5. **Skincare Routine** — morning/night routines, product recommendations by skin type. Practical, save-worthy.
+6. **Seasonal Skin Care** — monsoon fungal infections, winter dryness, summer sunscreen. Timely content.
+7. **Behind the Scenes** — clinic tour, equipment, team, day-in-the-life of a dermatologist.
+8. **Quick Tips** — 15-30 second actionable advice. "Sunscreen reapply कधी करायचं?" format.
 
-- [ ] **Step 5: Create `playbooks/dentist/calendar.html`**
+Each pillar: description, 3 example topics, recommended format, posting frequency.
 
-Adapt first 30 days from `/private/tmp/dentist/calendar/content-calendar.md`.
-
-Content:
-- 30-day calendar as a table: Day | Content Kit | Format | Content Pillar
-- Week 1: Launch week — 3 posts (Mon/Wed/Fri)
-- Week 2-4: Building rhythm
-- Notes on timing: best posting times for Indian audience
-- "हा calendar client ला दाखवा — approval घ्या — मग execute करा"
-
-- [ ] **Step 6: Create `playbooks/dentist/content-kits.html`**
-
-Adapt 10 content kits from `/private/tmp/dentist/content/`.
-
-Each kit contains:
-- Topic and hook
-- Carousel script (slide-by-slide) OR reel script (second-by-second)
-- Caption with CTA
-- Hashtag set
-- AI image prompt (Gemini-ready, in `.prompt-block`)
-- Visual style note
-
-Adapt all 10 kits:
-1. Why Brushing Twice Matters (from `preventive-care/01`)
-2. Flossing Truth (from `preventive-care/02`)
-3. What Happens at a Cleaning (from `preventive-care/03`)
-4. Diet and Teeth (from `preventive-care/04`)
-5. Mouthwash — Do You Need It? (from `preventive-care/05`)
-6. Root Canal Not Scary (from `treatment-demystified/01`)
-7. What is a Filling (from `treatment-demystified/02`)
-8. Wisdom Teeth Extraction (from `treatment-demystified/03`)
-9. Dental Implants Explained (from `treatment-demystified/04`)
-10. Crowns and Bridges (from `treatment-demystified/05`)
-
-For each kit, add a Marathi explanation of the content strategy: "हा post का काम करतो" — why the hook works, what emotion it targets.
-
-- [ ] **Step 7: Create `playbooks/dentist/hashtags.html`**
-
-Adapt from `/private/tmp/dentist/brand/hashtag-strategy.md` and `growth/growth-playbook.md`.
-
-Content:
-- Primary hashtags (always use): `#DentalTips #OralHealth #DentistExplains`
-- Rotating sets (3 different sets, rotate weekly)
-- Size mix: 1 large + 3 medium + 3 small + 1 branded per post
-- "Same hashtags सलग दोन posts वर लावू नका" rule
-- Local hashtags: how to add city-specific tags (`#PuneDentist`, `#MumbaiDentalCare`)
-
-- [ ] **Step 8: Create `playbooks/dentist/pitch.html`**
-
-Content (Marathi):
-- How to find dentists who need Instagram: Google Maps "dentist near me", check their online presence
-- The pitch script (Marathi): "नमस्कार, मी [तुमचं नाव]. मी dentists साठी Instagram content बनवतो. मी तुमच्यासाठी 2 sample posts बनवले — बघाल का?"
-- What to show: 2 sample posts from the content kits + the 30-day calendar
-- Pricing suggestion for dental niche: ₹5,000-15,000/month depending on scope
-- Common objections from dentists and how to handle them
-- Simple agreement template for dental clients
-
-- [ ] **Step 9: Verify and commit**
-
-```bash
-git add playbooks/
-git commit -m "feat: add playbook section — listing page + complete dentist playbook (7 pages)"
-```
-
----
-
-## Task 7: Section 4 — Parenting Playbook
-
-**Files:**
-- Create: `playbooks/parenting/index.html`
-- Create: `playbooks/parenting/brand-voice.html`
-- Create: `playbooks/parenting/content-pillars.html`
-- Create: `playbooks/parenting/calendar.html`
-- Create: `playbooks/parenting/content-kits.html`
-- Create: `playbooks/parenting/hashtags.html`
-- Create: `playbooks/parenting/pitch.html`
-
-**Source material:**
-- `/private/tmp/dentist/parenting-channel-playbook.json` — complete channel blueprint (brand voice, tone, content pillars, visual style, hashtag strategy, carousel structure)
-- `/private/tmp/dentist/instagram-tutorial-marathi.md` — carousel examples, content samples
-- `/private/tmp/dentist/parenting-playbook-marathi.md` — full Marathi parenting content
-
-- [ ] **Step 1: Create `playbooks/parenting/index.html`**
-
-Parenting niche overview.
-
-Content:
-- Parenting Instagram page म्हणजे काय — emotional support, community building
-- Target audience: working parents (25-40), nuclear family, metro cities, Hindi-Marathi speaking
-- Why parenting pages work on Instagram: high engagement, very shareable content
-- What this playbook contains: links to sub-pages
-- Note: "हा playbook 'Ghar Ka Classroom' style channel साठी आहे — honest, warm, non-judgmental parenting content"
-
-- [ ] **Step 2: Create `playbooks/parenting/brand-voice.html`**
-
-Adapt from `parenting-channel-playbook.json` → `channel.tone`.
-
-Content:
-- Voice: "Like a friend who's 2 years ahead" — translated/explained in Marathi
-- What we are: Warm, Reassuring, Honest, Gentle, Specific
-- What we are NOT: Preachy, Guilt-inducing, Judgmental, Toxic-positive
-- Rules (from JSON, explained in Marathi):
-  - "Validate the struggle BEFORE offering reassurance"
-  - "Never frame parenting as countdown or loss"
-  - "Specificity > generality"
-- Tone balance: ~65% warm, ~15% gut-punch, ~15% proud tears, ~5% funny
-- Handle suggestions: `@ghar.ka.classroom`, `@pune.parents`, `@real.mumbai.parents`
-- Bio template example
-
-- [ ] **Step 3: Create `playbooks/parenting/content-pillars.html`**
-
-Adapt from `parenting-channel-playbook.json` → content pillars.
-
-Content (9 pillars):
-1. बाळ मोठं होणं — milestones, development
-2. Office vs घर — working parent guilt, balance
-3. Couple life — relationship after kids
-4. Nuclear family challenges — no village, doing it alone
-5. School / education — homework, tiffin, school runs
-6. Real talk — honest confessions, imperfect moments
-7. Self-care — parent's identity beyond parenting
-8. Festival / seasonal — Indian festivals with kids
-9. Community — "you're not alone" solidarity posts
-
-Each pillar: description, 3 example topics, recommended format (carousel/reel/story)
-
-- [ ] **Step 4: Create `playbooks/parenting/calendar.html`**
+- [ ] **Step 5: Create `playbooks/dermatologist/calendar.html`**
 
 30-day content calendar.
 
 Content:
 - Table: Day | Topic | Format | Content Pillar | Hook
-- 3 posts per week (Mon/Wed/Fri) + daily stories
-- Week 1: Launch with strongest emotional content
-- Week 2-4: Rotate through pillars
-- Posting time: 9 PM - 11 PM (when parents are scrolling after kids sleep)
+- Week 1 (Launch): Start with myth-busting + skin science (high engagement, shareable)
+  - Mon: "Face wash दिवसातून 5 वेळा = चांगली skin?" (Carousel, Myth Busting)
+  - Wed: "तुमचा Skin Type कोणता?" (Carousel, Skin Science)
+  - Fri: "Sunscreen — कधी, किती, कोणतं?" (Reel, Quick Tips)
+- Week 2: Treatment explainers + before/after
+- Week 3: Skincare routines + seasonal
+- Week 4: Mix of all pillars + first behind-the-scenes
+- Posting time: 8-10 PM (after work, scrolling time)
+- Daily stories: polls ("तुम्ही sunscreen लावता का?"), skin type quizzes, Q&A
 
-- [ ] **Step 5: Create `playbooks/parenting/content-kits.html`**
+- [ ] **Step 6: Create `playbooks/dermatologist/content-kits.html`**
 
-10 ready-made content kits. Build from `parenting-channel-playbook.json` carousel structure and examples from `instagram-tutorial-marathi.md`.
+10 ready-made content kits:
 
-Each kit:
+1. **"Face Wash दिवसातून 5 वेळा?"** — Myth busting carousel. Hook: "जितकं जास्त wash, तितकी चांगली skin — खरं का?" Slides debunk over-washing, explain skin barrier.
+2. **"तुमचा Skin Type कोणता?"** — Educational carousel. 4 skin types explained with simple test. Save-worthy.
+3. **"Sunscreen चं खरं सत्य"** — Reel script. 60-sec explainer: SPF meaning, how much to apply, reapplication.
+4. **"Acne का होतं?"** — Science simplified carousel. Hormones, diet, stress — what actually causes acne.
+5. **"Chemical Peel म्हणजे काय?"** — Treatment explainer carousel. Step-by-step what happens, pain level, results timeline.
+6. **"DIY Face Pack — Safe का Risky?"** — Myth busting carousel. Which home remedies work, which are dangerous.
+7. **"Pigmentation कमी करायचं?"** — Educational carousel. Types of pigmentation, what works, what doesn't, realistic timeline.
+8. **"Morning Skincare Routine — 5 Minutes"** — Reel script. Quick routine: cleanser → serum → moisturizer → sunscreen.
+9. **"Hair Loss — कधी tension घ्यायची?"** — Educational carousel. Normal vs concerning hair fall, when to see a dermatologist.
+10. **"Laser Treatment — भयंकर नाही"** — Treatment explainer. What happens, pain level, recovery, results.
+
+Each kit contains:
 - Topic, hook, emotion target
-- Carousel script (5-6 slides): Hook → Struggle → Validate → Reframe → CTA
+- Carousel script (slide-by-slide) OR reel script (second-by-second)
 - Caption with CTA
 - Hashtag set
-- AI image prompt (warm, earthy, Indian home setting)
-- Visual style note
+- AI image prompt for Gemini (skin care visuals — clean, clinical but warm, Indian setting)
+- Visual style note (clean whites, soft blues, clinical-but-approachable aesthetic)
+- "हा post का काम करतो" — strategy explanation in Marathi
 
-Example kits:
-1. "पहिला दिवस, कोणी Manual नाही" — new parent overwhelm
-2. "रात्री 3 वाजता YouTube search" — sleepless nights
-3. "Office मधून guilt call" — working parent guilt
-4. "तुम्ही enough आहात" — reassurance
-5. "Weekend म्हणजे laundry" — real life
-6. "बाळाने पहिलं word बोललं — आणि ते 'no' होतं" — funny/proud
-7. "Tiffin wars" — school lunch stress
-8. "Video call वर आजी-आजोबा" — nuclear family emotions
-9. "तुमचं बाळ argue करतंय — proud moment" — reframe
-10. "Screen time guilt" — honest conversation
-
-- [ ] **Step 6: Create `playbooks/parenting/hashtags.html`**
-
-Adapt from `parenting-channel-playbook.json` → `engagement_strategy.hashtags`.
+- [ ] **Step 7: Create `playbooks/dermatologist/hashtags.html`**
 
 Content:
-- Primary: `#GharKaClassroom #WorkingParents #NuclearFamily #ParentingIndia`
-- Rotating sets (3 sets)
-- Local tags: `#MumbaiMom #PuneParents #BangaloreParenting`
-- Size mix strategy
+- Primary hashtags: `#SkinCareTips #DermatologistExplains #SkinScience #HealthySkin`
+- Rotating sets (3 sets, rotate weekly):
+  - Set A: `#AcneTreatment #SkinCareRoutine #GlowingSkin #DermTips #IndianSkinCare`
+  - Set B: `#PigmentationTreatment #SunscreenDaily #SkinMyths #ClearSkin #SkinHealth`
+  - Set C: `#HairLoss #AntiAging #ChemicalPeel #SkinCareFacts #BeautyScience`
+- Local hashtags: `#PuneDermatologist #MumbaiSkinClinic #[City]SkinCare`
+- Size mix: 1 large (1M+) + 3 medium (100K-1M) + 3 small (10K-100K) + 1 branded
+- "Same hashtags सलग दोन posts वर लावू नका" rule
 
-- [ ] **Step 7: Create `playbooks/parenting/pitch.html`**
+- [ ] **Step 8: Create `playbooks/dermatologist/pitch.html`**
+
+Content (Marathi):
+- How to find dermatologists: Google Maps "dermatologist near me" / "skin clinic", check Instagram
+- Signs they need help: no Instagram, or posting stock photos, or inconsistent posting
+- The pitch: "नमस्कार Doctor, मी [नाव]. मी dermatologists साठी Instagram content बनवतो. मी तुमच्या clinic साठी 2 sample posts बनवले — बघाल का? Patients आजकाल Instagram वर clinic search करतात."
+- What to show: 2 sample posts (myth-busting + treatment explainer) + 30-day calendar
+- Why dermatologists say yes: patients DO search Instagram before booking, competitors are already there
+- Pricing: ₹8,000-20,000/month (dermatologists have higher budgets than many local businesses)
+- Common objections:
+  - "Medical content sensitive आहे" → "म्हणूनच प्रत्येक post तुम्ही approve कराल"
+  - "माझ्याकडे patients येतात already" → "Instagram वर patients trust build होतो — ते directly book करतात"
+- Simple agreement template with medical content approval clause
+
+- [ ] **Step 9: Verify and commit**
+
+```bash
+git add playbooks/
+git commit -m "feat: add playbook section — listing page + complete dermatologist playbook (7 pages)"
+```
+
+---
+
+## Task 7: Section 4 — Gym / Fitness Playbook
+
+**Files:**
+- Create: `playbooks/gym/index.html`
+- Create: `playbooks/gym/brand-voice.html`
+- Create: `playbooks/gym/content-pillars.html`
+- Create: `playbooks/gym/calendar.html`
+- Create: `playbooks/gym/content-kits.html`
+- Create: `playbooks/gym/hashtags.html`
+- Create: `playbooks/gym/pitch.html`
+
+**Source material:** Created fresh — fitness is aspirational, transformation-driven content. High engagement niche.
+
+- [ ] **Step 1: Create `playbooks/gym/index.html`**
+
+Gym/fitness niche overview.
 
 Content:
-- This is different from dental — parenting pages are often personal brands, not business pages
-- Who is the "client": a parent who wants to build a following but doesn't have time to create content
-- How to find them: parenting WhatsApp groups, mommy bloggers who post irregularly
-- Pitch: "तुमच्याकडे stories आहेत, मी त्या Instagram content मध्ये convert करतो"
-- Pricing: lower than business clients (₹3,000-8,000/month) but high volume potential
-- Alternative model: build the page yourself, monetize through brand collaborations later
+- Gym/fitness niche म्हणजे काय — gym, personal trainer, fitness studio चं Instagram
+- Why this niche is powerful: transformation content is king, reels perform extremely well, aspirational + educational mix
+- Target audience: gym-goers (18-40), beginners scared of gym, people who want to start but don't know how
+- Why gyms need Instagram: local discovery, member retention, trainer credibility, competition is high
+- What this playbook contains: links to sub-pages
+- Quick start: "हे 7 pages वाचा, client ला approach करा, content deliver करा"
+
+- [ ] **Step 2: Create `playbooks/gym/brand-voice.html`**
+
+Content:
+- Handle suggestions: `@[GymName].Fitness`, `@[City]FitHub`, `@Coach[Name]`, `@[Name].Fitness`, `@Train.With.[Name]`
+- Bio template:
+  - Example: "FitZone Gym | Pune\nNo judgement. Just results.\nFree trial class — DM करा 💪"
+- Tone: Motivational but NOT toxic-positive. Inclusive — beginners welcome. Science-backed, not bro-science.
+- What we are: Energetic, Encouraging, Practical, Inclusive, Real
+- What we are NOT: Shaming ("तुम्ही lazy आहात"), unrealistic ("6 weeks मध्ये six-pack"), supplement-pushing, only-for-advanced
+- Do's and Don'ts table:
+  - Do: "तुम्ही gym ला आलात — हे सगळ्यात कठीण step होतं. Respect."
+  - Don't: "Summer body बनवायचं असेल तर आत्ताच सुरू करा — otherwise too late!"
+- Key rule: "Progress, not perfection. प्रत्येकाचा journey different आहे."
+
+- [ ] **Step 3: Create `playbooks/gym/content-pillars.html`**
+
+Content — 8 pillars:
+1. **Beginner Guides** — "Gym चा पहिला दिवस — काय करायचं?" Reduce intimidation.
+2. **Exercise Form** — correct technique for common exercises. Safety-first. Reel-perfect content.
+3. **Myth Busting** — "Weights उचलले तर bulky होतो" = myth. High engagement.
+4. **Transformation Stories** — member before/after (with consent). Most powerful content type.
+5. **Nutrition Basics** — simple diet tips, protein sources, meal prep. Save-worthy.
+6. **Workout Plans** — "chest day", "leg day", full-body routines. Practical, bookmarkable.
+7. **Behind the Scenes** — gym atmosphere, trainer life, member community, events.
+8. **Motivation** — "Monday motivation", progress celebration, consistency reminders. Use sparingly (~15%).
+
+Each pillar: description, 3 example topics, recommended format, posting frequency.
+
+- [ ] **Step 4: Create `playbooks/gym/calendar.html`**
+
+30-day content calendar.
+
+Content:
+- Table: Day | Topic | Format | Content Pillar | Hook
+- Week 1 (Launch): Start with beginner content + myth busting (widest appeal)
+  - Mon: "Gym चा पहिला दिवस — 5 गोष्टी" (Carousel, Beginner Guide)
+  - Wed: "Weights उचलले तर bulky होतो — खरं का?" (Reel, Myth Busting)
+  - Fri: "Protein किती लागतं — simple math" (Carousel, Nutrition)
+- Week 2: Exercise form + workout plans (practical value)
+- Week 3: Transformation stories + behind the scenes (social proof)
+- Week 4: Mix of all pillars + nutrition deep dive
+- Posting time: 6-8 AM (morning gym crowd) and 6-8 PM (evening crowd)
+- Daily stories: workout polls, "आज काय train केलं?", member spotlights
+
+- [ ] **Step 5: Create `playbooks/gym/content-kits.html`**
+
+10 ready-made content kits:
+
+1. **"Gym चा पहिला दिवस — 5 गोष्टी कोणी सांगत नाही"** — Beginner carousel. Hook: "पहिल्या दिवशी हे माहीत असतं तर बरं झालं असतं." Slides: what to wear, what to bring, which machines to start with, how long to stay, it's okay to feel lost.
+2. **"Weights उचलले तर bulky होतो — खरं का?"** — Myth busting reel (60-sec). Science-backed explanation: why it doesn't work that way, especially for women.
+3. **"Squat — बरोबर कसं करायचं"** — Exercise form reel (30-sec). Side-view, key form points highlighted with text overlay.
+4. **"Protein किती लागतं? — Simple Math"** — Nutrition carousel. Body weight × 1.6-2.2g formula. Indian protein sources with quantities.
+5. **"3 Months — Real Transformation"** — Before/after carousel. Member story, what they did, consistency message. (Template — client fills in real member photos)
+6. **"Home Exercise — Gym नाही तरी चालेल"** — 5 bodyweight exercises carousel. For days you can't go to gym.
+7. **"Chest Day Complete Workout"** — Workout plan carousel. Exercise name, sets × reps, rest time. Save-worthy.
+8. **"काय खायचं — Gym आधी आणि नंतर"** — Nutrition reel (60-sec). Pre-workout and post-workout meals, Indian food options.
+9. **"Running vs Gym — काय चांगलं?"** — Myth busting carousel. Answer: both, depends on goals. Comparison table.
+10. **"1 Month Challenge — Daily 30 Minutes"** — Engagement carousel. 30-day workout plan, each day listed. "Save करा आणि start करा."
+
+Each kit contains:
+- Topic, hook, emotion target
+- Carousel script (slide-by-slide) OR reel script (second-by-second)
+- Caption with CTA
+- Hashtag set
+- AI image prompt for Gemini (gym visuals — energetic, clean gym, Indian setting, diverse body types)
+- Visual style note (high contrast, dark/bold backgrounds for workout content, bright for nutrition)
+- "हा post का काम करतो" — strategy explanation in Marathi
+
+- [ ] **Step 6: Create `playbooks/gym/hashtags.html`**
+
+Content:
+- Primary hashtags: `#GymTips #FitnessIndia #WorkoutMotivation #FitLife`
+- Rotating sets (3 sets):
+  - Set A: `#GymBeginner #FitnessJourney #StrengthTraining #GymLife #HealthyLiving`
+  - Set B: `#WorkoutPlan #NutritionTips #ProteinDiet #FitnessTips #BodyTransformation`
+  - Set C: `#HomeWorkout #WeightLoss #MuscleBuilding #FitnessMotivation #IndianFitness`
+- Local hashtags: `#PuneGym #MumbaiFitness #[City]Gym`
+- Size mix: 1 large + 3 medium + 3 small + 1 branded
+
+- [ ] **Step 7: Create `playbooks/gym/pitch.html`**
+
+Content (Marathi):
+- How to find gyms: Google Maps "gym near me", walk past gyms in your area, check their Instagram
+- Signs they need help: only posting member selfies, no educational content, inconsistent, <500 followers
+- The pitch: "नमस्कार, मी [नाव]. मी gyms आणि trainers साठी Instagram content बनवतो. तुमच्या gym साठी 2 sample posts बनवले — बघाल का? नवीन members attract करायला Instagram खूप powerful आहे."
+- What to show: 2 sample posts (beginner guide + myth busting) + 30-day calendar
+- Why gyms say yes: competition for members is fierce, Instagram helps with local discovery and trust
+- Pricing: ₹5,000-15,000/month (gyms have marketing budgets, especially chains/franchises)
+- Common objections:
+  - "आमचे members आधीच येतात" → "नवीन members कुठून येतात? Instagram वरून search करतात."
+  - "आम्ही स्वतः post करतो" → "तुमचा वेळ training ला द्या, content creation मी handle करतो"
+- Simple agreement template
 
 - [ ] **Step 8: Verify and commit**
 
 ```bash
-git add playbooks/parenting/
-git commit -m "feat: add parenting playbook — 7 pages with content kits and strategy"
+git add playbooks/gym/
+git commit -m "feat: add gym/fitness playbook — 7 pages with content kits and strategy"
 ```
 
 ---
@@ -1211,6 +1219,9 @@ git commit -m "feat: add DIY section — 6 pages on creating playbooks for any n
 **Files:**
 - Create: `clients/kuthe-shodhayche.html`
 - Create: `clients/pahila-contact.html`
+- Create: `clients/call-strategy.html`
+- Create: `clients/meeting-tips.html`
+- Create: `clients/proposal-format.html`
 - Create: `clients/pitch-and-pricing.html`
 - Create: `clients/pahila-client.html`
 - Create: `clients/grow-kara.html`
@@ -1243,7 +1254,92 @@ Content:
 - Handling "नको": "ठीक आहे, हे माझं card/number आहे. कधी वाटलं तर सांगा." — move on
 - Exercise: "तुमच्या list मधल्या 1 business साठी free sample बनवा — playbook वापरून 2 posts बनवा"
 
-- [ ] **Step 3: Create `clients/pitch-and-pricing.html`**
+- [ ] **Step 3: Create `clients/call-strategy.html`**
+
+Content — Phone/video call strategy for client acquisition:
+- Before the call:
+  - Research the business: check their Instagram, website, Google reviews
+  - Prepare 2-3 specific observations: "तुमची Google rating 4.5 आहे पण Instagram वर फक्त 200 followers — हे match होत नाही"
+  - Have your sample posts ready to share (WhatsApp/email during call)
+- The call structure (step-by-step script in Marathi):
+  1. Introduction (30 sec): "नमस्कार, मी [नाव]. मी local businesses साठी Instagram content बनवतो."
+  2. Observation (30 sec): share one specific thing you noticed about their business/online presence
+  3. Value (1 min): explain what Instagram can do for their specific business — use examples from playbooks
+  4. Offer (30 sec): "मी तुमच्यासाठी 2 free sample posts बनवतो — बघता? कोणतीही commitment नाही."
+  5. Next step (15 sec): schedule a meeting or send samples on WhatsApp
+- What to say vs what NOT to say (table):
+  - Say: "तुमचे patients/customers Instagram वर search करतात" / Don't say: "तुमचं Instagram खूप वाईट आहे"
+  - Say: "मी handle करतो, तुमचा वेळ वाचतो" / Don't say: "हे खूप सोपं आहे"
+- Handling objections on phone:
+  - "आम्हाला interest नाही" → "ठीक आहे. मी तरी 2 sample posts पाठवतो WhatsApp वर — बघा, आवडले तर सांगा."
+  - "किती खर्च?" → "आधी sample बघा, मग बोलू — commitment नाही."
+  - "वेळ नाही आत्ता" → "कधी convenient आहे? 5 मिनिटं पुरतील."
+- Follow-up strategy: कधी follow up करायचं, किती वेळा, WhatsApp vs call
+- Exercise: "तुमच्या list मधल्या 3 businesses ला call करा. Script follow करा. काय reaction आली ते लिहा."
+
+- [ ] **Step 4: Create `clients/meeting-tips.html`**
+
+Content — In-person/video meeting tips:
+- Before the meeting:
+  - Dress professionally (business casual — neat, clean)
+  - Carry: phone with sample posts, printed 1-page proposal (optional but impressive), visiting card
+  - Arrive 5 min early. Never be late — trust starts here.
+- During the meeting — 7 rules:
+  1. **Listen first:** पहिले 5 minutes — त्यांच्या business बद्दल विचारा. "तुमचे customers कसे येतात? कोणत्या challenges आहेत?"
+  2. **Don't oversell:** "मी तुम्हाला 10,000 followers देतो" — हे कधीच बोलू नका
+  3. **Show, don't tell:** Sample posts दाखवा — phone वर carousel swipe करा, reel दाखवा
+  4. **Speak their language:** "ROI", "engagement rate" नाही — "नवीन customers येतील", "लोकांना तुमचं clinic माहीत होईल"
+  5. **Be honest about timeline:** "Instagram चे results 2-3 months ला दिसतात. Overnight magic नाही."
+  6. **Ask questions:** "तुम्हाला कोणत्या type चे patients/customers हवे आहेत?" — हे तुम्हाला content strategy ठरवायला मदत करतं
+  7. **End with clear next step:** "मी तुम्हाला proposal पाठवतो. बघा, आवडलं तर पुढच्या week पासून सुरू करू."
+- Body language tips:
+  - Eye contact ठेवा
+  - Phone silent/flip ठेवा (तुम्हीच social media manage करणार — तुम्ही phone बघत बसलात तर impression खराब)
+  - Notepad ठेवा — त्यांचे points लिहा (shows you care)
+- After the meeting:
+  - Same day: WhatsApp/email — "धन्यवाद भेटीसाठी. मी proposal पाठवतो."
+  - Within 24 hours: Send proposal
+  - After 3 days: Gentle follow-up if no response
+- `.warning` box: "पहिली meeting = first impression. तुम्ही professional आहात हे दाखवा. वेळेवर या, तयारी करून या, listen करा."
+- Exercise: "Mirror समोर practice करा — 2-minute introduction + sample दाखवणं. Record करा, बघा, improve करा."
+
+- [ ] **Step 5: Create `clients/proposal-format.html`**
+
+Content — Professional proposal format:
+- Why a proposal matters: "WhatsApp वर 'मी posts बनवतो, 5000 रुपये' — हे amateur वाटतं. एक proper proposal = तुम्ही serious आहात."
+- 1-page proposal template (Marathi + English, ready to copy):
+  - **Header:** तुमचं नाव/brand, client चं business name, date
+  - **Section 1: तुम्हाला काय मिळेल (What You Get)**
+    - X posts per month (carousel + reel mix)
+    - Content calendar (monthly)
+    - Hashtag strategy
+    - Caption writing
+    - [Optional] Story content
+    - [Optional] Engagement management (reply to comments)
+  - **Section 2: कसं काम होईल (How It Works)**
+    - Week 1: Research + brand voice + calendar approval
+    - Week 2 onwards: Content batch → approval → posting
+    - Communication: weekly WhatsApp update
+    - Approval: 48-hour window before posting
+  - **Section 3: Investment**
+    - Package A: Content creation only — ₹X/month
+    - Package B: Content creation + posting + basic engagement — ₹Y/month
+    - Payment: monthly, advance, UPI/bank transfer
+  - **Section 4: Terms**
+    - Minimum commitment: 1 month (first month = trial)
+    - Content ownership: client's
+    - Revisions: 2 per post included
+    - Cancellation: 15-day notice
+- Google Docs template link (create and share a public template)
+- Canva proposal template alternative (more visual, impressive for creative clients)
+- Tips:
+  - Print it if meeting in person — physical document = professional
+  - Customize for each client — don't send generic proposals
+  - Include 1-2 sample posts in the proposal or as attachment
+- Exercise: "Proposal template copy करा. तुमच्या sample business साठी fill करा. PDF बनवा."
+- Nav links updated to include these 3 new pages in the flow
+
+- [ ] **Step 6: Create `clients/pitch-and-pricing.html`**
 
 Content:
 - What to show in a pitch meeting:
@@ -1265,7 +1361,7 @@ Content:
   - Ownership: content कोणाचं (client चं)
 - Exercise: "1-page proposal बनवा तुमच्या sample business साठी"
 
-- [ ] **Step 4: Create `clients/pahila-client.html`**
+- [ ] **Step 7: Create `clients/pahila-client.html`**
 
 Content:
 - Onboarding checklist — client कडून काय collect करायचं:
@@ -1285,7 +1381,7 @@ Content:
   - NOT: "10,000 followers"
   - YES: consistent posting, professional look, first engagement from real people, client is happy with quality
 
-- [ ] **Step 5: Create `clients/grow-kara.html`**
+- [ ] **Step 8: Create `clients/grow-kara.html`**
 
 Content:
 - 1 client ते 5 clients — growth path
@@ -1303,7 +1399,7 @@ Content:
   - 5+: need to template more, or hire help
   - "Quality कमी करू नका. 3 happy clients > 6 struggling clients"
 
-- [ ] **Step 6: Create `clients/common-problems.html`**
+- [ ] **Step 9: Create `clients/common-problems.html`**
 
 Content (each problem as h2):
 - "Client approval ला reply करत नाही":
@@ -1327,11 +1423,11 @@ Content (each problem as h2):
   - Apologize, fix, add a safeguard (checklist before posting)
   - `.tip` box: "Posting checklist बनवा — प्रत्येक post पूर्वी check करा: account बरोबर आहे? Caption proofread? Hashtags correct? Approval मिळालं?"
 
-- [ ] **Step 7: Verify and commit**
+- [ ] **Step 10: Verify and commit**
 
 ```bash
 git add clients/
-git commit -m "feat: add clients section — 6 pages on finding and managing clients"
+git commit -m "feat: add clients section — 9 pages on finding and managing clients"
 ```
 
 ---
@@ -1390,8 +1486,8 @@ Task 2 (शिका)     ← independent after Task 1
 Task 3 (tools 1-5) ← independent after Task 1
 Task 4 (AI content) ← independent after Task 1
 Task 5 (scheduling) ← independent after Task 1
-Task 6 (dentist)    ← independent after Task 1, benefits from Task 3-4 being done (cross-references)
-Task 7 (parenting)  ← independent after Task 1, benefits from Task 3-4 being done
+Task 6 (dermatologist) ← independent after Task 1, benefits from Task 3-4 being done (cross-references)
+Task 7 (gym)           ← independent after Task 1, benefits from Task 3-4 being done
 Task 8 (DIY)        ← references tools section, better done after Tasks 3-4
 Task 9 (clients)    ← independent after Task 1
 Task 10 (deploy)    ← after all other tasks
