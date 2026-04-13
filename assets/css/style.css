@@ -181,6 +181,56 @@ nav .nav-links a.active {
   margin-bottom: 0;
 }
 
+/* Summary section (homepage) */
+.summary {
+  margin-bottom: 1rem;
+}
+
+.summary h2 {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  color: var(--color-accent-dark);
+}
+
+.summary ul {
+  margin: 0.5rem 0 1rem;
+}
+
+/* Table of Contents (homepage) */
+.toc h2 {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-accent-dark);
+}
+
+.toc h2:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.toc h3 {
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  color: var(--color-text-light);
+}
+
+.toc ul {
+  margin: 0.25rem 0 0.75rem;
+}
+
+.toc li {
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+}
+
+.toc p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
 /* Content pages */
 .page-header {
   padding: 2rem 0 1rem;
