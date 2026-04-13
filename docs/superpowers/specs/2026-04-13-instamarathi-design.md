@@ -77,7 +77,14 @@ instamarathi.github.io/
 │   ├── content-calendar.html           # Plan the month
 │   ├── content-kits.html               # Script to final output
 │   └── packaging.html                  # Deliver to client
-├── clients/                            # Section 6: Find and win clients
+├── sales/                              # Section 6: Sales शिका — books & mindset
+│   ├── index.html                      # Why sales matters for this business
+│   ├── you-can-sell.html               # Shiv Khera — You Can Sell summary
+│   ├── jeet-aapki.html                 # Shiv Khera — You Can Win summary
+│   ├── lets-build-a-company.html       # Harish Bhat — brand building lessons
+│   ├── sell-like-crazy.html            # Sabri Suby — digital service selling
+│   └── the-opportunity.html            # Eben Pagan — service business positioning
+├── clients/                            # Section 7: Find and win clients
 │   ├── kuthe-shodhayche.html           # Where to find clients
 │   ├── pahila-contact.html             # How to approach
 │   ├── call-strategy.html              # Phone/video call strategy
@@ -102,7 +109,9 @@ instamarathi.github.io/
 
 Value proposition in Marathi: "Instagram वरून business कसं चालवायचं शिका — दुसऱ्यांसाठी. मराठीत."
 
-Clear navigation paths into all 5 sections. Brief description of each section. No signup, no gate — everything open.
+Credibility line: "₹50,000 च्या 8-day social marketing course मधलं सगळ्यात important — मराठीत, free."
+
+Clear navigation paths into all 6 sections. Brief description of each section. No signup, no gate — everything open.
 
 ---
 
@@ -329,7 +338,53 @@ Teaching the skill of building playbooks independently.
 
 ---
 
-### Section 6: Clients मिळवा (Leads) — Find and Win Clients
+### Section 6: Sales शिका — Books & Mindset
+
+This is a sales business. Before tactics (how to pitch, how to price), the audience needs sales fundamentals — mindset, confidence, handling rejection, understanding what selling really is. This section summarizes key Indian/practical sales books in Marathi, extracting the most relevant lessons for someone selling Instagram services to local businesses.
+
+**Credibility framing:** "मी ₹50,000 चा 8-day social marketing course केला. सगळं नाही, पण सगळ्यात important गोष्टी — त्या मी इथे मराठीत लिहिल्या आहेत. Free." This establishes that the knowledge comes from real investment, not just Googling. Use this framing on the sales index page and reference it on the homepage.
+
+#### 6.0 Sales का शिकायला हवं? (`sales/index.html`)
+- Open with: "मी ₹50,000 चा 8-day social marketing course केला. तिथे सगळ्यात important lesson हा होता: हा business technical नाही — हा sales चा business आहे. Tools कोणीही शिकू शकतं. पण client मिळवणं, trust build करणं, deal close करणं — हे शिकायला लागतं."
+- Why this entire business is a sales job — you're selling your time, skill, and reliability
+- "मला sales नाही जमत" — this is the #1 fear, and these books will fix it
+- "या course मध्ये या books चे references आले. मी त्या वाचल्या. त्यातले main points मी मराठीत लिहिले — तुम्हाला ₹50,000 खर्च करायची गरज नाही."
+- Reading order recommendation
+- Each book page: Marathi summary of key points, how it applies to Instagram service business, actionable takeaways
+
+#### 6.1 You Can Sell — Shiv Khera (`sales/you-can-sell.html`)
+- Book overview in Marathi
+- Key concepts: sales = helping, not pushing; building confidence; handling rejection; follow-up discipline
+- 10 most relevant points summarized in Marathi with examples from Instagram service context
+- "तुमच्या business साठी काय शिकायचं" — 3-5 actionable takeaways specific to pitching Instagram services
+
+#### 6.2 Jeet Aapki (You Can Win) — Shiv Khera (`sales/jeet-aapki.html`)
+- Book overview in Marathi
+- Key concepts: attitude, motivation, goal setting, self-confidence, handling failure
+- 10 most relevant points — especially around rejection, persistence, and self-belief
+- "तुमच्या business साठी काय शिकायचं" — mindset foundation before you start selling
+
+#### 6.3 Let's Build a Company — Harish Bhat (`sales/lets-build-a-company.html`)
+- Book overview in Marathi
+- Key concepts: Indian brand building, Tata's approach to trust, long-term thinking, customer obsession
+- 10 most relevant points — especially around building trust and reputation
+- "तुमच्या business साठी काय शिकायचं" — how to think like a brand builder, not just a freelancer
+
+#### 6.4 Sell Like Crazy — Sabri Suby (`sales/sell-like-crazy.html`)
+- Book overview in Marathi
+- Key concepts: identifying dream buyers, crafting irresistible offers, the "Godfather strategy" (offer they can't refuse), follow-up systems
+- 10 most relevant points for digital service selling
+- "तुमच्या business साठी काय शिकायचं" — how to create your free sample strategy, how to make your offer compelling
+
+#### 6.5 The Opportunity — Eben Pagan (`sales/the-opportunity.html`)
+- Book overview in Marathi
+- Key concepts: finding opportunity in service gaps, positioning yourself as the solution, value-based selling
+- 10 most relevant points for service business positioning
+- "तुमच्या business साठी काय शिकायचं" — how to see every local business without Instagram as your opportunity
+
+---
+
+### Section 7: Clients मिळवा (Leads) — Find and Win Clients
 
 #### 6.1 कुठे शोधायचे (`clients/kuthe-shodhayche.html`)
 - Walk your street — every shop with no/dead Instagram

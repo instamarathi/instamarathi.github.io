@@ -383,6 +383,7 @@ This is the template all other pages follow. The homepage has the hero section +
         <li><a href="/tools/canva.html">Tools</a></li>
         <li><a href="/playbooks/">Playbooks</a></li>
         <li><a href="/diy/niche-research.html">स्वतः बनवा</a></li>
+        <li><a href="/sales/">Sales</a></li>
         <li><a href="/clients/kuthe-shodhayche.html">Clients</a></li>
       </ul>
     </div>
@@ -392,6 +393,7 @@ This is the template all other pages follow. The homepage has the hero section +
     <div class="hero">
       <h1>Instagram वरून Business चालवायचं शिका — दुसऱ्यांसाठी</h1>
       <p class="subtitle">Local businesses साठी Instagram manage करा. पैसे कमवा. सगळं मराठीत शिका.</p>
+      <p class="subtitle" style="font-size:0.95rem;">₹50,000 च्या 8-day social marketing course मधलं सगळ्यात important — मराठीत, free.</p>
     </div>
 
     <div class="section-cards">
@@ -415,9 +417,14 @@ This is the template all other pages follow. The homepage has the hero section +
         <p>कोणत्याही niche साठी स्वतःचा playbook बनवायला शिका — research ते delivery.</p>
       </a>
 
+      <a href="/sales/" class="card">
+        <h3>Sales शिका — ₹50,000 च्या Course मधलं</h3>
+        <p>Sales mindset, book summaries मराठीत. Rejection handle करणं, trust build करणं, deal close करणं.</p>
+      </a>
+
       <a href="/clients/kuthe-shodhayche.html" class="card">
         <h3>Clients मिळवा — Business कसं वाढवायचं</h3>
-        <p>Clients कुठे शोधायचे, pitch कसं करायचं, pricing, पहिले 30 दिवस, growth.</p>
+        <p>Clients कुठे शोधायचे, call strategy, meeting tips, proposal format, pricing, growth.</p>
       </a>
     </div>
   </div>
@@ -1214,7 +1221,154 @@ git commit -m "feat: add DIY section — 6 pages on creating playbooks for any n
 
 ---
 
-## Task 9: Section 6 — Clients मिळवा (Leads)
+## Task 9: Section 6 — Sales शिका (Books & Mindset)
+
+**Files:**
+- Create: `sales/index.html`
+- Create: `sales/you-can-sell.html`
+- Create: `sales/jeet-aapki.html`
+- Create: `sales/lets-build-a-company.html`
+- Create: `sales/sell-like-crazy.html`
+- Create: `sales/the-opportunity.html`
+
+**Credibility framing:** Every page opens with or references: "मी ₹50,000 चा 8-day social marketing course केला. त्यातले main lessons मी मराठीत लिहिले — free." This isn't the entire course — it's the most important takeaways, especially from the books recommended in that course.
+
+- [ ] **Step 1: Create directory**
+
+```bash
+mkdir -p sales
+```
+
+- [ ] **Step 2: Create `sales/index.html`**
+
+Content:
+- Opening: "मी ₹50,000 चा 8-day social marketing course केला. तिथे सगळ्यात important lesson हा होता: हा business technical नाही — हा sales चा business आहे. Tools कोणीही शिकू शकतं. पण client मिळवणं, trust build करणं, deal close करणं — हे शिकायला लागतं."
+- Why sales matters: "तुम्ही Canva master असाल, reels perfect बनवाल — पण client नसेल तर कोणाला दाखवणार?"
+- "या course मध्ये या 5 books चे references आले. मी त्या वाचल्या. प्रत्येक book चे main points मी मराठीत लिहिले. तुम्हाला ₹50,000 खर्च करायची गरज नाही."
+- 5 book cards with one-line description each:
+  1. You Can Sell — "Sales म्हणजे मदत करणं, push करणं नाही"
+  2. Jeet Aapki — "Confidence आणि attitude — sales च्या आधी"
+  3. Let's Build a Company — "Brand कसं build करायचं — Tata कडून शिका"
+  4. Sell Like Crazy — "Digital service कसं विकायचं — step by step"
+  5. The Opportunity — "प्रत्येक business without Instagram = तुमची opportunity"
+- Reading order recommendation: Jeet Aapki first (mindset) → You Can Sell (sales basics) → Sell Like Crazy (digital selling) → The Opportunity (positioning) → Let's Build a Company (long-term brand thinking)
+- Nav: prev = diy/packaging, next = sales/jeet-aapki
+
+- [ ] **Step 3: Create `sales/jeet-aapki.html`**
+
+Content — "Jeet Aapki (You Can Win)" by Shiv Khera:
+- Book overview: "हे sales चं book नाही — हे attitude चं book आहे. पण sales करायच्या आधी attitude बरोबर लागतो."
+- 10 key points in Marathi, each with Instagram business context:
+  1. **Winners vs Losers:** Winners find solutions, losers find excuses. "Client ने नाही म्हटलं = excuse शोधायचं नाही, पुढच्या client कडे जायचं."
+  2. **Attitude is everything:** तुमचा attitude तुमचं काम ठरवतो. "मला sales नाही जमत" हा attitude बदला → "मला अजून शिकायला लागेल."
+  3. **Goal setting:** लिहून ठेवा — "3 months मध्ये 3 clients." Written goals = accountability.
+  4. **Self-confidence:** "तुम्ही value देताय — तुम्ही भीक नाही मागत. Client ला Instagram लागतं, तुमच्याकडे skill आहे."
+  5. **Handling failure:** "10 calls = 8 rejections + 2 meetings. हे normal आहे. Rejection = failure नाही."
+  6. **Persistence:** "बहुतेक लोक 2-3 rejections नंतर सोडतात. यशस्वी लोक 10 rejections नंतर पण continue करतात."
+  7. **First impression:** "तुम्ही कसं दिसता, कसं बोलता, वेळेवर येता का — हे सगळं trust build करतं."
+  8. **Continuous learning:** "हे book वाचलंत — पुढचं वाचा. शिकणं कधी थांबवू नका."
+  9. **Integrity:** "जे करू शकता तेच promise करा. Over-promise + under-deliver = client गेला."
+  10. **Action over planning:** "Perfect plan ची वाट बघू नका. आज एक call करा. सुरुवात करा."
+- "तुमच्या business साठी 3 takeaways":
+  - Rejection personal नाही — business decision आहे
+  - Written goals ठेवा — monthly review करा
+  - आज एक action करा — एक call, एक sample post, एक pitch
+- Nav: prev = sales/index, next = sales/you-can-sell
+
+- [ ] **Step 4: Create `sales/you-can-sell.html`**
+
+Content — "You Can Sell" by Shiv Khera:
+- Book overview: "Sales म्हणजे pushing नाही — sales म्हणजे helping. तुम्ही client ला solve करताय त्यांचं problem."
+- 10 key points in Marathi with Instagram business context:
+  1. **Selling = Helping:** "तुम्ही dentist ला Instagram वर patients आणून देताय. हे helping आहे, selling नाही."
+  2. **Know your product:** "तुमचं product = content creation skill + playbook. हे तुम्हाला पूर्ण माहीत हवं."
+  3. **Know your customer:** "Dentist ला काय हवं? Patients. Gym ला काय हवं? Members. त्यांच्या language मध्ये बोला."
+  4. **Ask questions, don't pitch:** "Client ला विचारा — 'तुमचे customers कसे येतात?' — मग solution सांगा."
+  5. **Handle objections gracefully:** "नाही' म्हणजे 'आत्ता नाही' किंवा 'मला अजून माहिती हवी.' प्रत्येक objection = opportunity."
+  6. **Follow up:** "80% sales follow-up मध्ये होतात, पहिल्या meeting मध्ये नाही. Follow up करा — 3 दिवस, 1 आठवडा, 1 महिना."
+  7. **Build trust first:** "Free sample दिलात = trust build झालं. Trust = sale."
+  8. **Listen more, talk less:** "Client 70% बोलायला हवा, तुम्ही 30%. त्यांचं problem ऐका, मग solution सांगा."
+  9. **Close with confidence:** "Proposal पाठवल्यावर विचारा — 'पुढच्या week पासून सुरू करू?' Silence is okay."
+  10. **After-sale relationship:** "Sale झाली = relationship सुरू. Monthly reports, communication, reliability — हे retention आहे."
+- "तुमच्या business साठी 3 takeaways":
+  - Free sample = best sales tool
+  - Follow-up discipline = difference between 1 client and 5 clients
+  - Sales = solving problems, not convincing people
+- Nav: prev = sales/jeet-aapki, next = sales/sell-like-crazy
+
+- [ ] **Step 5: Create `sales/sell-like-crazy.html`**
+
+Content — "Sell Like Crazy" by Sabri Suby:
+- Book overview: "Digital service कसं विकायचं — यासाठी सगळ्यात practical book. तुम्ही exactly हेच करताय — digital service sell करताय local businesses ला."
+- 10 key points in Marathi with Instagram business context:
+  1. **Dream buyer:** "तुमचा ideal client कोण आहे? Dentist? Gym? Salon? एक niche निवडा — सगळ्यांना sell करू नका."
+  2. **The Godfather Strategy:** "एक offer बनवा जो refuse करणं कठीण आहे. 'Free मध्ये 3 posts बनवतो — आवडले तरच पुढे' = Godfather offer."
+  3. **Lead magnet:** "तुमचा free sample = तुमचा lead magnet. हे दाखवतं 'मी काय करू शकतो.'"
+  4. **High-value content:** "तुमची website (InstaMarathi) = तुमचं proof. 'मी हे शिकलो, मी हे करू शकतो.'"
+  5. **Follow-up sequences:** "पहिला contact → sample → proposal → follow-up → follow-up → close. System बनवा."
+  6. **Irresistible offer:** "₹5,000/month for 12 professional posts + calendar + hashtags = client ला स्वतः करण्यापेक्षा स्वस्त"
+  7. **Scarcity (ethical):** "मी 5 पेक्षा जास्त clients घेत नाही — quality maintain करायला." (हे खरं असायला हवं)"
+  8. **Testimonials:** "पहिल्या client चा screenshot = तुमचं strongest sales tool. लगेच मागा."
+  9. **Track and measure:** "किती calls → किती meetings → किती sales. Numbers track करा."
+  10. **Speed wins:** "Client ने interest दाखवला? 24 तासांत proposal पाठवा. Slow = lost."
+- "तुमच्या business साठी 3 takeaways":
+  - Godfather offer: free sample that proves your value
+  - System बनवा: contact → sample → proposal → follow-up
+  - Speed: interest → proposal within 24 hours
+- Nav: prev = sales/you-can-sell, next = sales/the-opportunity
+
+- [ ] **Step 6: Create `sales/the-opportunity.html`**
+
+Content — "The Opportunity" by Eben Pagan:
+- Book overview: "Opportunity कशी शोधायची आणि कशी पकडायची — service business perspective मधून."
+- 10 key points in Marathi with Instagram business context:
+  1. **Opportunity is everywhere:** "तुमच्या गल्लीत 50 दुकानं आहेत. 40 चं Instagram नाही. = 40 opportunities."
+  2. **Solve real problems:** "Business owner ला customers हवेत. तुम्ही Instagram वरून customers आणता. = Real problem, real solution."
+  3. **Position yourself as expert:** "तुम्ही playbook वाचलंय, tools शिकलंय, practice केलंय. = तुम्ही expert आहात — या niche मध्ये."
+  4. **Value-based selling:** "₹10,000/month expensive नाही — जर त्यातून 5 new patients/customers आले."
+  5. **Start small, prove, expand:** "एक client, एक niche. Prove करा. मग expand करा."
+  6. **The gap:** "Business owner ला Instagram चालवायला वेळ नाही. तुम्ही तो gap fill करताय."
+  7. **First-mover advantage:** "तुमच्या area मध्ये अजून कोणी हे करत नाही. = First mover."
+  8. **Service > Product:** "तुम्ही product विकत नाही — service देताय. Service = relationship."
+  9. **Create your own opportunity:** "Client नाही? Sample बनवा, दाखवा. Opportunity create करा."
+  10. **Long-term thinking:** "पहिला client = ₹5,000. दोन वर्षांनी 5 clients = ₹50,000/month. Long game खेळा."
+- "तुमच्या business साठी 3 takeaways":
+  - Walk your street — opportunities are physical, not theoretical
+  - Value frame: cost vs what client gets in return
+  - Long game: build reputation, not quick money
+- Nav: prev = sales/sell-like-crazy, next = sales/lets-build-a-company
+
+- [ ] **Step 7: Create `sales/lets-build-a-company.html`**
+
+Content — "Let's Build a Company" by Harish Bhat:
+- Book overview: "Tata group कसं build झालं — brand, trust, long-term thinking. तुम्ही freelancer नाही — तुम्ही brand build करताय."
+- 10 key points in Marathi with Instagram business context:
+  1. **Trust is the brand:** "Tata म्हटलं की trust. तुमचं नाव म्हटलं की quality — हे build करा."
+  2. **Customer obsession:** "Client चं Instagram तुमच्या स्वतःच्या पेक्षा important आहे. त्यांचा success = तुमचा success."
+  3. **Consistency over brilliance:** "एक brilliant post पेक्षा 30 consistent posts जास्त powerful आहेत."
+  4. **Long-term relationships:** "एक client 2 वर्षं ठेवणं > 10 clients 1 महिन्यात गमावणं."
+  5. **Quality never compromised:** "Deadline miss करा, पण quality कमी करू नका."
+  6. **Innovation:** "नवीन formats, नवीन tools शिका. Stagnant होऊ नका."
+  7. **Give back:** "Community ला शिकवा, knowledge share करा. = More trust, more referrals."
+  8. **Ethics in business:** "Client चे DMs वाचता, numbers बघता — confidentiality ठेवा. Always."
+  9. **Build systems:** "प्रत्येक वेळी scratch पासून करू नका. Templates, processes, checklists बनवा."
+  10. **Think like a company:** "तुम्ही एकटे असाल तरी — brand name ठेवा, professional invoice द्या, agreement बनवा."
+- "तुमच्या business साठी 3 takeaways":
+  - Brand = trust. Trust = repeat clients + referrals
+  - Systems save time: templates, checklists, processes
+  - Think long-term: 2-year plan, not 2-week plan
+- Nav: prev = sales/the-opportunity, next = clients/kuthe-shodhayche
+
+- [ ] **Step 8: Verify and commit**
+
+```bash
+git add sales/
+git commit -m "feat: add sales section — 6 pages with book summaries and sales mindset"
+```
+
+---
+
+## Task 10: Section 7 — Clients मिळवा (Leads)
 
 **Files:**
 - Create: `clients/kuthe-shodhayche.html`
@@ -1432,7 +1586,7 @@ git commit -m "feat: add clients section — 9 pages on finding and managing cli
 
 ---
 
-## Task 10: Push to GitHub & Enable GitHub Pages
+## Task 11: Push to GitHub & Enable GitHub Pages
 
 **Files:**
 - No new files — push existing repo to `instamarathi/instamarathi.github.io`
@@ -1481,19 +1635,21 @@ git add -A && git commit -m "fix: path corrections for GitHub Pages" && git push
 ## Task Dependencies
 
 ```
-Task 1 (skeleton) ← everything depends on this
-Task 2 (शिका)     ← independent after Task 1
-Task 3 (tools 1-5) ← independent after Task 1
-Task 4 (AI content) ← independent after Task 1
-Task 5 (scheduling) ← independent after Task 1
+Task 1 (skeleton)      ← everything depends on this
+Task 2 (शिका)         ← independent after Task 1
+Task 3 (tools 1-5)    ← independent after Task 1
+Task 4 (AI content)    ← independent after Task 1
+Task 5 (scheduling)    ← independent after Task 1
 Task 6 (dermatologist) ← independent after Task 1, benefits from Task 3-4 being done (cross-references)
 Task 7 (gym)           ← independent after Task 1, benefits from Task 3-4 being done
-Task 8 (DIY)        ← references tools section, better done after Tasks 3-4
-Task 9 (clients)    ← independent after Task 1
-Task 10 (deploy)    ← after all other tasks
+Task 8 (DIY)           ← references tools section, better done after Tasks 3-4
+Task 9 (sales)         ← independent after Task 1
+Task 10 (clients)      ← benefits from Task 9 (sales mindset before tactics)
+Task 11 (deploy)       ← after all other tasks
 ```
 
 **Parallelizable:** Tasks 2, 3, 4, 5, 9 can all run in parallel after Task 1.
 Tasks 6, 7 can run in parallel after Task 1 (ideally after 3-4).
 Task 8 after Tasks 3-4.
-Task 10 last.
+Task 10 benefits from Task 9 being done first.
+Task 11 last.
