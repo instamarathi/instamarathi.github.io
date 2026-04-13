@@ -444,7 +444,15 @@ footer {
   /* Hamburger menu */
   .nav-hamburger {
     display: block;
+    order: 3;
   }
+
+  nav .nav-inner {
+    flex-wrap: wrap;
+  }
+
+  nav .logo { order: 1; }
+  .theme-toggle { order: 2; margin-left: auto; }
 
   nav .nav-links {
     display: none;
@@ -452,7 +460,7 @@ footer {
     flex-direction: column;
     gap: 0;
     padding-top: 0.5rem;
-    order: 3;
+    order: 4;
   }
 
   nav .nav-links.open {
@@ -468,10 +476,6 @@ footer {
     padding: 0.6rem 0.25rem;
     font-size: 0.95rem;
     border-radius: 0;
-  }
-
-  nav .nav-inner {
-    flex-wrap: wrap;
   }
 
   /* Tables scroll horizontally */
