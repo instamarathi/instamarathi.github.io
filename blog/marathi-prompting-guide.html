@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatGPT/Gemini ला Marathi मध्ये चांगलं Output कसं काढायचं? — InstaMarathi Blog</title>
+  <meta name="description" content="Prompting guide for getting quality Marathi output from ChatGPT and Gemini. Techniques for carousel scripts, captions, content calendars in natural Marathi.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DSX7QN8HXY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DSX7QN8HXY');
+  </script>
+</head>
+<body>
+  <script>
+(function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t)})();
+</script>
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">Insta<span>Marathi</span></a>
+      <button class="nav-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="/shika/business-kya-aahe.html">शिका</a></li>
+        <li><a href="/tools/canva.html">Tools</a></li>
+        <li><a href="/playbooks/">Playbooks</a></li>
+        <li><a href="/diy/niche-research.html">स्वतः बनवा</a></li>
+        <li><a href="/sales/">Sales</a></li>
+        <li><a href="/clients/kuthe-shodhayche.html">Clients</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+      </ul>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">☀️</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Marathi Prompting Guide</div>
+      <span class="blog-category">Tools & How-To</span>
+      <h1>ChatGPT/Gemini ला Marathi मध्ये चांगलं Output कसं काढायचं?</h1>
+      <div class="post-meta">Tools & How-To · April 2026</div>
+    </div>
+
+    <div class="blog-post">
+
+      <p>तुम्ही ChatGPT किंवा Gemini ला Marathi मध्ये विचारलंय कधी? "मला एक Instagram caption लिहून दे Marathi मध्ये" — आणि जे output आलं ते वाचून तुम्ही म्हणालात "हे कोण बोलतं असं?" शुद्ध, formal, textbook सारखं Marathi — जे कोणत्याही real conversation मध्ये वापरत नाही.</p>
+
+      <p>Problem AI मध्ये नाही — problem तुमच्या prompt मध्ये आहे. Prompt चांगला दिला तर output चांगला येतो. या guide मध्ये मी exact techniques सांगणार आहे — copy-paste करता येतील असे prompts.</p>
+
+      <h2>Problem: Direct Marathi Prompts का Fail होतात?</h2>
+
+      <p>तुम्ही Marathi मध्ये prompt दिलात: "एका बेकरीसाठी Instagram caption लिही." Output येतो:</p>
+
+      <p><em>"आमच्या बेकरीमध्ये आपले स्वागत आहे. ताज्या पदार्थांचा आस्वाद घ्या आणि आपल्या जीवनात गोडवा आणा."</em></p>
+
+      <p>हे textbook Marathi आहे. कोणी असं बोलत नाही. का?</p>
+
+      <ul>
+        <li><strong>Training data:</strong> AI चं Marathi training data बहुतेक formal sources मधून आहे — news, Wikipedia, government documents. Casual Marathi कमी आहे.</li>
+        <li><strong>Context नसणे:</strong> "बेकरी" म्हणजे कोणती? कुठे? काय special? AI ला context नसतो तर generic output देतो.</li>
+        <li><strong>Tone specification नसणे:</strong> तुम्ही "casual" म्हणालात नाहीत, तर AI default formal mode मध्ये जातो.</li>
+      </ul>
+
+      <h2>Golden Rule: English मध्ये Prompt द्या, Marathi Output विचारा</h2>
+
+      <p>हे सगळ्यात important technique आहे. English prompts ने AI चं reasoning engine चांगलं activate होतं. मग output Marathi मध्ये विचारा.</p>
+
+      <p><strong>Bad prompt:</strong> "बेकरीसाठी caption लिही"</p>
+      <p><strong>Good prompt:</strong> "Write an Instagram caption in Marathi for a Pune-based eggless bakery called Sweet Crumbs. They are posting a photo of fresh chocolate brownies. Keep it casual — like a friend recommending food. Max 2-3 lines. Mix English words naturally as Pune people do."</p>
+
+      <div class="tip">
+        <strong>Pro Tip:</strong> English prompt मध्ये जितकं specific, तितकं output चांगलं. City, business name, product, tone, length — सगळं specify करा.
+      </div>
+
+      <h2>Prompt Framework: 6 Elements</h2>
+
+      <p>प्रत्येक prompt मध्ये हे 6 elements असायला हवेत:</p>
+
+      <ol>
+        <li><strong>Role:</strong> AI ला कोणती role द्यायची ("You are a social media manager for local Marathi businesses")</li>
+        <li><strong>Task:</strong> काय करायचं ("Write an Instagram caption")</li>
+        <li><strong>Context:</strong> Business details ("Pune bakery, eggless, called Sweet Crumbs")</li>
+        <li><strong>Tone:</strong> कसं लिहायचं ("Casual, friendly, mix English-Marathi naturally")</li>
+        <li><strong>Format:</strong> Output कसं हवं ("2-3 lines, end with CTA")</li>
+        <li><strong>Language:</strong> भाषा ("Write in Marathi script, use Devanagari")</li>
+      </ol>
+
+      <h2>Ready-to-Use Prompts — Copy-Paste करा</h2>
+
+      <h3>Prompt 1: Instagram Caption</h3>
+      <p><em>"You are a social media manager for local businesses in Maharashtra. Write an Instagram caption in Marathi (Devanagari script) for [BUSINESS NAME], a [BUSINESS TYPE] in [CITY]. They are posting a photo of [DESCRIBE PHOTO]. Requirements: casual tone like talking to a friend, max 3 lines, mix English words naturally (as young Maharashtrians do), end with a soft call-to-action. Avoid formal/literary Marathi. Avoid excessive emojis — max 1-2."</em></p>
+
+      <div class="tip">
+        <strong>Tip:</strong> [BRACKETS] मधला text तुमच्या client च्या details ने replace करा. Template save करा Notes app मध्ये — प्रत्येक वेळी नवीन prompt लिहायची गरज नाही.
+      </div>
+
+      <h3>Prompt 2: Carousel Script (5-7 Slides)</h3>
+      <p><em>"Create a 7-slide Instagram carousel script in Marathi (Devanagari) for [BUSINESS NAME], a [BUSINESS TYPE] in [CITY]. Topic: [TOPIC]. Format for each slide: Headline (bold, 5-7 words) + Body text (1-2 short sentences). Slide 1 = hook/question that grabs attention. Slides 2-6 = main content points. Slide 7 = CTA slide. Tone: educational but casual. Use 'तुम्ही' not 'आपण'. Mix English technical terms naturally. Each slide text should fit on a phone screen without scrolling."</em></p>
+
+      <h3>Prompt 3: Content Calendar (Monthly)</h3>
+      <p><em>"Create a 30-day Instagram content calendar for [BUSINESS NAME], a [BUSINESS TYPE] in [CITY]. Format: Table with columns — Day, Post Type (carousel/reel/single image/story), Topic, Caption Idea (one line summary in Marathi). Mix post types: 40% carousels, 30% reels, 20% single images, 10% stories. Include local festivals and events relevant to Maharashtra in [MONTH]. Every 5th post should be engagement-focused (poll, question, this-or-that). Keep captions casual, in Marathi with natural English mixing."</em></p>
+
+      <h3>Prompt 4: Reel Script</h3>
+      <p><em>"Write a 30-second Instagram Reel script in Marathi for [BUSINESS NAME], a [BUSINESS TYPE] in [CITY]. Topic: [TOPIC]. Format: Timestamp | Visual (what appears on screen) | Voiceover/Text (what is said or shown as text). Hook in first 3 seconds — ask a question or make a surprising statement. Keep sentences short — max 8-10 words per line. End with CTA. Tone: energetic, casual. Use Marathi with natural English words."</em></p>
+
+      <h3>Prompt 5: Bio Writing</h3>
+      <p><em>"Write 3 variations of an Instagram bio in Marathi for [BUSINESS NAME], a [BUSINESS TYPE] in [CITY]. Max 150 characters each. Include: what they do, location, one unique selling point. Use emojis sparingly (1-2 max). Mix Marathi and English naturally. Make it scannable — use line breaks with | or bullet points."</em></p>
+
+      <h2>Advanced Technique: Style Examples द्या</h2>
+
+      <p>AI ला तुम्ही example दिलात तर तो त्या style मध्ये लिहितो. याला "few-shot prompting" म्हणतात.</p>
+
+      <p><strong>Prompt मध्ये हे add करा:</strong></p>
+      <p><em>"Here are 2 examples of the writing style I want:</em></p>
+      <p><em>Example 1: 'Fresh chocolate brownies — आत्ताच oven मधून बाहेर आले. Eggless आहेत, guilt-free खा. आज संध्याकाळपर्यंत संपतील — DM करा order साठी.'</em></p>
+      <p><em>Example 2: 'पुण्यात सगळ्यात soft इडली कुठे मिळते? आमच्या customers ला विचारा. रोज सकाळी 7 ते 10 — fresh बनवतो. Weekend ला special sambhar.'</em></p>
+      <p><em>Write in this exact style — short sentences, casual, English-Marathi mix."</em></p>
+
+      <div class="tip">
+        <strong>Pro Tip:</strong> तुमच्या best performing posts चे captions examples म्हणून द्या. AI तो tone copy करतो. 2-3 examples पुरतात.
+      </div>
+
+      <h2>Common Prompting Mistakes</h2>
+
+      <div class="warning">
+        <strong>Mistake 1:</strong> "Marathi मध्ये लिही" एवढंच सांगणं. AI ला formal Marathi default आहे. "Casual Marathi, like talking to a friend, mix English naturally" — हे सांगायलाच हवं.
+      </div>
+
+      <div class="warning">
+        <strong>Mistake 2:</strong> खूप लांब prompt देणं. 10 ओळींचा prompt पुरतो. 50 ओळींच्या prompt मध्ये AI confused होतो आणि सगळ्या instructions follow करत नाही.
+      </div>
+
+      <div class="warning">
+        <strong>Mistake 3:</strong> Output आलं की directly use करणं. AI चा first output ही starting point आहे. "Make it shorter", "Make it more casual", "Remove the formal words" — follow-up prompts द्या.
+      </div>
+
+      <h2>Iterative Prompting — एकदम perfect येत नाही</h2>
+
+      <p>पहिल्या prompt नंतर output 70% correct असतो. Follow-up prompts ने 95% पर्यंत नेता येतो:</p>
+
+      <ol>
+        <li><strong>First prompt:</strong> Main content generate करा</li>
+        <li><strong>Follow-up 1:</strong> "Make it shorter — remove any sentence that doesn't add value"</li>
+        <li><strong>Follow-up 2:</strong> "Replace formal Marathi words with casual equivalents"</li>
+        <li><strong>Follow-up 3:</strong> "Add a local Pune reference in the second line"</li>
+        <li><strong>Manual edit:</strong> Final 5% तुम्ही manually adjust करा</li>
+      </ol>
+
+      <h2>ChatGPT vs Gemini — Marathi साठी कोणतं चांगलं?</h2>
+
+      <table>
+        <thead>
+          <tr><th>Feature</th><th>ChatGPT</th><th>Gemini</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Marathi quality</td><td>चांगलं — casual tone बरोबर येतो</td><td>चांगलं — पण थोडं formal</td></tr>
+          <tr><td>English-Marathi mixing</td><td>Natural</td><td>Sometimes awkward</td></tr>
+          <tr><td>Free tier</td><td>Limited (GPT-4o mini)</td><td>Generous free usage</td></tr>
+          <tr><td>Best for</td><td>Captions, creative content</td><td>Content calendars, lists</td></tr>
+          <tr><td>Speed</td><td>Fast</td><td>Fast</td></tr>
+        </tbody>
+      </table>
+
+      <p>माझी recommendation: दोन्ही try करा. Captions साठी ChatGPT, planning साठी Gemini. दोन्ही free मध्ये पुरेसं काम होतं.</p>
+
+      <h2>Practice Exercise</h2>
+
+      <p>आत्ता हे करा:</p>
+      <ol>
+        <li>ChatGPT किंवा Gemini उघडा</li>
+        <li>वरचा Prompt 1 (Caption) copy करा</li>
+        <li>तुमच्या local area मधल्या कोणत्यातरी दुकानाची details भरा</li>
+        <li>Output बघा</li>
+        <li>"Make it more casual and shorter" असं follow-up द्या</li>
+        <li>दोन outputs compare करा — फरक बघा</li>
+      </ol>
+
+      <p>Prompting ही skill आहे — practice ने improve होते. पहिल्या 10 prompts mediocre असतील. 50 prompts नंतर तुम्ही expert व्हाल. सुरुवात करा.</p>
+
+    </div>
+
+    <div class="page-nav">
+      <a href="/blog/">← सगळे Blog Posts</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>InstaMarathi — मराठीत Instagram Business शिका. सगळं free, सगळं open.</p>
+    <p style="margin-top: 0.75em;"><a href="https://whatsapp.com/channel/0029Vb7xXnkFnSzDlxmcUV0l" target="_blank" rel="noopener" class="cta-whatsapp" style="font-size: 0.85rem; padding: 0.4rem 1rem;">WhatsApp Channel Join करा</a></p>
+    <p style="font-size: 0.85em; margin-top: 0.5em;">
+      <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener" style="color: inherit;">CC BY-NC-ND 4.0</a> — share freely, credit required, no commercial use, no derivatives.
+    </p>
+  </footer>
+<script>
+function toggleTheme(){var r=document.documentElement,c=r.getAttribute('data-theme')==='dark'?'light':'dark';r.setAttribute('data-theme',c);localStorage.setItem('theme',c);updateToggleIcon()}
+function updateToggleIcon(){var b=document.querySelector('.theme-toggle');if(b)b.textContent=document.documentElement.getAttribute('data-theme')==='dark'?'☀️':'🌙'}
+updateToggleIcon();
+</script>
+</body>
+</html>
