@@ -54,3 +54,5 @@ Disallow: /
 # Default: allow everything else
 User-agent: *
 Allow: /
+
+Sitemap: https://instamarathi.github.io/sitemap.xml
