@@ -188,24 +188,6 @@ nav .nav-links a.active {
   font-weight: 500;
 }
 
-/* WhatsApp CTA */
-.cta-whatsapp {
-  display: inline-block;
-  background: #25D366;
-  color: #fff;
-  font-weight: 600;
-  padding: 0.65rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 0.95rem;
-  transition: background 0.2s;
-}
-
-.cta-whatsapp:hover {
-  background: #1ebe57;
-  color: #fff;
-}
-
 /* Section cards (homepage) */
 .section-cards {
   display: grid;
