@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code ने Video बनवा — Remotion, Manim, HyperFrames आणि FFmpeg — InstaMarathi Blog</title>
+  <meta name="description" content="Remotion, Manim, Motion Canvas, Revideo, HyperFrames, FFmpeg, MoviePy — code ने Instagram reels बनवण्याचे tools. Licence, किंमत, learning curve, Marathi font tips आणि AI coding agent ला द्यायचे prompts.">
+  <link rel="canonical" href="https://instamarathi.github.io/blog/code-video-remotion-manim.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="InstaMarathi">
+  <meta property="og:locale" content="mr_IN">
+  <meta property="og:title" content="Code ने Video बनवा — Remotion, Manim, HyperFrames आणि FFmpeg — InstaMarathi Blog">
+  <meta property="og:description" content="Remotion, Manim, Motion Canvas, Revideo, HyperFrames, FFmpeg, MoviePy — code ने Instagram reels बनवण्याचे tools. Licence, किंमत, learning curve, Marathi font tips आणि AI coding agent ला द्यायचे prompts.">
+  <meta property="og:url" content="https://instamarathi.github.io/blog/code-video-remotion-manim.html">
+  <meta property="og:image" content="https://instamarathi.github.io/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DSX7QN8HXY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DSX7QN8HXY');
+  </script>
+</head>
+<body>
+  <script>
+(function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t)})();
+</script>
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">Insta<span>Marathi</span></a>
+      <button class="nav-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="/shika/business-kya-aahe.html">शिका</a></li>
+        <li><a href="/tools/canva.html">Tools</a></li>
+        <li><a href="/playbooks/">Playbooks</a></li>
+        <li><a href="/diy/niche-research.html">स्वतः बनवा</a></li>
+        <li><a href="/sales/">Sales</a></li>
+        <li><a href="/clients/kuthe-shodhayche.html">Clients</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+      </ul>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">☀️</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Code ने Video</div>
+      <span class="blog-category">Tools & How-To</span>
+      <h1>Code ने Video बनवा — Remotion, Manim, HyperFrames आणि FFmpeg</h1>
+      <div class="post-meta">Tools & How-To · October 2026</div>
+    </div>
+
+    <div class="blog-post">
+
+      <p>एका कपड्याच्या दुकानाला 50 products चे reels हवे आहेत. प्रत्येक reel मध्ये तोच layout — photo, नाव, किंमत, "आजच order करा". CapCut मध्ये हे 50 वेळा हाताने करायचं म्हणजे दोन-तीन दिवस जातात. आणि उद्या client म्हणाला "किंमतीचा font थोडा मोठा करा", तर पुन्हा 50 वेळा.</p>
+
+      <p>Code ने video बनवणं म्हणजे हाच प्रश्न सोडवणं. एकदा template लिहा, मग data बदलून कितीही videos render करा. 2026 मध्ये मोठा बदल हा आहे की code तुम्हाला स्वतः लिहावा लागत नाही — Claude Code, Codex, Cursor सारखा AI coding agent साध्या भाषेतल्या prompt वरून तो लिहून देतो. तुमचं काम: काय हवंय ते नीट सांगणं, output तपासणं, आणि client ला deliver करणं.</p>
+
+      <p>या post मध्ये 7 tools बघूया, प्रत्येकाचा freelancer म्हणून उपयोग कुठे, licence आणि किंमत काय, आणि Marathi text बरोबर कसा दिसेल.</p>
+
+      <h2>Code Video कुठे उपयोगी आहे?</h2>
+
+      <ul>
+        <li><strong>Templated product reels:</strong> 50 products, एकच design. Spreadsheet मधून नाव-किंमत-photo घ्या, 50 MP4 files तयार.</li>
+        <li><strong>Data/stat reels:</strong> "आमच्या clinic मध्ये 1,200 patients" असा आकडा 0 पासून वर जाणारा, bar chart वाढणारा.</li>
+        <li><strong>Tuition classes साठी explainer:</strong> गणिताचं सूत्र step-by-step लिहिलं जाणं, graph काढला जाणं.</li>
+        <li><strong>Auto-captioned reels:</strong> Client ने shoot केलेल्या video वर Marathi captions आपोआप बसवणं.</li>
+        <li><strong>Festival greeting templates:</strong> दिवाळी, गुढीपाडवा, गणेशोत्सव — एक design, 20 clients ची नावं आणि logos बदलून 20 videos.</li>
+      </ul>
+
+      <p>सामान्य धागा: <strong>repetition</strong>. एकच प्रकारचा video अनेक वेळा लागत असेल, तर code worth आहे. एकदाच लागणार असेल, तर बहुतेक वेळा नाही.</p>
+
+      <h2>2026 चा बदल — Code तुम्ही नाही, Agent लिहितो</h2>
+
+      <p>दोन वर्षांपूर्वी Remotion किंवा Manim वापरायचं म्हणजे React किंवा Python शिकणं. आता workflow असा आहे:</p>
+
+      <ol>
+        <li>Laptop वर Node.js किंवा Python install करा (agent हे सुद्धा सांगतो).</li>
+        <li>Claude Code / Codex / Cursor उघडा आणि plain भाषेत video describe करा.</li>
+        <li>Agent project बनवतो, code लिहितो, preview चालवतो.</li>
+        <li>तुम्ही preview बघा आणि बदल सांगा: "आकडा थोडा हळू वाढू दे", "logo वर उजवीकडे ठेवा".</li>
+        <li>Render करा, MP4 client ला पाठवा.</li>
+      </ol>
+
+      <p>Remotion आणि HyperFrames दोघांनी AI agents साठी "skills" दिले आहेत — agent ला framework चे नियम आधीच माहीत असतात, त्यामुळे चुका कमी होतात. AI agents video साठी कसे वापरायचे याचा सविस्तर भाग <a href="/blog/ai-skills-video-creation.html">AI Skills आणि Video Creation</a> post मध्ये आहे.</p>
+
+      <div class="tip">
+        <strong>Code वाचता आलं पाहिजे का?</strong> लिहिता येणं गरजेचं नाही, पण थोडं वाचता आलं तर फायदा होतो. "हा आकडा कुठे बदलायचा", "हा रंग कुठे आहे" हे ओळखता आलं की छोटे बदल agent शिवायही करता येतात. Agent ला विचारा: "हा code मला साध्या भाषेत समजावून सांग."
+      </div>
+
+      <h2>1. Remotion — React ने Video</h2>
+
+      <p>Remotion मध्ये video म्हणजे React component. प्रत्येक frame एक web page सारखी render होते. Current version 4.0.x आहे (26 October 2026 ला 4.0.539 release झाला). Templated reels, stat reels, captions — सगळ्यासाठी हा सगळ्यात mature पर्याय आहे.</p>
+
+      <p>एक छोटा stat reel component असा दिसतो — आकडा 2 seconds (60 frames) मध्ये 0 पासून वर जातो:</p>
+
+<pre class="prompt-block" style="font-family: monospace; font-size: 0.8rem; overflow-x: auto;"><code>import {AbsoluteFill, useCurrentFrame, interpolate} from 'remotion';
+
+export const StatReel = ({number, label}) =&gt; {
+  const frame = useCurrentFrame();
+  const value = Math.round(
+    interpolate(frame, [0, 60], [0, number], {extrapolateRight: 'clamp'})
+  );
+  return (
+    &lt;AbsoluteFill style={{background: '#111', color: '#fff',
+      justifyContent: 'center', alignItems: 'center', fontFamily: 'Mukta'}}&gt;
+      &lt;h1 style={{fontSize: 160}}&gt;{value}+&lt;/h1&gt;
+      &lt;p style={{fontSize: 56}}&gt;{label}&lt;/p&gt;
+    &lt;/AbsoluteFill&gt;
+  );
+};</code></pre>
+
+      <p><code>number</code> आणि <code>label</code> बदलले की नवीन video. 50 products साठी हेच — spreadsheet ची प्रत्येक row एक video.</p>
+
+      <h3>Licence — नीट समजून घ्या</h3>
+
+      <p>Remotion पूर्ण free open-source नाही. त्याचं स्वतःचं licence आहे:</p>
+
+      <ul>
+        <li><strong>Free License:</strong> individuals, 3 पर्यंत employees असलेल्या for-profit companies, non-profits, आणि evaluation करणारे. Commercial use सुद्धा allowed.</li>
+        <li><strong>Company License:</strong> 4 किंवा जास्त लोकांच्या company ला लागतं. Creators plan $25 per seat per month; Automators plan (server वर automatic renders) $0.01 per render, minimum $100 per month (October 2026 चे दर).</li>
+      </ul>
+
+      <p>Solo freelancer किंवा 2-3 जणांच्या agency ला Remotion free आहे. Agency मोठी झाली की licence घ्यावं लागेल. Remotion ने सांगितलं आहे की version 5.0 मध्ये licence थोडं बदलणार आहे — तेव्हा पुन्हा तपासा.</p>
+
+      <h2>2. Manim — गणित आणि Explainer Animations</h2>
+
+      <p>Manim हे 3Blue1Brown (Grant Sanderson) ने गणिताचे videos बनवण्यासाठी तयार केलेलं Python library आहे. सूत्रं लिहिली जाणं, आकृत्या बदलणं, graphs — tuition classes आणि coaching institutes साठी उत्तम.</p>
+
+      <p>दोन versions आहेत:</p>
+
+      <ul>
+        <li><strong>Manim Community Edition (CE):</strong> community maintained, documentation चांगलं, beginners साठी हेच वापरा. Latest 0.22.0 (8 October 2026), Python 3.11 किंवा पुढचं लागतं. MIT licence.</li>
+        <li><strong>ManimGL:</strong> 3b1b चं स्वतःचं version, OpenGL वर चालतं, interactive preview fast. Last release v1.7.2. MIT licence. Grant स्वतःच्या videos साठी वापरतो; docs कमी आहेत.</li>
+      </ul>
+
+      <p>दोघांचा code एकमेकांशी पूर्ण compatible नाही. Internet वरचं example कोणत्या version चं आहे ते बघा. Agent ला prompt देताना "Manim Community Edition" स्पष्ट लिहा.</p>
+
+<pre class="prompt-block" style="font-family: monospace; font-size: 0.8rem; overflow-x: auto;"><code>from manim import *
+
+class Pythagoras(Scene):
+    def construct(self):
+        title = Text("पायथागोरसचे प्रमेय", font="Noto Sans Devanagari")
+        eq = MathTex("a^2 + b^2 = c^2").scale(2)
+        self.play(Write(title))
+        self.play(title.animate.to_edge(UP))
+        self.play(Write(eq))
+        self.wait(2)</code></pre>
+
+      <p>Reel साठी vertical (1080×1920) render करायचं असेल तर agent ला सांगा — Manim चा default landscape आहे.</p>
+
+      <h2>3. Motion Canvas — Animation Editor + Code</h2>
+
+      <p>Motion Canvas हे TypeScript library आहे. Animation code मध्ये लिहायचं, पण बरोबर एक browser editor मिळतो ज्यात real-time preview आणि timeline दिसते. Voiceover बरोबर animation sync करायला सोयीचं. Explainer आणि diagram-heavy videos साठी चांगलं. MIT licence, free.</p>
+
+      <p>मर्यादा: शेवटचा npm release 3.17.2 (December 2024) आहे — repo वर काम चालू असलं तरी releases हळू येतात. Data वरून शेकडो videos auto-render करणं हा त्याचा मुख्य उद्देश नाही.</p>
+
+      <h2>4. Revideo — Motion Canvas शैली, Automation साठी</h2>
+
+      <p>Revideo मध्ये scenes TypeScript मध्ये Motion Canvas सारख्या generator functions ने लिहिले जातात, पण focus आहे headless rendering वर — म्हणजे server किंवा script मधून video आपोआप render करणं. MIT licence, free. Latest 0.11.0 (July 2026). Revideo च्या README मध्येच लिहिलं आहे की scene plain TypeScript असल्याने Claude किंवा Codex prompt वरून तो लिहू शकतो.</p>
+
+      <p>Community Remotion पेक्षा खूप लहान आहे, त्यामुळे अडकलात तर examples कमी मिळतात. Remotion चं licence टाळायचं असेल आणि team 4+ लोकांची असेल, तर पर्याय म्हणून बघा.</p>
+
+      <h2>5. HyperFrames — HTML लिहा, Video मिळवा</h2>
+
+      <p>HyperFrames हे HeyGen ने open-source केलेलं framework आहे. Video म्हणजे साधी HTML file — text, images, CSS, आणि GSAP सारख्या libraries ने animation. Headless Chrome आणि FFmpeg वापरून MP4 render होतो. Tagline आहे: "Write HTML. Render video. Built for agents." Apache 2.0 licence — per-render fee नाही, team size ची अट नाही. Node.js 22+ आणि FFmpeg लागतं.</p>
+
+      <p>हे HeyGen च्या avatar / talking-head product पेक्षा वेगळं आहे — इथे AI avatar नाही, फक्त design आणि motion graphics. Claude Code साठी plugin आहे, आणि Codex, Cursor, Gemini CLI साठी skills आहेत. Project नवीन आहे (version 0.8.x), त्यामुळे बदल वेगाने होतात.</p>
+
+      <div class="tip">
+        <strong>कोणासाठी:</strong> HTML/CSS थोडं माहीत आहे, किंवा पूर्णपणे agent वर अवलंबून राहायचं आहे — तर HyperFrames सोपं पडतं. Festival greeting templates, product promos, text animation reels यासाठी चांगलं.
+      </div>
+
+      <h2>6. FFmpeg — कापणं, जोडणं, Captions</h2>
+
+      <p>FFmpeg हे command-line tool आहे — जवळपास सगळे video tools (Remotion, HyperFrames सुद्धा) आतून हेच वापरतात. Animation बनवण्यासाठी नाही, तर तयार videos वर काम करण्यासाठी: clip कापणं, अनेक clips जोडणं, 16:9 चा 9:16 करणं, compress करणं, background music लावणं, आणि <code>.srt</code> captions video मध्ये burn करणं. Latest stable 9.0.x (September 2026). Free, LGPL/GPL licence.</p>
+
+<pre class="prompt-block" style="font-family: monospace; font-size: 0.8rem; overflow-x: auto;"><code>ffmpeg -i reel.mp4 -vf "subtitles=captions.srt:force_style='FontName=Mukta,FontSize=14'" out.mp4</code></pre>
+
+      <p>Commands लक्षात ठेवायची गरज नाही — agent ला सांगा "या folder मधल्या सगळ्या videos चे पहिले 2 seconds कापून 9:16 कर". 30 videos एका command मध्ये होतात.</p>
+
+      <h2>7. MoviePy — Python मधून Editing</h2>
+
+      <p>MoviePy हे Python library आहे: clips कापणं, जोडणं, text overlay, transitions. FFmpeg पेक्षा वाचायला सोपं. Latest 2.2.1 (May 2025), MIT licence. Version 2 मध्ये बरेच functions बदलले आहेत, त्यामुळे जुने (1.x) internet examples चालत नाहीत — agent ला "MoviePy 2.x" स्पष्ट सांगा.</p>
+
+      <p>Simple slideshow reels, photos + music + text, किंवा shoot केलेल्या clips आपोआप जोडणं यासाठी ठीक. Fancy motion graphics साठी Remotion किंवा HyperFrames चांगले.</p>
+
+      <h2>Lottie बद्दल एक ओळ</h2>
+
+      <p>Lottie हे animation file format आहे (JSON). After Effects मधून export होतं, आणि LottieFiles वर तयार animations मिळतात. Remotion (<code>@remotion/lottie</code>) आणि HyperFrames दोघांमध्ये Lottie वापरता येतं — म्हणजे तयार icon animation किंवा confetti तुमच्या code video मध्ये टाकता येतं, After Effects न शिकता.</p>
+
+      <h2>Comparison Table</h2>
+
+      <table>
+        <thead>
+          <tr><th>Tool</th><th>भाषा</th><th>Best for</th><th>Licence/किंमत</th><th>Difficulty</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Remotion</td><td>React (TypeScript/JS)</td><td>50 product reels, stat reels, captions</td><td>3 लोकांपर्यंत free; मोठ्या company ला $25/seat/month</td><td>मध्यम</td></tr>
+          <tr><td>Manim CE</td><td>Python</td><td>गणित, tuition explainers</td><td>MIT, free</td><td>मध्यम</td></tr>
+          <tr><td>ManimGL</td><td>Python</td><td>Advanced गणित animation</td><td>MIT, free</td><td>कठीण</td></tr>
+          <tr><td>Motion Canvas</td><td>TypeScript</td><td>Voiceover sync explainers</td><td>MIT, free</td><td>मध्यम</td></tr>
+          <tr><td>Revideo</td><td>TypeScript</td><td>Server वर auto-render</td><td>MIT, free</td><td>मध्यम-कठीण</td></tr>
+          <tr><td>HyperFrames</td><td>HTML/CSS/JS</td><td>Greeting templates, promos</td><td>Apache 2.0, free</td><td>सोपं-मध्यम</td></tr>
+          <tr><td>FFmpeg</td><td>Command line</td><td>कापणं, जोडणं, captions burn</td><td>LGPL/GPL, free</td><td>सोपं (agent सोबत)</td></tr>
+          <tr><td>MoviePy</td><td>Python</td><td>Slideshow, clips जोडणं</td><td>MIT, free</td><td>सोपं</td></tr>
+        </tbody>
+      </table>
+
+      <p>Difficulty agent वापरून आहे. स्वतः code लिहायचा असेल तर प्रत्येक एक पायरी कठीण समजा.</p>
+
+      <h2>Agent ला द्यायचा Prompt — Example</h2>
+
+      <div class="prompt-block"><span class="label">Prompt</span>मला Remotion मध्ये Instagram reel template हवं आहे. Size 1080x1920, 30fps, 8 seconds.
+products.csv मध्ये columns आहेत: name, price, photo (images/ folder मधलं file name).
+प्रत्येक row साठी एक video:
+- 0-2s: product photo हळूहळू zoom-in
+- 2-5s: खाली product नाव (Marathi) आणि किंमत "₹" सह slide-up
+- 5-8s: "आजच order करा" आणि WhatsApp number 98XXXXXXXX
+Font: Noto Sans Devanagari (Google Fonts मधून load कर). Colors: #8B1E3F आणि #F5E6C8.
+आधी एका product चा preview दाखव. मी OK म्हटल्यावर सगळ्या rows चे MP4 out/ folder मध्ये render कर.</div>
+
+      <p>लक्षात घ्या: size, duration, data कुठे आहे, प्रत्येक second ला काय, font, colors — सगळं स्पष्ट. "छान reel बनव" असा vague prompt दिला तर agent अंदाज लावतो, आणि 3-4 वेळा दुरुस्ती करावी लागते. Prompt templates आणि पूर्ण workflow साठी <a href="/blog/video-creation-system.html">Video Creation System</a> post बघा.</p>
+
+      <h2>Marathi Text — Font आणि जोडाक्षरे तपासा</h2>
+
+      <p>Code video मध्ये सगळ्यात जास्त अडचण Marathi text ला येते. Font योग्य नसेल तर "क्ष", "ज्ञ", "श्र", "द्ध" सारखी जोडाक्षरे तुटतात, किंवा मात्रा (ि, ी) चुकीच्या जागी दिसतात.</p>
+
+      <ul>
+        <li><strong>Font:</strong> Noto Sans Devanagari, Mukta, Hind, Baloo 2 — हे Google Fonts वर free आहेत आणि Devanagari नीट support करतात. Font file project मध्ये ठेवा किंवा Google Fonts मधून load करा; system font वर अवलंबून राहू नका.</li>
+        <li><strong>Remotion / HyperFrames:</strong> Browser मध्ये render होतं, त्यामुळे font load झाला की Marathi सहसा बरोबर दिसतं. Remotion मध्ये <code>@remotion/google-fonts</code> package आहे.</li>
+        <li><strong>Manim:</strong> Marathi साठी <code>Text()</code> वापरा आणि <code>font=</code> द्या. <code>Tex()</code> / <code>MathTex()</code> मध्ये Devanagari टाकू नका — ते LaTeX वरून चालतात आणि Devanagari साठी वेगळं setup लागतं. सूत्रं MathTex मध्ये, Marathi शब्द Text मध्ये.</li>
+        <li><strong>MoviePy:</strong> Text Pillow वरून बनतो. Pillow ला complex script layout (libraqm) मिळालं नाही तर मात्रा चुकतात. Render झाल्यावर नक्की तपासा.</li>
+        <li><strong>FFmpeg captions:</strong> <code>FontName</code> मध्ये Devanagari font द्या आणि तो font laptop वर install असल्याची खात्री करा.</li>
+      </ul>
+
+      <div class="tip">
+        <strong>Test sentence:</strong> प्रत्येक नवीन template मध्ये हे वाक्य टाकून एक frame render करा: "क्षमा, ज्ञान, श्रीगणेश, शुद्ध, प्रकृती, कृष्ण, दिवाळीच्या शुभेच्छा". हे सगळं बरोबर दिसलं तर बाकीचं Marathi सहसा ठीक येतं.
+      </div>
+
+      <h2>Code Video कधी वापरू नये</h2>
+
+      <div class="warning">
+        <strong>हे code ने करू नका:</strong>
+        <ul>
+          <li><strong>एकदाच लागणारा emotional reel:</strong> दुकानाच्या 25 वर्षांची गोष्ट, मालकाची मुलाखत, customer चा अनुभव — phone वर shoot करा आणि CapCut मध्ये edit करा. <a href="/blog/capcut-phone-masterclass.html">CapCut Phone Masterclass</a> बघा.</li>
+          <li><strong>Trending audio वर reel:</strong> Instagram चा trending audio app मधूनच लावावा लागतो. Code ने render केलेल्या video ला नंतर Instagram मध्ये audio जोडा.</li>
+          <li><strong>Deadline आज संध्याकाळी:</strong> पहिला template setup करायला 2-4 तास लागू शकतात (install, font, दुरुस्त्या). Canva किंवा CapCut template जलद.</li>
+          <li><strong>Client ला स्वतः बदल करायचे आहेत:</strong> Client code उघडणार नाही. त्यांना editable हवं असेल तर Canva template द्या.</li>
+        </ul>
+      </div>
+
+      <h2>सुरुवात कशी करायची</h2>
+
+      <ol>
+        <li>एक tool निवडा. Product/stat reels साठी Remotion किंवा HyperFrames; tuition explainers साठी Manim CE.</li>
+        <li>Agent ला सांगा "माझ्या laptop वर [tool] setup कर आणि एक 5-second test video render कर".</li>
+        <li>Marathi test sentence टाकून font तपासा.</li>
+        <li>तुमच्या एका client साठी एक template बनवा — उदा. 10 products. Time लिहून ठेवा.</li>
+        <li>तेच काम CapCut मध्ये किती वेळ लागलं असतं याशी तुलना करा. फरक मोठा असेल तर ही service म्हणून विका: "50 product reels, एका आठवड्यात".</li>
+      </ol>
+
+      <p>Budget laptop (8GB RAM) वर हे tools चालतात, फक्त render हळू होतो — 50 छोटे reels रात्रभर render ला ठेवा. Phone वर हे करता येत नाही; laptop लागतोच.</p>
+
+      <p>Code video ही जादू नाही. पहिला template बनवायला वेळ लागतो, आणि Marathi font सारख्या छोट्या अडचणी येतात. पण एकदा template तयार झाला की 50 वा video पहिल्याइतकाच सोपा. Repetition असलेल्या कामात इथेच तुमचा वेळ वाचतो, आणि इतर freelancers पेक्षा जलद delivery देता येते.</p>
+
+    </div>
+
+    <div class="page-nav">
+      <a href="/blog/">← सगळे Blog Posts</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>InstaMarathi — मराठीत Instagram Business शिका. सगळं free, सगळं open.</p>
+    <p style="font-size: 0.85em; margin-top: 0.5em;">
+      <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener" style="color: inherit;">CC BY-NC-ND 4.0</a> — share freely, credit required, no commercial use, no derivatives.
+    </p>
+  </footer>
+<script>
+function toggleTheme(){var r=document.documentElement,c=r.getAttribute('data-theme')==='dark'?'light':'dark';r.setAttribute('data-theme',c);localStorage.setItem('theme',c);updateToggleIcon()}
+function updateToggleIcon(){var b=document.querySelector('.theme-toggle');if(b)b.textContent=document.documentElement.getAttribute('data-theme')==='dark'?'☀️':'🌙'}
+updateToggleIcon();
+</script>
+</body>
+</html>

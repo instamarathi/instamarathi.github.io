@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Agent Skills म्हणजे काय — आणि Video बनवण्यासाठी कामाचे Skills — InstaMarathi Blog</title>
+  <meta name="description" content="Agent Skills (SKILL.md) सोप्या मराठीत — Claude, Codex सारख्या AI agents ला नवीन काम शिकवणारे folders. Remotion, HyperFrames, Manim, FFmpeg, video-use सारखे video creation skills, prompts, खर्च आणि safety.">
+  <link rel="canonical" href="https://instamarathi.github.io/blog/ai-skills-video-creation.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="InstaMarathi">
+  <meta property="og:locale" content="mr_IN">
+  <meta property="og:title" content="AI Agent Skills म्हणजे काय — आणि Video बनवण्यासाठी कामाचे Skills — InstaMarathi Blog">
+  <meta property="og:description" content="Agent Skills (SKILL.md) सोप्या मराठीत — Claude, Codex सारख्या AI agents ला नवीन काम शिकवणारे folders. Remotion, HyperFrames, Manim, FFmpeg, video-use सारखे video creation skills, prompts, खर्च आणि safety.">
+  <meta property="og:url" content="https://instamarathi.github.io/blog/ai-skills-video-creation.html">
+  <meta property="og:image" content="https://instamarathi.github.io/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DSX7QN8HXY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DSX7QN8HXY');
+  </script>
+</head>
+<body>
+  <script>
+(function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t)})();
+</script>
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">Insta<span>Marathi</span></a>
+      <button class="nav-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="/shika/business-kya-aahe.html">शिका</a></li>
+        <li><a href="/tools/canva.html">Tools</a></li>
+        <li><a href="/playbooks/">Playbooks</a></li>
+        <li><a href="/diy/niche-research.html">स्वतः बनवा</a></li>
+        <li><a href="/sales/">Sales</a></li>
+        <li><a href="/clients/kuthe-shodhayche.html">Clients</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+      </ul>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">☀️</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / AI Skills for Video Creation</div>
+      <span class="blog-category">Tools & How-To</span>
+      <h1>AI Agent Skills म्हणजे काय — आणि Video बनवण्यासाठी कामाचे Skills</h1>
+      <div class="post-meta">Tools & How-To · October 2026</div>
+    </div>
+
+    <div class="blog-post">
+
+      <p>Claude Code किंवा Codex ला "माझ्या bakery साठी 15 second reel बनव" असं सांगितलं, तर तो काहीतरी बनवतो. पण दर वेळी तो शून्यापासून विचार करतो — कोणतं tool, कोणती size, captions कसे, render कसा. त्यामुळे result कधी चांगला, कधी गोंधळलेला.</p>
+
+      <p>"Skill" हा प्रश्न सोडवतो. Skill म्हणजे AI agent साठी लिहिलेलं एक तयार instruction पुस्तक. ते install केलं की agent ला ते काम "आधीच शिकलेलं" असतं. या post मध्ये skill म्हणजे काय, non-programmer ने ते कसं वापरायचं, आणि video बनवण्यासाठी आज खरोखर उपलब्ध असलेले skills कोणते — ते बघूया.</p>
+
+      <h2>Agent Skill म्हणजे काय? (सोप्या भाषेत)</h2>
+
+      <p>एक skill म्हणजे एक folder. त्यात एक <strong>SKILL.md</strong> नावाची file असते — त्यात skill चं नाव, एका ओळीत "हा skill कधी वापरायचा" याचं वर्णन, आणि मग step-by-step सूचना. सोबत गरज असेल तर scripts (code), reference notes, templates, fonts वगैरे.</p>
+
+<pre><code>reel-skill/
+├── SKILL.md      ← नाव + वर्णन + सूचना (हे compulsory)
+├── scripts/      ← agent चालवू शकेल असा code (optional)
+├── references/   ← जास्तीची माहिती (optional)
+└── assets/       ← templates, fonts, images (optional)</code></pre>
+
+      <p>Agent हे कसं वापरतो? सुरुवातीला तो फक्त सगळ्या skills ची नावं आणि वर्णनं वाचतो. तुम्ही विचारलेलं काम एखाद्या skill च्या वर्णनाशी जुळलं, की तेव्हाच तो पूर्ण SKILL.md उघडतो आणि त्याप्रमाणे काम करतो. म्हणून 20-30 skills install असले तरी agent गोंधळत नाही.</p>
+
+      <p>हे format Anthropic ने बनवलं आणि नंतर <strong>open standard</strong> म्हणून खुलं केलं (agentskills.io). आज Claude (claude.ai app आणि Claude Code), OpenAI चा Codex, Cursor, GitHub Copilot, Gemini CLI यांसारखे अनेक agents हेच format वाचतात. म्हणजे एकदा skill शिकलात की तो वेगवेगळ्या agents मध्ये चालतो.</p>
+
+      <div class="tip">
+        <strong>एका वाक्यात:</strong> Prompt म्हणजे एकदा दिलेली सूचना. Skill म्हणजे agent कडे कायम ठेवलेलं, तपासलेलं "कसं करायचं" पुस्तक — तुम्ही साधं बोललात तरी तो ते पुस्तक उघडून काम करतो.
+      </div>
+
+      <h2>Non-programmer ने skill कसा वापरायचा?</h2>
+
+      <p>तुम्हाला code लिहायचा नाही. फक्त तीन गोष्टी:</p>
+
+      <ol>
+        <li><strong>Agent निवडा:</strong> Video skills साठी सहसा <strong>Claude Code</strong> किंवा <strong>Codex</strong> लागतो, कारण ते तुमच्या laptop वर commands चालवून video render करतात. Claude Code साठी Claude Pro (साधारण $20/महिना, October 2026) लागतो; Codex ChatGPT plans मध्ये येतो (Plus साधारण $20/महिना).</li>
+        <li><strong>Skill install करा:</strong> बहुतेक skills एका command ने install होतात. उदा. <code>npx skills add remotion-dev/skills</code>. हे command agent ला सांगूनही चालवून घेता येतं — "हा skill install कर" असं लिहा.</li>
+        <li><strong>साध्या भाषेत मागा:</strong> "माझ्या bakery साठी 9:16 reel बनव" — एवढंच. Agent योग्य skill आपोआप उचलतो. हवं तर नावाने बोलवा: Claude Code मध्ये <code>/remotion-create</code>, Codex मध्ये <code>$skill-name</code>.</li>
+      </ol>
+
+      <p>claude.ai (web/app) मध्येही skills वापरता येतात — Free plan सकट. Settings मध्ये "Code execution / Create and edit files" चालू करा, मग Customize → Skills मध्ये skill चा ZIP upload करा. पण video render करायला जड software (Node, FFmpeg, Chrome) लागतं, म्हणून video साठी laptop वरचा Claude Code किंवा Codex जास्त सोयीचा.</p>
+
+      <h3>Skills कुठे मिळतात?</h3>
+
+      <ul>
+        <li><strong>Official repos:</strong> <code>github.com/anthropics/skills</code> (Anthropic चे — documents, design, GIF वगैरे), <code>remotion-dev/skills</code>, <code>heygen-com/hyperframes</code>.</li>
+        <li><strong>skills.sh:</strong> Vercel चं directory. Install संख्येनुसार leaderboard, आणि <code>npx skills add owner/repo</code> हा CLI इथूनच येतो.</li>
+        <li><strong>Claude Code plugin marketplace:</strong> <code>/plugin marketplace add anthropics/skills</code> सारख्या command ने पूर्ण संच जोडता येतो.</li>
+        <li><strong>GitHub search:</strong> "manim skill", "ffmpeg skill" शोधा — पण इथे कोणीही काहीही टाकू शकतो, म्हणून खालचा warning नक्की वाचा.</li>
+      </ul>
+
+      <div class="warning">
+        <strong>Skill म्हणजे तुमच्या laptop वर चालणारा code:</strong>
+        <ul>
+          <li>Skill मधले scripts agent तुमच्या machine वर चालवतो. चुकीचा skill files delete करू शकतो किंवा तुमचा data बाहेर पाठवू शकतो. Anthropic च्या help page वरही हेच लिहिलं आहे — फक्त trusted sources कडूनच install करा.</li>
+          <li>Install करण्याआधी SKILL.md उघडून वाचा. "हा URL ला data पाठव", "ही key कुठे paste कर" असं काही विचित्र दिसलं तर थांबा. समजत नसेल तर agent ला विचारा: "हा skill काय काय करतो ते मराठीत सांग, काही धोकादायक आहे का?"</li>
+          <li>GitHub stars जास्त म्हणजे safe असं नाही. Official company repo (Remotion, HeyGen, Anthropic) ला प्राधान्य द्या.</li>
+          <li><strong>खर्च:</strong> Skill बहुतेक free असतो, पण agent चा subscription (साधारण $20/महिना) लागतो. काही skills ElevenLabs, HeyGen सारख्या paid API keys मागतात. आणि budget laptop वर render ला वेळ लागतो — 15 second reel ला काही मिनिटं, मोठ्या video ला जास्त.</li>
+        </ul>
+      </div>
+
+      <h2>Video बनवण्यासाठी कामाचे Skills</h2>
+
+      <p>खालचे सगळे skills आज (October 2026) GitHub वर उपलब्ध आहेत (repos तपासून ही list बनवली आहे). प्रत्येकासाठी — काय करतो, reel साठी उदाहरण prompt, आणि कोणासाठी योग्य.</p>
+
+      <h3>1. Remotion Skills (official)</h3>
+
+      <p>Remotion हे React code ने video बनवण्याचं tool आहे. त्यांच्या official <code>remotion-dev/skills</code> repo मध्ये 12 skills आहेत: नवीन video बनवणं (<code>remotion-create</code>), preview (<code>remotion-studio</code>), render (<code>remotion-render</code>), captions (<code>remotion-captions</code> — Whisper ने laptop वरच transcribe करतो, GPU लागतो), map animations (<code>remotion-maps</code>) वगैरे. सगळ्यांचा router म्हणजे <code>remotion-best-practices</code>.</p>
+
+      <ul>
+        <li><strong>Install:</strong> <code>npx skills add remotion-dev/skills</code></li>
+        <li><strong>Prompt:</strong> "Remotion वापरून 1080x1920 चा 10 second reel बनव: 'नवीन batch सुरू — 1 November पासून' हा मराठी text मोठ्या font मध्ये slide होऊन यावा, background orange gradient."</li>
+        <li><strong>कोणासाठी:</strong> एकाच design चे 50 variations (प्रत्येक product, प्रत्येक offer) बनवायचे असतील तर. Licence: individuals आणि 3 employees पर्यंतच्या companies ना commercial use free; मोठ्या companies ला paid company licence.</li>
+      </ul>
+
+      <p>Remotion आणि Manim मध्ये code ने video कसा बनतो याची सविस्तर माहिती <a href="/blog/code-video-remotion-manim.html">Code ने Video — Remotion आणि Manim</a> या post मध्ये आहे.</p>
+
+      <h3>2. HyperFrames Skills (HeyGen)</h3>
+
+      <p>HyperFrames हे HeyGen चं open-source (Apache 2.0) framework — HTML/CSS animation चा MP4 video बनवतो. Skills install केल्यावर <code>/hyperframes</code> हा मुख्य skill तुमची request ओळखून योग्य workflow निवडतो: product launch video, faceless explainer (चेहरा नसलेला माहितीपर video), talking-head video वर captions, music च्या beat वर चालणारा video, motion graphics, vertical social clip.</p>
+
+      <ul>
+        <li><strong>Install:</strong> <code>npx skills add heygen-com/hyperframes</code> (Claude Code मध्ये plugin म्हणूनही मिळतो). Node.js 22+ आणि FFmpeg लागतं.</li>
+        <li><strong>Prompt:</strong> "/hyperframes — या 20 second गाण्याच्या beat वर माझ्या दुकानाचे हे 8 photos 9:16 मध्ये cut कर, शेवटी logo आणि पत्ता."</li>
+        <li><strong>Prompt (explainer):</strong> "GST invoice म्हणजे काय यावर 30 second faceless explainer reel बनव, मोठे मराठी text cards, साधे icons."</li>
+        <li><strong>कोणासाठी:</strong> Template-type reels, offer announcements, explainer content. Render laptop वर free होतो. Voiceover साठी free local option (Kokoro) आहे पण त्यात मराठी नाही; HeyGen avatar/voice साठी HeyGen account आणि credits लागतात.</li>
+      </ul>
+
+      <h3>3. Manim Skills</h3>
+
+      <p>Manim हे 3Blue1Brown style गणित/diagram animation चं Python tool. Official Manim team चा skill नाही, पण community मधला <code>adithya-s-k/manim_skill</code> (MIT licence, GitHub वर 1,200+ stars) सगळ्यात लोकप्रिय आहे — Manim Community आणि ManimGL दोन्हीसाठी सूचना.</p>
+
+      <ul>
+        <li><strong>Install:</strong> <code>npx skills add adithya-s-k/manim_skill</code>. Python, FFmpeg आणि LaTeX लागतं — setup थोडा जड.</li>
+        <li><strong>Prompt:</strong> "Manim ने 15 second animation बनव: 'SIP मध्ये दरमहा ₹2,000 टाकले तर 10 वर्षांत किती?' — graph हळूहळू वर जाताना दाखव."</li>
+        <li><strong>कोणासाठी:</strong> Coaching classes, CA/financial advisors, tuition teachers — जिथे concept समजावायचा आहे.</li>
+      </ul>
+
+      <h3>4. video-use — Raw footage edit करणारा skill</h3>
+
+      <p><code>browser-use/video-use</code> (MIT licence) हा skill raw clips चा final video बनवतो: "अं… उं…" आणि रिकामे भाग कापतो, color grade करतो, subtitles burn करतो, गरज असेल तर HyperFrames/Remotion/Manim ने animation overlays जोडतो. Claude Code आणि Codex दोन्हीत चालतो.</p>
+
+      <ul>
+        <li><strong>Install:</strong> repo च्या README मधला setup prompt agent मध्ये paste करा — agent स्वतः install करतो. Transcription साठी <strong>ElevenLabs API key</strong> लागते (paid service, free tier मर्यादित).</li>
+        <li><strong>Prompt:</strong> "या folder मधल्या 6 clips मधून 30 second reel बनव — मालक cake बद्दल बोलतोय, चुकलेले takes काढ, खाली मोठे captions."</li>
+        <li><strong>कोणासाठी:</strong> Client ने phone वर shoot केलेले talking clips edit करणारे freelancers.</li>
+      </ul>
+
+      <h3>5. FFmpeg Skills — छोटी, रोजची कामं</h3>
+
+      <p>FFmpeg हे video convert/cut/compress करणारं free tool. त्यासाठी अनेक community skills आहेत — उदा. OpenMontage project मधला <code>ffmpeg</code> skill (AGPL-3.0) किंवा <code>gupsammy/claudest</code> मधला <code>convert-video</code> (command चालवण्याआधी तुमची परवानगी मागतो). यांपैकी एकही official FFmpeg team चा नाही — install आधी SKILL.md वाचा.</p>
+
+      <ul>
+        <li><strong>Prompt:</strong> "हा 16:9 video 9:16 मध्ये crop कर, 30 second पर्यंत कापून, WhatsApp वर जाईल इतका compress कर."</li>
+        <li><strong>कोणासाठी:</strong> सगळ्यांसाठी. खरं तर Claude Code ला skill शिवायही बरेच FFmpeg commands येतात; skill मुळे ते जास्त consistent होतं.</li>
+      </ul>
+
+      <h3>6. Thumbnail, poster आणि reel script साठी skills</h3>
+
+      <ul>
+        <li><strong>canvas-design (Anthropic):</strong> <code>anthropics/skills</code> मध्ये. PNG/PDF poster किंवा static design बनवतो — reel cover, offer poster साठी. Prompt: "Diwali offer साठी 1080x1920 reel cover बनव, मध्ये मोठं '20% सूट'."</li>
+        <li><strong>slack-gif-creator (Anthropic):</strong> नावात Slack आहे, पण छोटे animated GIF/sticker बनवायला उपयोगी.</li>
+        <li><strong>social, video, image (marketingskills):</strong> <code>coreyhaines31/marketingskills</code> (MIT) मध्ये. <code>social</code> skill reels चे hooks, scripts आणि content calendar लिहितो; <code>video</code> skill AI video tools आणि Remotion/HyperFrames मधून योग्य मार्ग सुचवतो.</li>
+      </ul>
+
+      <p>Script मराठीत नैसर्गिक हवी असेल तर prompt कसा लिहायचा हे <a href="/blog/marathi-prompting-guide.html">मराठी Prompting Guide</a> मध्ये आहे.</p>
+
+      <h2>Quick Comparison</h2>
+
+      <table>
+        <thead>
+          <tr><th>Skill</th><th>काय करतो</th><th>कोणासाठी</th><th>कुठे मिळतो</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Remotion Skills</td><td>Code-based video, captions, render</td><td>एकाच template चे अनेक reels</td><td>remotion-dev/skills</td></tr>
+          <tr><td>HyperFrames</td><td>Launch video, explainer, captions, music-to-video</td><td>Offer reels, explainers</td><td>heygen-com/hyperframes</td></tr>
+          <tr><td>Manim skill</td><td>गणित/diagram animation</td><td>Classes, finance advisors</td><td>adithya-s-k/manim_skill</td></tr>
+          <tr><td>video-use</td><td>Raw clips चं edit, subtitles</td><td>Talking-head reels edit करणारे</td><td>browser-use/video-use</td></tr>
+          <tr><td>FFmpeg skills</td><td>Crop, cut, compress, convert</td><td>सगळ्यांसाठी</td><td>OpenMontage, claudest (community)</td></tr>
+          <tr><td>canvas-design</td><td>Poster, reel cover</td><td>Thumbnail लागणारे</td><td>anthropics/skills</td></tr>
+          <tr><td>social</td><td>Hooks, reel scripts, calendar</td><td>Content planning</td><td>coreyhaines31/marketingskills</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Practical Example: Pune bakery साठी 15 second Diwali offer reel</h2>
+
+      <p>समजा कोथरूडमधल्या एका bakery ला Diwali faral box वर 15% सूट जाहीर करायची आहे. HyperFrames skill वापरून हे असं करता येईल:</p>
+
+      <ol>
+        <li><strong>Setup (एकदाच):</strong> Laptop वर Node.js 22+ आणि FFmpeg install करा (हेही agent ला सांगून करून घेता येतं). Claude Code उघडा आणि लिहा: "heygen-com/hyperframes skills install कर."</li>
+        <li><strong>Material एका folder मध्ये:</strong> 4-5 product photos (faral box, करंजी, चकली), bakery चा logo, आणि एक मराठी font file (उदा. Google Fonts वरचा Mukta किंवा Noto Sans Devanagari).</li>
+        <li><strong>Prompt द्या:</strong></li>
+      </ol>
+
+<pre><code>/hyperframes — या folder मधल्या photos वापरून 15 second चा 9:16 (1080x1920) Instagram reel बनव.
+Bakery: "गोडवा Bakery, कोथरूड, पुणे"
+Scenes:
+1) 0-3s: "दिवाळी फराळ Box" मोठ्या अक्षरात, दिव्यांचा soft glow
+2) 3-10s: 4 photos एकामागून एक, प्रत्येकावर नाव (करंजी, चकली, लाडू, शंकरपाळी)
+3) 10-13s: "15% सूट — 5 November पर्यंत"
+4) 13-15s: logo + "Order: DM करा"
+मराठी text साठी assets/fonts मधला Mukta font वापर. Voiceover नको, हलकं music चालेल.
+आधी Studio preview दाखव, render नंतर.</code></pre>
+
+      <ol start="4">
+        <li><strong>Preview तपासा:</strong> Agent preview उघडतो. मराठी अक्षरं नीट जुळली आहेत का (मात्रा, जोडाक्षरं तुटली नाहीत ना) ते नक्की बघा — हीच सगळ्यात common चूक असते.</li>
+        <li><strong>बदल साध्या भाषेत:</strong> "दुसरा scene थोडा हळू कर", "सूट चा text पिवळा कर" — agent बदल करतो.</li>
+        <li><strong>Render:</strong> "आता render कर" — MP4 folder मध्ये तयार. Phone वर पाठवून Instagram वर upload.</li>
+      </ol>
+
+      <div class="tip">
+        <strong>Freelancer साठी फायदा:</strong> एकदा हा reel जमला की पुढच्या client साठी फक्त photos, नाव आणि offer बदला. "हाच reel 'साई स्वीट्स, नाशिक' साठी, 10% सूट" — 10 मिनिटांत नवीन version. Voiceover हवा असेल तर <a href="/blog/open-models-2026.html">मराठी voiceover</a> वेगळा बनवून जोडा.
+      </div>
+
+      <p>Skills, AI video models आणि editing tools एकत्र जोडून रोजचं content system कसं बनवायचं, ते <a href="/blog/video-creation-system.html">Video Creation System</a> या post मध्ये आहे.</p>
+
+      <h2>बंद करताना</h2>
+
+      <p>Skills मुळे AI agent "हुशार" होत नाही — त्याला फक्त तपासलेली पद्धत मिळते. पहिल्या आठवड्यात एकच skill निवडा (offer reels साठी HyperFrames किंवा Remotion), त्याने 5-6 reels बनवा, आणि काय जमतं, काय अडतं याच्या notes ठेवा. 20 skills install करून एकही नीट न वापरण्यापेक्षा एक skill पक्का शिकणं जास्त कामाचं.</p>
+
+    </div>
+
+    <div class="page-nav">
+      <a href="/blog/">← सगळे Blog Posts</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>InstaMarathi — मराठीत Instagram Business शिका. सगळं free, सगळं open.</p>
+    <p style="font-size: 0.85em; margin-top: 0.5em;">
+      <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener" style="color: inherit;">CC BY-NC-ND 4.0</a> — share freely, credit required, no commercial use, no derivatives.
+    </p>
+  </footer>
+<script>
+function toggleTheme(){var r=document.documentElement,c=r.getAttribute('data-theme')==='dark'?'light':'dark';r.setAttribute('data-theme',c);localStorage.setItem('theme',c);updateToggleIcon()}
+function updateToggleIcon(){var b=document.querySelector('.theme-toggle');if(b)b.textContent=document.documentElement.getAttribute('data-theme')==='dark'?'☀️':'🌙'}
+updateToggleIcon();
+</script>
+</body>
+</html>

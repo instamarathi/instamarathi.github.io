@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026 चे Open AI Models — Image, Video, Voice आणि Captions साठी — InstaMarathi Blog</title>
+  <meta name="description" content="October 2026 मधले उपयोगी open-weight AI models — image, video, Marathi voiceover (TTS) आणि Marathi auto-captions (STT). कुठे try करायचे, किंमत किती, licence चालतो का, आणि GPU लागतो का.">
+  <link rel="canonical" href="https://instamarathi.github.io/blog/open-models-2026.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="InstaMarathi">
+  <meta property="og:locale" content="mr_IN">
+  <meta property="og:title" content="2026 चे Open AI Models — Image, Video, Voice आणि Captions साठी — InstaMarathi Blog">
+  <meta property="og:description" content="October 2026 मधले उपयोगी open-weight AI models — image, video, Marathi voiceover (TTS) आणि Marathi auto-captions (STT). कुठे try करायचे, किंमत किती, licence चालतो का, आणि GPU लागतो का.">
+  <meta property="og:url" content="https://instamarathi.github.io/blog/open-models-2026.html">
+  <meta property="og:image" content="https://instamarathi.github.io/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DSX7QN8HXY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DSX7QN8HXY');
+  </script>
+</head>
+<body>
+  <script>
+(function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t)})();
+</script>
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">Insta<span>Marathi</span></a>
+      <button class="nav-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="/shika/business-kya-aahe.html">शिका</a></li>
+        <li><a href="/tools/canva.html">Tools</a></li>
+        <li><a href="/playbooks/">Playbooks</a></li>
+        <li><a href="/diy/niche-research.html">स्वतः बनवा</a></li>
+        <li><a href="/sales/">Sales</a></li>
+        <li><a href="/clients/kuthe-shodhayche.html">Clients</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+      </ul>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">☀️</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Open AI Models 2026</div>
+      <span class="blog-category">Tools & How-To</span>
+      <h1>2026 चे Open AI Models — Image, Video, Voice आणि Captions साठी</h1>
+      <div class="post-meta">Tools & How-To · October 2026</div>
+    </div>
+
+    <div class="blog-post">
+
+      <p><strong>Open-weight</strong> model म्हणजे ज्याचे weights (model ची "brain file") कंपनी Hugging Face वर public करते. कोणीही download करू शकतो, आणि fal.ai, Replicate सारख्या sites तो host करतात — त्यामुळे rate closed models पेक्षा कमी राहतो. पण "open" म्हणजे "client कामासाठी free" असं नाही. वापराच्या अटी प्रत्येक model च्या <strong>licence</strong> मध्ये असतात.</p>
+
+      <p>या post मध्ये चार कामांसाठी — image, video, Marathi voiceover आणि Marathi captions — प्रत्येकी 3-4 उपयोगी models. सगळी माहिती October 2026 ची, prices अंदाजे, $1 ≈ ₹95 धरून.</p>
+
+      <div class="warning">
+        <strong>Client कामाआधी licence बघा.</strong> Apache 2.0 / MIT असेल तर commercial वापर साधारणपणे चालतो. बाकी custom licences मध्ये अटी असतात. तीन मुख्य सापळे:
+        <ul>
+          <li><strong>FLUX.2 [dev]:</strong> weights "FLUX Non-Commercial" licence वर. स्वतःच्या GPU वर client कामासाठी चालवायला BFL चा paid licence लागतो. Commercial use allow करणाऱ्या hosted service वरून (उदा. Replicate, BFL API) वापरता येतो — त्या platform चे terms वाचा.</li>
+          <li><strong>LTX-2.x (Lightricks):</strong> वार्षिक revenue $10 million पेक्षा जास्त असलेल्या कंपनीला paid licence लागतो. तुम्ही आणि local clients याच्या खूप खाली आहात.</li>
+          <li><strong>Hunyuan (Tencent) आणि MiniMax H3:</strong> region ची अट. Hunyuan licence EU, UK, South Korea मध्ये लागू नाही; MiniMax H3 चा licence US, EU, UK, South Korea मध्ये नाही. India मध्ये चालतात, पण परदेशी client असेल तर टाळा.</li>
+        </ul>
+        हा legal advice नाही. मोठ्या client साठी model card वरचा licence स्वतः वाचा, आणि कोणत्या project मध्ये कोणता model वापरला याची नोंद ठेवा.
+      </div>
+
+      <h2>1. Image — posters, product shots</h2>
+
+      <p>Prices fal.ai वरचे, per megapixel. 1024×1024 म्हणजे 1 MP; Instagram portrait (1080×1350) साधारण 1.5 MP, म्हणजे खर्च 1.5-2 पट.</p>
+
+      <ul>
+        <li><strong>Qwen-Image-Edit-2511 (Alibaba):</strong> product photo तसाच ठेवून background बदलणं, अनेक images एकत्र करणं. Freelancer साठी सगळ्यात उपयोगी. fal, Replicate · $0.03/MP ≈ ₹3 · Apache 2.0.</li>
+        <li><strong>Qwen-Image-2512:</strong> poster backgrounds, realistic माणसं, English text बऱ्यापैकी. fal, Replicate · $0.02/MP ≈ ₹2 · Apache 2.0.</li>
+        <li><strong>FLUX.2 [klein] 4B (Black Forest Labs):</strong> स्वस्त आणि fast drafts, thumbnails; editing सुद्धा. fal, Replicate · $0.005/MP ≈ ₹0.5 · Apache 2.0. (याच family चे 9B models non-commercial आहेत.)</li>
+        <li><strong>Z-Image-Turbo (Alibaba Tongyi):</strong> स्वस्त realistic photos; 16GB GPU वर घरी चालतो. fal · $0.005/MP ≈ ₹0.5 · Apache 2.0.</li>
+      </ul>
+
+      <div class="warning">
+        <strong>Marathi text:</strong> कोणत्याही open image model च्या card वर Devanagari support चा उल्लेख नाही — मात्रा तुटतात, जोडाक्षरं चुकतात. Image text शिवाय बनवा ("leave empty space at the top for text") आणि Marathi text <a href="/blog/canva-hidden-features.html">Canva</a> मध्ये टाका. नवीन Qwen-Image-2.1 चा licence research-only आहे — client कामासाठी 2512 / Edit-2511 वापरा.
+      </div>
+
+      <h2>2. Video — Reels clips, b-roll</h2>
+
+      <p>Prices fal.ai वरचे, एका 5-6 second clip साठी. जुने स्वस्त models बद्दल <a href="/blog/old-video-models-cost-effective.html">हा post</a> बघा.</p>
+
+      <ul>
+        <li><strong>Wan 2.2 (Alibaba):</strong> character motion, स्वस्त drafts; vertical देतो, पण आवाज नाही. fal, Replicate · 5B ≈ $0.15 (₹14), A14B 720p ≈ $0.40 (₹38) · Apache 2.0 — सगळ्यात सोपा licence. (Wan 2.5/2.6 फक्त paid API वर, weights open नाहीत.)</li>
+        <li><strong>LTX-2.3 / LTX-2.5 (Lightricks):</strong> video सोबत background आवाज, 9:16; 2.5 मध्ये multishot. fal, LTX Studio · LTX-2.3 Fast 1080p ≈ $0.25-0.35 (₹24-33); 2.5 चा rate जास्त, page वर बघा · LTX Community License ($10M अट).</li>
+        <li><strong>HunyuanVideo 1.5 (Tencent):</strong> product photo → video, हलका model (8.3B). fal (16:9 आणि 9:16) · 480p ≈ $0.38 (₹36), reel साठी upscale लागेल · Hunyuan Community License (EU/UK/Korea नाही).</li>
+        <li><strong>MiniMax H3:</strong> 15 second पर्यंत clip, stereo audio, dialogue. fal (2K) · ≈ $0.80-1.30 (₹76-124) — सगळ्यात महाग · MiniMax H3 Community License (US/EU/UK/Korea नाही; UI मध्ये model चं नाव दाखवावं लागतं).</li>
+      </ul>
+
+      <div class="tip">
+        <strong>Test:</strong> fal वर $10 चा credit टाका आणि एकाच prompt ने Wan 2.2 5B, LTX-2.3 Fast आणि HunyuanVideo 1.5 मधून एक-एक 9:16 clip बनवा. एकूण $1 च्या आत. Phone वर बघा आणि client च्या niche ला कोणता शोभतो ते ठरवा. Draft स्वस्त model वर, final clip चांगल्या model वर — असा नियम ठेवला तर बिल कमी राहतं. पूर्ण reel कशी जोडायची ते <a href="/blog/video-creation-system.html">Video Creation System</a> मध्ये आहे.
+      </div>
+
+      <h2>3. Voiceover (TTS) — Marathi बोलणारे</h2>
+
+      <p>"Multilingual" लिहिलं म्हणजे Marathi बोलेल असं नाही — उदा. लोकप्रिय Kokoro-82M Hindi बोलतो, Marathi नाही. खालचे सगळे model card नुसार Marathi support करतात.</p>
+
+      <ul>
+        <li><strong>Indic Parler-TTS (AI4Bharat):</strong> English मध्ये आवाजाचं वर्णन लिहा ("A female speaker with a clear, cheerful voice"); Marathi voices Sanjay, Sunita (recommended) + 4. HF Space <code>ai4bharat/indic-parler-tts</code> · free · Apache 2.0.</li>
+        <li><strong>IndicF5 (AI4Bharat):</strong> छोट्या reference clip वरून voice cloning. HF Space <code>ai4bharat/IndicF5</code> · free · MIT, पण download साठी अटी accept कराव्या लागतात — फक्त permission असलेला आवाज clone करा.</li>
+        <li><strong>Sarvam Bulbul v3 / v4 Flash:</strong> open-weight नाही, पण quality चांगली आणि try करायला सगळ्यात सोपं. sarvam.ai playground · v3 ₹3, Flash ₹1 प्रति 1,000 characters (30 second script ≈ 450 characters → ₹1.5 / ₹0.5) · paid API, Sarvam चे terms.</li>
+        <li><strong>Indic-Speak (Bodhan AI):</strong> September 2026 चा नवीन model, English-Marathi mix साठी train केलेला (voices: Anagha, Chinmay). Gated, 3B, GPU लागतो · Indic Open Model License v1.0. अजून नवीन आहे — client कामाआधी स्वतः test करा.</li>
+      </ul>
+
+      <div class="warning">
+        <strong>Voice cloning आणि label:</strong> Client किंवा staff चा आवाज clone करायचा असेल तर त्या व्यक्तीची written permission घ्या. Celebrity, नेते यांचा आवाज कधीही नाही. AI voiceover असलेल्या reel ला Instagram वर AI label लावा. Meta चं <code>mms-tts-mar</code> CC-BY-NC आहे — client कामासाठी नाही.
+      </div>
+
+      <div class="tip">
+        <strong>उच्चार सुधारायची trick:</strong> आकडे आणि symbols शब्दांत लिहा — "₹199" ऐवजी "एकशे नव्याण्णव रुपये", "5%" ऐवजी "पाच टक्के". लांब script 2-3 तुकड्यांत बनवा.
+      </div>
+
+      <h2>4. Auto-Captions (STT) — Marathi</h2>
+
+      <p>बहुतेक लोक reels आवाज बंद ठेवून बघतात. कोणताही tool वापरला तरी प्रत्येक शब्द हाताने तपासा.</p>
+
+      <ul>
+        <li><strong>OpenAI Whisper:</strong> Marathi support आहे, laptop वर चालतो; पण OpenAI स्वतः सांगतं की accuracy भाषेनुसार बदलते, आणि Marathi मध्ये चुका जास्त येतात. HF Spaces, Replicate · free (local) · MIT code / Apache 2.0 weights.</li>
+        <li><strong>IndicConformer 600M (AI4Bharat):</strong> 22 Indian भाषांसाठी बनवलेला, Marathi सह. Setup technical (NeMo); community Spaces वर try करा · free · MIT (gated).</li>
+        <li><strong>Sarvam Speech-to-Text:</strong> Indian भाषांसाठी hosted API, सगळ्यात कमी मेहनत. sarvam.ai · ₹0.49 प्रति minute (30 second reel ≈ 25 पैसे) · paid API.</li>
+        <li><strong>CapCut auto-captions:</strong> सगळ्यात सोपं, phone वर. Marathi output कधी चांगलं, कधी नाही.</li>
+      </ul>
+
+      <div class="tip">
+        <strong>TTS वापरला असेल तर STT नको:</strong> Script तुमच्याकडे आधीच आहे — तोच text captions म्हणून टाका आणि timing जुळवा. Spelling चुका शून्य. Caption चा text लिहायला Marathi साठी Sarvam-30B (Apache 2.0, model card वर Marathi listed) हा open LLM test करून बघण्यासारखा आहे.
+      </div>
+
+      <h2>सगळं एका table मध्ये</h2>
+
+      <table>
+        <thead>
+          <tr><th>काम</th><th>Model</th><th>कुठे</th><th>अंदाजे किंमत (Oct 2026)</th><th>Licence</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Product background बदलणं</td><td>Qwen-Image-Edit-2511</td><td>fal, Replicate</td><td>₹3 / image</td><td>Apache 2.0</td></tr>
+          <tr><td>Poster background</td><td>Qwen-Image-2512</td><td>fal, Replicate</td><td>₹2 / image</td><td>Apache 2.0</td></tr>
+          <tr><td>Image drafts</td><td>FLUX.2 [klein] 4B</td><td>fal, Replicate</td><td>₹0.5 / image</td><td>Apache 2.0</td></tr>
+          <tr><td>Realistic photo, स्वस्त</td><td>Z-Image-Turbo</td><td>fal, 16GB GPU</td><td>₹0.5 / image</td><td>Apache 2.0</td></tr>
+          <tr><td>Video draft / motion</td><td>Wan 2.2</td><td>fal, Replicate</td><td>₹14-38 / clip</td><td>Apache 2.0</td></tr>
+          <tr><td>Video + आवाज, 9:16</td><td>LTX-2.3 Fast</td><td>fal, LTX Studio</td><td>₹24-33 / clip</td><td>LTX Community ($10M)</td></tr>
+          <tr><td>Photo → video</td><td>HunyuanVideo 1.5</td><td>fal</td><td>₹36 / clip (480p)</td><td>Hunyuan (EU/UK/Korea नाही)</td></tr>
+          <tr><td>लांब clip + dialogue</td><td>MiniMax H3</td><td>fal</td><td>₹76-124 / clip</td><td>MiniMax H3 (US/EU/UK/Korea नाही)</td></tr>
+          <tr><td>Marathi voiceover, free</td><td>Indic Parler-TTS</td><td>HF Space</td><td>Free</td><td>Apache 2.0</td></tr>
+          <tr><td>Marathi voiceover, सोपं</td><td>Sarvam Bulbul</td><td>sarvam.ai</td><td>₹0.5-1.5 / reel</td><td>Paid API</td></tr>
+          <tr><td>Voice cloning (consent सह)</td><td>IndicF5</td><td>HF Space</td><td>Free</td><td>MIT (gated)</td></tr>
+          <tr><td>Marathi captions</td><td>Sarvam STT</td><td>sarvam.ai</td><td>₹0.49 / minute</td><td>Paid API</td></tr>
+          <tr><td>Marathi captions, free</td><td>Whisper / IndicConformer</td><td>HF Spaces, local</td><td>Free</td><td>MIT / Apache 2.0</td></tr>
+        </tbody>
+      </table>
+
+      <p>Prices बदलत राहतात — generate करण्याआधी model page वर एकदा बघा. एका client च्या महिन्याच्या 30 posts × 4 tries (120 images) चा खर्च drafts klein वर आणि final Qwen Edit वर केला तर साधारण ₹135 येतो.</p>
+
+      <h2>GPU लागतो का?</h2>
+
+      <ul>
+        <li><strong>नाही.</strong> वरचं सगळं fal, Replicate, HF Spaces किंवा Sarvam वर phone/budget laptop वरून चालतं. जेवढं वापरलं तेवढंच बिल.</li>
+        <li>घ्यायचाच असेल तर पहिला आकडा <strong>VRAM</strong>. Model GPU memory मध्ये बसला नाही तर चालत नाही किंवा खूप slow होतो. <strong>16GB comfortable minimum</strong>; video models साठी 24GB आरामात.</li>
+        <li><strong>NVIDIA (CUDA):</strong> सगळ्यात सोपं — नवीन models, ComfyUI nodes, tutorials आधी NVIDIA वर चालतात. AI साठी RTX 5060 Ti चा 16GB version घ्या, 8GB नाही.</li>
+        <li><strong>AMD (ROCm):</strong> 16GB प्रति ₹ स्वस्त (RX 9060 XT / 9070 XT), पण software मध्ये अडचणी — काही video nodes CUDA-only, Windows वर support अजून अपूर्ण.</li>
+        <li>2026 मध्ये memory तुटवड्यामुळे GPU prices वाढलेले आहेत. महिन्याचा cloud खर्च सातत्याने ₹3,000-4,000 च्या वर जाईपर्यंत GPU चा विचार करू नका.</li>
+      </ul>
+
+      <h2>बंद करताना</h2>
+
+      <p>सुरुवातीसाठी एवढं पुरे: image editing ला Qwen-Image-Edit-2511, video drafts ला Wan 2.2, voiceover ला Indic Parler-TTS किंवा Sarvam, आणि Marathi text Canva मध्ये. सगळे Apache 2.0 किंवा paid API — licence चं टेन्शन कमी, खर्च महिन्याला काहीशे रुपये. नवीन model आला की 2-3 outputs वर test करा, licence वाचा, आणि मगच client कामात आणा. Code ने video बनवायचा पर्याय <a href="/blog/code-video-remotion-manim.html">Remotion आणि Manim</a> post मध्ये आहे.</p>
+
+    </div>
+
+    <div class="page-nav">
+      <a href="/blog/">← सगळे Blog Posts</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>InstaMarathi — मराठीत Instagram Business शिका. सगळं free, सगळं open.</p>
+    <p style="font-size: 0.85em; margin-top: 0.5em;">
+      <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener" style="color: inherit;">CC BY-NC-ND 4.0</a> — share freely, credit required, no commercial use, no derivatives.
+    </p>
+  </footer>
+<script>
+function toggleTheme(){var r=document.documentElement,c=r.getAttribute('data-theme')==='dark'?'light':'dark';r.setAttribute('data-theme',c);localStorage.setItem('theme',c);updateToggleIcon()}
+function updateToggleIcon(){var b=document.querySelector('.theme-toggle');if(b)b.textContent=document.documentElement.getAttribute('data-theme')==='dark'?'☀️':'🌙'}
+updateToggleIcon();
+</script>
+</body>
+</html>
