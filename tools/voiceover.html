@@ -147,6 +147,50 @@
       <strong>Marathi voice test:</strong> एकच Marathi script Sarvam आणि ElevenLabs दोघांवर बनवा, आणि तुमच्या आवाजातलं recording पण ठेवा. तिन्ही client ला ऐकवा — client ला जे "आपलं" वाटेल ते वापरा.
     </div>
 
+    <h2>Open Marathi Voice Models — Free पर्याय (नवीन)</h2>
+    <p>Sarvam आणि ElevenLabs शिवाय काही <strong>open</strong> models पण Marathi बोलतात — म्हणजे त्यांचे weights Hugging Face वर public आहेत, आणि त्यांचे free demo pages (HF Spaces) browser मधूनच वापरता येतात. Phone किंवा budget laptop पुरतो, GPU नको.</p>
+    <ul>
+      <li><strong>Indic Parler-TTS (AI4Bharat):</strong> English मध्ये आवाजाचं वर्णन लिहा — उदा. "A female speaker with a clear, cheerful voice" — आणि खाली Marathi script. Marathi voices: Sanjay, Sunita (recommended) + आणखी 4. HF Space <code>ai4bharat/indic-parler-tts</code> वर free. Licence Apache 2.0 — client कामासाठी चालतो.</li>
+      <li><strong>IndicF5 (AI4Bharat):</strong> छोट्या reference clip वरून <strong>voice cloning</strong> — म्हणजे client चा आवाज एकदा record करा आणि नवीन scripts त्याच आवाजात. HF Space <code>ai4bharat/IndicF5</code> वर free. Licence MIT, पण model gated आहे — वापराच्या अटी accept कराव्या लागतात, आणि त्यात स्पष्ट लिहिलं आहे: फक्त परवानगी असलेलाच आवाज clone करा.</li>
+      <li><strong>Indic-Speak (Bodhan AI):</strong> September 2026 चा नवीन model, English शब्द मिसळलेलं Marathi बोलण्यासाठी बनवलेला — Marathi voices Anagha आणि Chinmay. पण gated, मोठा model, आणि setup technical — beginners साठी अजून नाही. Licence "Indic Open Model License v1.0" — client कामाआधी अटी वाचा.</li>
+    </ul>
+
+    <table>
+      <thead>
+        <tr>
+          <th>गरज</th>
+          <th>काय वापरायचं</th>
+          <th>का?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Budget zero, Marathi voice हवा</td>
+          <td>Indic Parler-TTS</td>
+          <td>Free, commercial वापर चालतो. पण Space कधी कधी slow किंवा queue मध्ये असतो</td>
+        </tr>
+        <tr>
+          <td>सगळ्यात कमी मेहनत, consistent quality</td>
+          <td>Sarvam Bulbul</td>
+          <td>Paid पण स्वस्त — v3 ₹3, v4 Flash ₹1 प्रति 1,000 characters (30 second script ≈ ₹0.5-1.5)</td>
+        </tr>
+        <tr>
+          <td>Client चाच आवाज हवा, client हजर नाही</td>
+          <td>IndicF5 (लेखी परवानगी घेऊनच)</td>
+          <td>Free cloning. Consent नसेल तर वापरू नका</td>
+        </tr>
+        <tr>
+          <td>English + Hindi + Marathi सगळं एकाच account वर</td>
+          <td>ElevenLabs</td>
+          <td>एकाच ठिकाणी सगळ्या भाषा, free tier आहे — Marathi उच्चार ऐकून ठरवा</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="tip">
+      <strong>उच्चार सुधारायची trick:</strong> कोणताही AI voice असो — आकडे आणि symbols शब्दांत लिहा. "₹199" ऐवजी "एकशे नव्याण्णव रुपये", "5%" ऐवजी "पाच टक्के". लांब script 2-3 तुकड्यांत बनवा. सगळ्या models ची तुलना आणि licences: <a href="/blog/open-models-2026.html">2026 चे Open AI Models</a>.
+    </div>
+
     <h2>Instagram चं AI Dubbing — Reel आपोआप Marathi मध्ये</h2>
     <p>January 2026 पासून Meta AI Instagram reels चं <strong>Marathi, Hindi, Tamil, Telugu, Bengali, Kannada</strong> मध्ये translation आणि dubbing करू शकतो — बोलणाऱ्याचाच आवाज ठेवून, lip-sync चा पर्याय सहित. म्हणजे client ने Hindi मध्ये reel बनवली तर Marathi बोलणाऱ्या लोकांना ती Marathi मध्ये दिसू शकते. Reel post करताना translation / dubbing चा option बघा — हे features हळूहळू सगळ्या accounts ला येतात.</p>
 
@@ -213,11 +257,32 @@
           <td>DIY voice (तुमचा) किंवा Sarvam Bulbul</td>
           <td>DIY सगळ्यात नैसर्गिक. Sarvam चा Marathi voice आता वापरण्यासारखा — ऐकून ठरवा</td>
         </tr>
+        <tr>
+          <td>Marathi voiceover, budget zero</td>
+          <td>Indic Parler-TTS (free HF Space)</td>
+          <td>Free आणि Apache 2.0 licence — client कामासाठी चालतो. Sarvam इतका सोपा नाही, पण पैसे शून्य</td>
+        </tr>
       </tbody>
     </table>
 
     <div class="warning">
       <strong>Marathi AI Voice — October 2026 ची परिस्थिती:</strong> परिस्थिती सुधारली आहे — Sarvam Bulbul v3 अधिकृतपणे Marathi support करतो, आणि ElevenLabs v4 मध्ये 90+ भाषा आहेत. पण उच्चार आणि लय अजूनही प्रत्येक वेळी परफेक्ट नसते — client ला देण्याआधी पूर्ण ऐका. नैसर्गिक, "आपला" वाटणारा Marathi voiceover हवा असेल तर DIY (स्वतःचा voice) अजूनही सगळ्यात सुरक्षित पर्याय आहे. English किंवा Hinglish content साठी AI voice चांगलं काम करतो.
+    </div>
+
+    <h2>Marathi Auto-Captions (Speech-to-Text)</h2>
+    <p>बहुतेक लोक reels आवाज बंद ठेवून बघतात — म्हणून voiceover असो वा नसो, captions हवेतच. बोललेल्या आवाजाचा text आपोआप बनवणं म्हणजे <strong>Speech-to-Text (STT)</strong>. Marathi साठी पर्याय:</p>
+    <ul>
+      <li><strong>Instagram Edits auto-captions:</strong> सगळ्यात सोपं, phone वरच. पण Edits च्या caption भाषांच्या ज्या यादी बातम्यांमध्ये आल्या (2026) त्यात Hindi, Gujarati, Bengali, Kannada आहेत — Marathi दिसत नाही. म्हणून आधी एका छोट्या Marathi clip वर test करा; Marathi बोलण्याचं Hindi/English मध्ये उलटं-सुलटं लिहिलं गेलं तर हाताने captions टाका. (CapCut भारतात ban आहे, म्हणून तो पर्याय नाही.)</li>
+      <li><strong>Sarvam Speech-to-Text:</strong> Indian भाषांसाठी बनवलेलं, Marathi सह. sarvam.ai वर audio upload करा, text मिळतो. किंमत ₹0.49 प्रति minute — 30 second reel ≈ 25 पैसे. पहिल्यांदा sign up केल्यावर काही free credits मिळतात.</li>
+      <li><strong>Whisper / IndicConformer (advanced):</strong> दोन्ही free, open models. OpenAI चा Whisper laptop वर किंवा HF Spaces वर चालतो, पण Marathi मध्ये चुका जास्त येतात. AI4Bharat चा IndicConformer खास Indian भाषांसाठी आहे, पण setup technical — community Spaces वर try करा.</li>
+    </ul>
+
+    <div class="warning">
+      <strong>प्रत्येक शब्द तपासा:</strong> कोणताही tool वापरला तरी Marathi captions मध्ये चुका येतात — नावं, ठिकाणं, आकडे, जोडाक्षरं. Client च्या business चं नाव चुकलेली caption post झाली तर ते वाईट दिसतं. Post करण्याआधी पूर्ण caption वाचा.
+    </div>
+
+    <div class="tip">
+      <strong>AI voice वापरला असेल तर STT नको:</strong> Script तुमच्याकडे आधीच आहे — तोच text Edits मध्ये captions म्हणून टाका आणि timing जुळवा. Spelling चुका शून्य.
     </div>
 
     <div class="tip">
@@ -226,7 +291,7 @@
 
     <div class="page-nav">
       <a href="/tools/capcut.html" class="prev">← Reels (Edits)</a>
-      <a href="/tools/ai-content/research.html" class="next">AI Content Research →</a>
+      <a href="/tools/ai-video.html" class="next">AI Video →</a>
     </div>
   </div>
 

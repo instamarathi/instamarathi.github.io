@@ -175,6 +175,22 @@
       <strong>काम कसं करायचं:</strong> एकच prompt Gemini आणि ChatGPT दोघांना द्या. दोन वेगळ्या style चे पर्याय मिळतात — त्यातून चांगला निवडा, मग त्याच chat मध्ये छोटे बदल सांगून final करा. यामुळे client ला चांगली quality मिळते.
     </div>
 
+    <h2>Open Image Models — fal/Replicate वर स्वस्त पर्याय</h2>
+    <p>Gemini आणि ChatGPT ची free मर्यादा संपली, किंवा एका client साठी महिन्याला 100+ images लागतात — तेव्हा <strong>open</strong> models उपयोगी. यांचे weights public आहेत, आणि fal.ai, Replicate सारख्या sites ते host करतात. Account बनवा, थोडे credits टाका, आणि जेवढ्या images तेवढंच बिल. GPU नको — phone/laptop browser पुरतो. किंमत per megapixel (1024×1024 = 1 MP; Instagram 4:5 portrait साधारण 1.5 MP, म्हणजे खर्च 1.5-2 पट). $1 ≈ ₹95, October 2026 चे अंदाज:</p>
+    <ul>
+      <li><strong>FLUX.2 [klein] 4B (Black Forest Labs):</strong> स्वस्त आणि fast drafts, thumbnails — आधी 10 पर्याय बनवून बघायला. fal, Replicate · $0.005/MP ≈ ₹0.5 · Apache 2.0. (याच family चे 9B models non-commercial आहेत — 4B च निवडा.)</li>
+      <li><strong>Qwen-Image-Edit-2511 (Alibaba):</strong> Client चा product photo तसाच ठेवून <strong>background बदलणं</strong> — उदा. साध्या टेबलावरचा cake Diwali च्या सजावटीत. Freelancer साठी सगळ्यात उपयोगी. fal, Replicate · $0.03/MP ≈ ₹3 · Apache 2.0.</li>
+      <li><strong>Z-Image-Turbo (Alibaba Tongyi):</strong> स्वस्त realistic photos. fal · $0.005/MP ≈ ₹0.5 · Apache 2.0.</li>
+    </ul>
+
+    <div class="warning">
+      <strong>Licence आधी बघा:</strong> "Open" म्हणजे "client कामासाठी free" असं नाही. <strong>FLUX.2 [dev]</strong> चे weights non-commercial licence वर आहेत — स्वतः चालवून client काम करायला paid licence लागतो. नवीन <strong>Qwen-Image-2.1</strong> चा licence research-only आहे — client कामासाठी वापरू नका; त्याऐवजी Qwen-Image-Edit-2511 किंवा Qwen-Image-2512 (Apache 2.0). कोणत्या post साठी कोणता model वापरला याची नोंद ठेवा.
+    </div>
+
+    <div class="tip">
+      <strong>Marathi text Canva मध्येच:</strong> या कोणत्याही open model मध्ये Devanagari भरवशाचं नाही — मात्रा तुटतात. Prompt मध्ये "leave empty space at the top for text" लिहा, आणि Marathi text Canva मध्ये टाका. पद्धत: drafts klein वर, final image Qwen Edit वर — एका client च्या महिन्याच्या 120 images चा खर्च साधारण ₹135. पूर्ण यादी, video आणि voice models: <a href="/blog/open-models-2026.html">2026 चे Open AI Models</a>.
+    </div>
+
     <h2>AI Image ला Label — नवीन नियम (2026)</h2>
     <p>भारत सरकारने IT Rules मध्ये बदल केला — <strong>20 February 2026 पासून</strong> AI ने बनवलेल्या ("synthetically generated") content वर स्पष्ट label असणं बंधनकारक आहे. हा नियम मुख्यतः Instagram सारख्या platforms वर आहे, पण post करणारे म्हणून तुम्ही पण तो पाळायला हवा. साधं editing (crop, brightness, filter) याला लागू नाही.</p>
     <div class="warning">

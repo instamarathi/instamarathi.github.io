@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Agents & Skills — Agent ला काम शिकवा, Reels बनवा | InstaMarathi Tools</title>
+  <meta name="description" content="Claude Code, Codex सारखे AI agents आणि Skills (SKILL.md) step-by-step मराठीत. Setup, skills install, Remotion ने 10 product reels, client brand kit skill, खर्च आणि safety.">
+  <meta name="keywords" content="AI agent marathi, Claude Code marathi, agent skills, SKILL.md, Remotion reels, HyperFrames, npx skills add, instagram reel automation">
+  <link rel="canonical" href="https://instamarathi.github.io/tools/ai-agents-skills.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="InstaMarathi">
+  <meta property="og:locale" content="mr_IN">
+  <meta property="og:title" content="AI Agents &amp; Skills — Agent ला काम शिकवा, Reels बनवा | InstaMarathi Tools">
+  <meta property="og:description" content="Claude Code, Codex सारखे AI agents आणि Skills (SKILL.md) step-by-step मराठीत. Setup, skills install, Remotion ने 10 product reels, client brand kit skill, खर्च आणि safety.">
+  <meta property="og:url" content="https://instamarathi.github.io/tools/ai-agents-skills.html">
+  <meta property="og:image" content="https://instamarathi.github.io/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DSX7QN8HXY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DSX7QN8HXY');
+  </script>
+</head>
+<body>
+  <script>
+(function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t)})();
+</script>
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">Insta<span>Marathi</span></a>
+      <button class="nav-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="/shika/business-kya-aahe.html">शिका</a></li>
+        <li><a href="/tools/canva.html" class="active">Tools</a></li>
+        <li><a href="/playbooks/">Playbooks</a></li>
+        <li><a href="/diy/niche-research.html">स्वतः बनवा</a></li>
+        <li><a href="/sales/">Sales</a></li>
+        <li><a href="/clients/kuthe-shodhayche.html">Clients</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">☀️</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <p class="breadcrumb"><a href="/">Home</a> / <a href="/tools/canva.html">Tools</a> / AI Agents & Skills</p>
+      <h1>AI Agents & Skills — Agent ला काम शिकवा, Reels बनवा</h1>
+      <p>Chatbot पेक्षा एक पाऊल पुढे: laptop वरच्या folder मध्ये काम करणारा AI agent, त्याला skills शिकवणं, आणि एका प्रयत्नात 10 product reels.</p>
+    </div>
+
+    <p>हे पान hands-on आहे — step-by-step करून बघायचं. Skills म्हणजे काय आणि video साठी कोणते skills आहेत याची ओळख <a href="/blog/ai-skills-video-creation.html">AI Agent Skills म्हणजे काय</a> या blog post मध्ये आहे, आणि Remotion, HyperFrames, Manim ही tools कशी आहेत ते <a href="/blog/code-video-remotion-manim.html">Code ने Video बनवा</a> मध्ये. आधी ते वाचलेत तर हे पान लवकर समजेल.</p>
+
+    <h2>Chatbot आणि Agent — फरक काय?</h2>
+    <p>ChatGPT किंवा Claude च्या chat मध्ये तुम्ही प्रश्न विचारता, तो उत्तर लिहितो. File हवी असेल तर download करा, स्वतः उघडा, स्वतः जोडा. <strong>Agent</strong> हे काम स्वतः करतो: तुमच्या laptop वरच्या एका folder मधल्या files वाचतो, नवीन files बनवतो, commands चालवतो (उदा. video render करणं), आणि result तपासून परत सुधारतो. तुम्ही फक्त साध्या भाषेत सांगता आणि तो काय करतोय ते बघता.</p>
+
+    <table>
+      <thead>
+        <tr><th>Agent</th><th>काय आहे</th><th>किंमत (October 2026)</th><th>Non-programmer साठी</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Claude Code</strong> (Claude desktop app मधला Code tab)</td><td>Anthropic चा agent. Terminal मध्ये किंवा desktop app मध्ये चालतो</td><td>Claude Pro — $20/महिना (वार्षिक घेतल्यास $17/महिना). Free plan मध्ये नाही</td><td>सगळ्यात सोपा — desktop app मध्ये terminal न उघडता वापरता येतो. <strong>या पानावर हाच मार्ग</strong></td></tr>
+        <tr><td><strong>claude.ai (web/app) + skills</strong></td><td>नेहमीचा Claude chat, पण skills upload करता येतात</td><td>Free plan सकट</td><td>Documents, posters, brand kit साठी चांगला. Video render साठी नाही</td></tr>
+        <tr><td><strong>OpenAI Codex</strong></td><td>OpenAI चा agent — CLI, desktop app</td><td>ChatGPT plans मध्ये (Plus साधारण $20/महिना)</td><td>चांगला पर्याय, skills पण वाचतो. ChatGPT आधीच घेतलं असेल तर हाच वापरा</td></tr>
+        <tr><td><strong>Cursor</strong></td><td>Code editor (VS Code सारखा) ज्यात agent आहे</td><td>Plans बदलत राहतात — cursor.com तपासा</td><td>Programmers साठी बनवलेला. Skills चालतात, पण screen वर code जास्त दिसतो</td></tr>
+      </tbody>
+    </table>
+
+    <div class="tip">
+      <strong>कोणता निवडायचा?</strong> Code अजिबात येत नसेल तर Claude desktop app (Code tab) ने सुरुवात करा. एकाच वेळी दोन subscriptions घेऊ नका — एक agent निवडा आणि महिनाभर तोच वापरा. Skills चं format (SKILL.md) open standard आहे, त्यामुळे नंतर agent बदलला तरी skills वाया जात नाहीत.
+    </div>
+
+    <h2>Setup — Claude Desktop App (Windows / Mac)</h2>
+    <p>Laptop लागतो — phone वर हे होत नाही. Anthropic च्या docs नुसार किमान: Windows 10 (version 1809+) किंवा macOS 13+, आणि 4 GB+ RAM. Budget laptop (8 GB RAM) वर चालतं, फक्त video render हळू होतो.</p>
+
+    <h3>Step 1 — Claude Pro घ्या</h3>
+    <ol>
+      <li>claude.ai वर account बनवा (Google account चालतो).</li>
+      <li>Settings → Billing मध्ये Pro plan घ्या ($20/महिना). Claude Code Pro, Max, Team, Enterprise मध्येच येतो.</li>
+    </ol>
+
+    <h3>Step 2 — Desktop app install करा</h3>
+    <ol>
+      <li>claude.com/download उघडा → तुमच्या system चा installer (Windows किंवा macOS) download करा.</li>
+      <li>Installer चालवा. Mac वर Applications मधून, Windows वर Start menu मधून Claude उघडा आणि sign in करा.</li>
+      <li>Sidebar मध्ये वर <strong>Code</strong> tab वर click करा. "Upgrade" दिसलं तर Pro अजून active झालेला नाही.</li>
+    </ol>
+
+    <h3>Step 3 — Project folder निवडा</h3>
+    <ol>
+      <li>Laptop वर एक folder बनवा, उदा. <code>Documents/reels-godwa-bakery</code>. एका client साठी एक folder — हा नियम ठेवा.</li>
+      <li>Code tab मध्ये prompt box खालच्या ओळीत environment मध्ये <strong>Local</strong> निवडा, मग <strong>Open folder…</strong> → तुमचा folder.</li>
+      <li>Permission mode <strong>Manual</strong> ठेवा — agent प्रत्येक file बदल किंवा command आधी तुमची परवानगी मागेल. सुरुवातीला हेच सुरक्षित.</li>
+    </ol>
+
+    <h3>Step 4 — Video साठी Node.js आणि FFmpeg</h3>
+    <p>Desktop app ला स्वतःला Node.js लागत नाही. पण Remotion/HyperFrames ने video बनवायला <strong>Node.js 22 किंवा पुढचं</strong> आणि <strong>FFmpeg</strong> लागतं. nodejs.org वरून LTS version install करा. FFmpeg agent लाच सांगा:</p>
+    <div class="prompt-block"><span class="label">Prompt</span>माझ्या laptop वर Node.js आणि FFmpeg install आहेत का ते तपास. नसतील तर install करायच्या steps सांग आणि प्रत्येक command चालवण्याआधी मला विचार. शेवटी दोन्हींचं version दाखव.</div>
+
+    <div class="tip">
+      <strong>Terminal वाला मार्ग (optional):</strong> Terminal आवडत असेल तर Mac वर <code>curl -fsSL https://claude.ai/install.sh | bash</code>, Windows PowerShell मध्ये <code>irm https://claude.ai/install.ps1 | iex</code> — मग folder मध्ये <code>claude</code> टाइप करा. Windows वर Git for Windows install केलं तर agent जास्त commands नीट चालवू शकतो. Desktop app आणि terminal दोन्ही एकच Claude Code आहे.
+    </div>
+
+    <h2>Skills — Agent चं "कसं करायचं" पुस्तक</h2>
+    <p>Skill म्हणजे एक folder ज्यात <strong>SKILL.md</strong> नावाची file असते: वर नाव आणि "हा skill कधी वापरायचा" याचं एका ओळीत वर्णन, खाली step-by-step सूचना. सोबत scripts, templates, fonts असू शकतात. Agent आधी फक्त नावं-वर्णनं वाचतो; तुमचं काम एखाद्या skill शी जुळलं की तेव्हाच पूर्ण skill उघडतो.</p>
+
+    <h3>Skills install करण्याचे 3 मार्ग</h3>
+    <ol>
+      <li><strong>claude.ai (web/app):</strong> Settings → Capabilities मध्ये "Code execution and file creation" (नव्या layout मध्ये "Create and edit files") चालू करा. मग <strong>Customize → Skills</strong> → "+" → "+ Create skill" → "Upload a skill" → skill folder चा ZIP निवडा. ZIP मधल्या folder चं नाव skill च्या नावाशी जुळलं पाहिजे.</li>
+      <li><strong>Claude Code plugin marketplace:</strong> Code tab मध्ये किंवा terminal मध्ये:
+<pre class="prompt-block" style="font-family: monospace; font-size: 0.8rem; overflow-x: auto;"><code>/plugin marketplace add anthropics/skills
+/plugin install document-skills@anthropic-agent-skills</code></pre></li>
+      <li><strong>skills CLI (skills.sh, Vercel):</strong> project folder मध्ये <code>npx skills add owner/repo</code>. एकच skill हवा असेल तर <code>--skill नाव</code>, सगळ्या projects साठी हवा असेल तर <code>-g</code>. यासाठी Node.js 22.20+ लागतो. हा command Claude Code, Codex, Cursor सगळ्यांसाठी चालतो.</li>
+    </ol>
+    <p>Commands स्वतः टाइप करायची गरज नाही — agent ला सांगा: "<code>npx skills add remotion-dev/skills</code> चालवून Remotion skills install कर."</p>
+
+    <h3>कामाचे Skills — निवडक यादी</h3>
+    <table>
+      <thead>
+        <tr><th>Skill</th><th>काय करतो</th><th>Install</th><th>कोणासाठी</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Remotion skills (official)</td><td>React code ने video — create, preview, render, captions</td><td><code>npx skills add remotion-dev/skills</code></td><td>एकाच design चे अनेक product reels</td></tr>
+        <tr><td>HyperFrames (HeyGen)</td><td>HTML चा MP4 — promo, explainer, music-beat video</td><td><code>npx skills add heygen-com/hyperframes</code> किंवा Claude Code plugin</td><td>Offer reels, festival greetings</td></tr>
+        <tr><td>Manim skill (community)</td><td>गणित/diagram animation</td><td><code>npx skills add adithya-s-k/manim_skill</code></td><td>Classes, CA, financial advisors. Python + LaTeX लागतं</td></tr>
+        <tr><td>video-use</td><td>Raw clips edit — चुका कापणं, subtitles</td><td>README मधला setup prompt agent मध्ये paste करा</td><td>Talking-head clips. ElevenLabs API key (paid) लागते</td></tr>
+        <tr><td>marketingskills: social, copywriting, copy-editing, video</td><td>Reel hooks/scripts, captions, copy सुधारणं, video चा मार्ग सुचवणं</td><td><code>npx skills add coreyhaines31/marketingskills --skill social copywriting</code></td><td>Content planning, captions</td></tr>
+        <tr><td>anthropics/skills: pptx, pdf, docx, xlsx</td><td>Client proposal, report, invoice sheet बनवणं</td><td><code>/plugin install document-skills@anthropic-agent-skills</code></td><td>Client ला देणारे documents</td></tr>
+        <tr><td>anthropics/skills: canvas-design</td><td>Poster, reel cover (PNG/PDF)</td><td><code>/plugin install example-skills@anthropic-agent-skills</code></td><td>Offer posters, thumbnails</td></tr>
+      </tbody>
+    </table>
+    <p>marketingskills (MIT licence) मध्ये claude.ai साठी तयार ZIP पण Releases page वर मिळतात. Anthropic चे docx/pdf/pptx/xlsx skills source-available आहेत (open source नाहीत) — वापरायला हरकत नाही, पण copy करून विकू नका.</p>
+
+    <h2>Hands-on: 10 Products, 10 Reels (Remotion)</h2>
+    <p>समजा "गोडवा Bakery, कोथरूड" ला दिवाळीसाठी 10 products चे 8-second reels हवे आहेत. एकच design, फक्त photo-नाव-किंमत बदलते. हे Remotion चं खास काम आहे — Remotion च्या docs मध्ये dataset (JSON/CSV) मधून अनेक videos render करायची पद्धत दिली आहे. (HyperFrames ने पण करता येईल; पद्धत तीच.)</p>
+
+    <h3>Step 1 — Material तयार ठेवा</h3>
+    <ul>
+      <li><strong>photos/</strong> folder: 10 product photos, साधी नावं — <code>karanji.jpg</code>, <code>chakli.jpg</code>. Phone ने उभे (portrait) काढलेले चांगले.</li>
+      <li><strong>products.csv:</strong> Google Sheets मध्ये बनवा → File → Download → CSV. तीन columns:</li>
+    </ul>
+<pre class="prompt-block" style="font-family: monospace; font-size: 0.8rem; overflow-x: auto;"><code>name,price,photo
+करंजी (250 ग्रॅम),180,karanji.jpg
+चकली (250 ग्रॅम),160,chakli.jpg
+बेसन लाडू (500 ग्रॅम),320,besan-ladu.jpg</code></pre>
+    <ul>
+      <li><strong>logo.png</strong> — शक्यतो transparent background.</li>
+    </ul>
+
+    <h3>Step 2 — Skill install आणि पहिला prompt</h3>
+    <div class="prompt-block"><span class="label">Prompt 1 — Setup</span>या folder मध्ये remotion-dev/skills install कर (npx skills add remotion-dev/skills). मग Remotion चा नवीन blank project बनव. प्रत्येक step आधी काय करणार ते मला एका ओळीत सांग.</div>
+
+    <div class="prompt-block"><span class="label">Prompt 2 — Template</span>Remotion मध्ये Instagram reel template बनव. Size 1080x1920, 30fps, 8 seconds.
+Data: products.csv (columns: name, price, photo). Photos photos/ folder मध्ये आहेत.
+प्रत्येक row साठी एक video:
+- 0-2s: product photo पूर्ण screen, हळूहळू zoom-in
+- 2-5s: खाली product नाव (मराठी) आणि "₹" सह किंमत slide-up
+- 5-8s: logo.png आणि "Order साठी DM करा · गोडवा Bakery, कोथरूड"
+Font: Noto Sans Devanagari (@remotion/google-fonts मधून load कर). Colors: #8B1E3F आणि #F5E6C8.
+आधी फक्त पहिल्या product चा Studio preview उघड. सगळे render आत्ता करू नकोस.</div>
+
+    <h3>Step 3 — Preview तपासा आणि बदल सांगा</h3>
+    <p>Agent Remotion Studio उघडतो (browser मध्ये preview). इथे घाई करू नका:</p>
+    <ul>
+      <li>मराठी अक्षरं नीट आहेत का — "क्ष", "ज्ञ", "श्र", मात्रा तुटल्या नाहीत ना. Font Noto Sans Devanagari किंवा Mukta असला की सहसा बरोबर येतं.</li>
+      <li>Text phone च्या खालच्या भागात (Instagram चे buttons, caption) झाकला जात नाही ना.</li>
+      <li>बदल साध्या भाषेत: "किंमत मोठी आणि पिवळी कर", "zoom थोडा हळू", "logo वर उजवीकडे".</li>
+    </ul>
+
+    <h3>Step 4 — सगळे render करा</h3>
+    <div class="prompt-block"><span class="label">Prompt 3 — Render</span>Preview OK आहे. आता products.csv च्या सगळ्या rows चे MP4 out/ folder मध्ये render कर, एका वेळी एक. File चं नाव product च्या photo नावावरून ठेव (उदा. karanji.mp4). शेवटी किती files बनल्या आणि प्रत्येकीची size सांग.</div>
+    <p>Budget laptop वर 10 छोटे reels ना काही मिनिटं ते अर्धा तास लागू शकतो — render चालू असताना laptop चार्जिंगला लावा.</p>
+
+    <h3>Step 5 — Proofread आणि deliver</h3>
+    <ol>
+      <li>प्रत्येक MP4 phone वर पाठवून पूर्ण बघा — नाव, किंमत, spelling. एका चुकीच्या किंमतीमुळे client चा विश्वास जातो.</li>
+      <li>चूक CSV मध्ये दुरुस्त करा आणि फक्त तो एक video परत render करायला सांगा.</li>
+      <li>Trending audio Instagram app मधूनच लावा — post करताना.</li>
+    </ol>
+
+    <div class="warning">
+      <strong>Remotion licence:</strong> Individuals आणि 3 पर्यंत employees असलेल्या companies ना commercial use सकट free. 4 किंवा जास्त लोकांच्या agency ला company licence लागतं. HyperFrames Apache 2.0 आहे — अशी अट नाही. सविस्तर <a href="/blog/code-video-remotion-manim.html">Code ने Video</a> post मध्ये.
+    </div>
+
+    <h2>स्वतःचा Skill बनवा — Client Brand Kit</h2>
+    <p>प्रत्येक वेळी "colours हे, font हा, tone असा" सांगण्यापेक्षा client चा एक छोटा skill बनवा. मग "गोडवा साठी Diwali caption लिही" एवढं म्हटलं तरी agent brand नियम पाळतो. Folder चं नाव आणि <code>name</code> सारखं ठेवा (lowercase, hyphen):</p>
+<pre class="prompt-block" style="font-family: monospace; font-size: 0.8rem; overflow-x: auto;"><code>godwa-bakery-brand/
+└── SKILL.md
+
+---
+name: godwa-bakery-brand
+description: गोडवा Bakery (कोथरूड, पुणे) चे brand नियम. या client साठी reel, poster, caption किंवा hashtags बनवताना नेहमी वापर.
+---
+
+# गोडवा Bakery — Brand Kit
+
+## Colours
+- मुख्य: #8B1E3F (maroon)   - Background: #F5E6C8 (cream)   - Accent: #E8A33D
+
+## Fonts
+- मराठी headings: Mukta Bold   - मराठी body: Noto Sans Devanagari
+- English: Poppins
+
+## Tone
+- घरगुती, आपुलकीचा, पुणेरी पण उद्धट नाही. "तुम्ही" वापर, "तू" नाही.
+- Emojis: जास्तीत जास्त 2 प्रति caption.
+- "Best in Pune", "No.1" सारखे दावे करू नकोस.
+
+## Hashtags (जास्तीत जास्त 5)
+#गोडवाBakery #KothrudFood #PuneBakery #DiwaliFaral #पुणे
+
+## Reel नियम
+- Size 1080x1920, शेवटच्या 2 seconds मध्ये logo + "Order साठी DM करा".
+- किंमत नेहमी "₹" सह, CSV मधूनच घे — स्वतः अंदाज लावू नकोस.</code></pre>
+    <ul>
+      <li><strong>Claude Code:</strong> हा folder <code>~/.claude/skills/</code> मध्ये ठेवा (सगळ्या projects साठी) किंवा project folder मधल्या <code>.claude/skills/</code> मध्ये (फक्त त्या client साठी). मग <code>/godwa-bakery-brand</code> टाइप करून बोलवता येतो.</li>
+      <li><strong>claude.ai:</strong> folder ZIP करा आणि Customize → Skills मध्ये upload करा.</li>
+      <li>लिहायचा कंटाळा? agent ला सांगा: "या client साठी brand kit skill बनव — मी प्रश्नांची उत्तरं देतो." Anthropic चा <code>skill-creator</code> skill हेच काम करतो.</li>
+    </ul>
+
+    <h2>खर्च आणि Safety</h2>
+    <ul>
+      <li><strong>खर्च:</strong> Skills बहुतेक free. Agent चा subscription — Claude Pro $20/महिना किंवा ChatGPT Plus साधारण $20/महिना. Pro मध्ये usage limit असतो; मोठे render-दुरुस्त्या एका दिवसात केल्या तर limit संपू शकतो — काही तासांनी परत मिळतो. API key वापरून चालवलं तर प्रत्येक काम वेगळं billed होतं — सुरुवातीला subscription च बरा.</li>
+      <li><strong>Paid API keys:</strong> काही skills (video-use, HeyGen avatar) ElevenLabs/HeyGen keys मागतात. Key म्हणजे पैसे — कोणाला share करू नका.</li>
+      <li><strong>Client service ची किंमत:</strong> हा subscription तुमचा business खर्च आहे — "10 product reels" package ची किंमत ठरवताना तो धरा.</li>
+    </ul>
+
+    <div class="warning">
+      <strong>Skill = तुमच्या laptop वर चालणारा code:</strong>
+      <ul>
+        <li>फक्त trusted sources कडूनच skills — official repos (Anthropic, Remotion, HeyGen) ला प्राधान्य. GitHub stars जास्त म्हणजे safe नाही.</li>
+        <li>Install आधी SKILL.md उघडून वाचा. "हा URL ला data पाठव", "key इथे paste कर" असं विचित्र दिसलं तर थांबा. Agent ला विचारा: "हा skill काय करतो ते मराठीत सांग, काही धोकादायक आहे का?"</li>
+        <li>Client चे Instagram/Facebook passwords, OTP, bank details agent ला किंवा कोणत्याही file मध्ये कधीही देऊ नका.</li>
+        <li>Agent ला फक्त त्या client चा folder द्या — पूर्ण Documents किंवा Desktop नाही. Permission mode Manual ठेवा.</li>
+        <li><strong>Backup:</strong> Client चे original photos आणि CSV Google Drive वर वेगळे ठेवा. Agent चुकून file overwrite करू शकतो.</li>
+      </ul>
+    </div>
+
+    <div class="exercise">
+      <h4>सराव — 3 Products, 3 Reels</h4>
+      <p>तुमच्या ओळखीचं एखादं दुकान (किंवा स्वतःचं काल्पनिक) घ्या:</p>
+      <ol>
+        <li>Claude desktop app install करा, Code tab मध्ये नवीन folder उघडा.</li>
+        <li>3 products चे phone photos आणि <code>products.csv</code> (name, price, photo) बनवा.</li>
+        <li>वरचा brand kit SKILL.md त्या दुकानासाठी बदलून install करा.</li>
+        <li>Prompt 1, 2, 3 वापरून 3 reels render करा. Preview मध्ये कमीत कमी 2 बदल सांगा.</li>
+        <li>Font test: एका reel मध्ये "क्षमा, ज्ञान, श्रीगणेश, दिवाळीच्या शुभेच्छा" टाकून तपासा.</li>
+        <li>लिहून ठेवा: setup ला किती वेळ लागला, 3 reels ला किती. Edits/CapCut मध्ये हेच किती वेळात झालं असतं?</li>
+      </ol>
+      <p><strong>Checklist:</strong> ☐ मराठी जोडाक्षरं बरोबर ☐ किंमती CSV शी जुळतात ☐ Text Instagram buttons खाली झाकला नाही ☐ Originals चा backup ☐ कोणताही password agent ला दिला नाही</p>
+    </div>
+
+    <p>Skills, AI video models आणि editing एकत्र करून रोजचं content system कसं बनवायचं ते <a href="/blog/video-creation-system.html">Video Creation System</a> post मध्ये आहे.</p>
+
+    <div class="page-nav">
+      <a href="/tools/ai-video.html" class="prev">← AI Video</a>
+      <a href="/tools/ai-content/research.html" class="next">AI Content Research →</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>InstaMarathi — मराठीत Instagram Business शिका. सगळं free, सगळं open.</p>
+    <p style="font-size: 0.85em; margin-top: 0.5em;">
+      <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener" style="color: inherit;">CC BY-NC-ND 4.0</a> — share freely, credit required, no commercial use, no derivatives.
+    </p>
+  </footer>
+<script>
+function toggleTheme(){var r=document.documentElement,c=r.getAttribute('data-theme')==='dark'?'light':'dark';r.setAttribute('data-theme',c);localStorage.setItem('theme',c);updateToggleIcon()}
+function updateToggleIcon(){var b=document.querySelector('.theme-toggle');if(b)b.textContent=document.documentElement.getAttribute('data-theme')==='dark'?'☀️':'🌙'}
+updateToggleIcon();
+</script>
+</body>
+</html>
