@@ -52,18 +52,46 @@
   <div class="container">
     <div class="page-header">
       <p class="breadcrumb"><a href="/">Home</a> / <a href="/tools/canva.html">Tools</a> / <a href="/tools/ai-content/research.html">AI Content</a> / Carousel Script</p>
-      <h1>Carousel Script Writing — Brief ते Final</h1>
-      <p>एका prompt मध्ये script येत नाही. काम कसं करायचं ते शिका — draft, सुधारणा, final. तीन prompts, एक तयार script.</p>
+      <h1>Carousel Script — AI कडून slide चा मजकूर लिहून घ्या</h1>
+      <p>Carousel म्हणजे एकाच post मध्ये 5-10 slides, ज्या बोट सरकवून एकामागून एक वाचायच्या. प्रत्येक slide वर काय लिहायचं, ते Gemini किंवा ChatGPT कडून कसं लिहून घ्यायचं, ते इथे आहे.</p>
     </div>
 
-    <h2>पद्धत का लागते?</h2>
-    <p>नवे creators एकच prompt देतात, output आलं की सरळ Canva मध्ये टाकतात. Result: साधं content. अनुभवी creators फेऱ्या मारतात — पहिला draft तपासतात, कमकुवत भाग शोधतात, नक्की सुधारणा मागतात. हे 3 पायऱ्यांत होतं: Draft → सुधारणा → शेवटचा. प्रत्येक पायरीसाठी एक prompt. एकूण वेळ: 15-20 मिनिटे. Output: client ला द्यायला तयार script.</p>
+    <h2>झटपट — हा prompt copy करा</h2>
+    <div class="prompt-block">
+      <span class="label">मराठी prompt — 6 slides</span>मी [दुकानाचं / दवाखान्याचं नाव] साठी Instagram carousel बनवतोय. हा व्यवसाय [गावाचं नाव] मध्ये आहे.
 
-    <h2>पायरी 1 — माहिती + Brand चा tone + Topic</h2>
-    <p>पहिल्या prompt मध्ये सगळं सांगा: client कोण, audience कोण, topic काय, brand चा बोलण्याचा tone कसा, format काय (किती slides). हा "माहिती देणारा" prompt आहे.</p>
+विषय: [उदा. "दात दुखत असेल तर दवाखान्यात कधी जायचं?"]
+
+6 slides चा मजकूर लिहा:
+- Slide 1: वाचणारा थांबेल असं एक छोटं वाक्य
+- Slide 2 ते 5: प्रत्येक slide वर एक मुद्दा, जास्तीत जास्त 3 ओळी
+- Slide 6: शेवटी काय करायचं ते सांगा (call करा, post save करा, message करा)
+
+भाषा: साधी, बोलण्यातली मराठी. घाबरवणारी किंवा जाहिरातीसारखी नको.
+    </div>
+
+    <div class="tip">
+      <strong>काय करायचं:</strong>
+      <ol>
+        <li>फोनवर Gemini किंवा ChatGPT app उघडा.</li>
+        <li>वरचा prompt copy करून paste करा.</li>
+        <li>[कंसातले] शब्द बदला. उदा. "श्री दंत चिकित्सालय", "संगमनेर". मग send करा.</li>
+      </ol>
+    </div>
+
+    <p>खाली सविस्तर पद्धत आहे — मजकूर अजून चांगला करायचा असेल तर ती वापरा.</p>
+
+    <h2>तीन पायऱ्या का?</h2>
+    <p>बरेच जण एकच prompt देतात आणि आलेला मजकूर तसाच Canva मध्ये टाकतात. मग post सगळ्यांसारखी साधी दिसते.</p>
+    <p>चांगलं काम करणारे लोक पहिला draft (कच्चा मजकूर) वाचतात. कुठली slide कमी पडते ते शोधतात. आणि फक्त तेवढा भाग सुधारायला सांगतात.</p>
+    <p>म्हणून 3 पायऱ्या: कच्चा मजकूर → सुधारणा → अंतिम मजकूर. प्रत्येक पायरीला एक prompt. एकूण वेळ साधारण 15-20 मिनिटं.</p>
+
+    <h2>पायरी 1 — सगळी माहिती देऊन पहिला draft</h2>
+    <p>पहिल्या prompt मध्ये सगळं सांगा: व्यवसाय कोणता, post कोण वाचणार, विषय काय, बोलण्याची पद्धत (tone) कशी, आणि किती slides.</p>
+    <p>खालचे prompts इंग्रजीत आहेत. तुम्ही हेच मुद्दे मराठीत लिहिले तरी Gemini / ChatGPT नीट समजतात.</p>
 
     <div class="prompt-block">
-      <span class="label">Step 1 — Initial Draft Prompt</span>Write a 6-slide Instagram carousel script for a dentist clinic in Pune, India.
+      <span class="label">Step 1 — Initial Draft Prompt</span>Write a 6-slide Instagram carousel script for a dentist clinic in Sangamner, Maharashtra.
 
 Client details:
 - Clinic name: Dr. Priya Smile Clinic
@@ -86,10 +114,11 @@ Structure:
 Language: Marathi-Hindi mix OK for text on slides. Keep it conversational.
     </div>
 
-    <p>LLM एक पूर्ण 6-slide draft देईल. पूर्ण वाचा. मग शोधा: कोणता slide कमकुवत आहे? सहसा Slide 1 (hook) किंवा CTA slide कमकुवत असतो.</p>
+    <p>AI (Gemini / ChatGPT सारख्या app ना LLM असंही म्हणतात) पूर्ण 6 slides चा draft देईल. पूर्ण वाचा. मग बघा: कुठली slide कमी पडते?</p>
+    <p>बहुतेक वेळा Slide 1 चा hook (पहिलं, लक्ष वेधणारं वाक्य) किंवा शेवटची CTA slide (वाचणाऱ्याने पुढे काय करावं ते — call, save, message) कमी पडते.</p>
 
-    <h2>पायरी 2 — कमकुवत भाग सुधारा</h2>
-    <p>समजा Slide 1 चा hook तुम्हाला खूप साधा वाटला. आता LLM ला पर्याय मागा — सारखी माहिती, सारखा tone, फक्त पर्याय. Copy-paste करत नव्या conversation मध्ये जाऊ नका — त्याच conversation मध्येच पुढे जा.</p>
+    <h2>पायरी 2 — कमी पडणारी slide सुधारा</h2>
+    <p>समजा Slide 1 चं वाक्य खूप साधं वाटलं. आता त्यासाठी 5 पर्याय मागा. नवा chat उघडू नका — त्याच chat मध्ये पुढे लिहा.</p>
 
     <div class="prompt-block">
       <span class="label">Step 2 — Hook Alternatives Prompt</span>Slide 1 चा hook weak आहे. Too generic.
@@ -105,8 +134,8 @@ Number them 1 to 5. I'll pick one.
 
     <p>5 पर्याय येतील. एक निवडा — जो सगळ्यात खरा वाटतो, जाहिरातीसारखा नाही, आणि मनाला भिडणारा वाटतो. पुढे पायरी 3 मध्ये त्या number ने सांगा.</p>
 
-    <h2>पायरी 3 — निवडलेल्या Hook सोबत पुन्हा लिहा + इतर सुधारणा</h2>
-    <p>आता सगळे बदल एकत्र सांगा. नवी conversation नको — त्याच conversation मध्ये पुढे जा. LLM ला मागची माहिती आहे.</p>
+    <h2>पायरी 3 — निवडलेलं वाक्य घालून पूर्ण मजकूर पुन्हा लिहून घ्या</h2>
+    <p>आता सगळे बदल एकदम सांगा. त्याच chat मध्ये लिहा — AI ला आधीचं बोलणं लक्षात असतं.</p>
 
     <div class="prompt-block">
       <span class="label">Step 3 — Final Rewrite Prompt</span>Rewrite the full 6-slide carousel with these changes:
@@ -128,7 +157,7 @@ Keep everything else the same. Give me the final version, slide by slide.
     </ul>
 
     <div class="tip">
-      <strong>Tip — त्याच Conversation मध्ये राहा:</strong> ChatGPT किंवा Claude मध्ये नवा chat उघडू नका. LLM ला मागचं बोलणं लक्षात असतं — त्यामुळे "use hook #3" म्हटलं तर ते समजतं. नवा chat उघडला तर माहिती नाही, परत सगळं सांगावं लागेल.
+      <strong>Tip — त्याच Conversation मध्ये राहा:</strong> Gemini किंवा ChatGPT मध्ये नवा chat उघडू नका. LLM ला मागचं बोलणं लक्षात असतं — त्यामुळे "use hook #3" म्हटलं तर ते समजतं. नवा chat उघडला तर माहिती नाही, परत सगळं सांगावं लागेल.
     </div>
 
     <div class="exercise">
