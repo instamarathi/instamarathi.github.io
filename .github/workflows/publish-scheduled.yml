@@ -1,0 +1,40 @@
+name: Publish scheduled posts
+
+on:
+  schedule:
+    - cron: "30 3 * * *"   # 9:00 AM India time, every day
+  workflow_dispatch:        # "Run workflow" button = publish due posts now
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: publish-scheduled
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Publish due drafts
+        run: python .github/scripts/publish_scheduled.py
+      - name: Commit and push
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Publish scheduled blog post(s)"
+          git push
+          # Make sure GitHub Pages rebuilds after a bot push
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" || true
+        env:
+          GH_TOKEN: ${{ github.token }}
