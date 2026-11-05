@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="mr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>तुमच्या लग्नाची Website — प्रश्नावली (Demo)</title>
+<meta name="description" content="2 मिनिटांत उत्तरं द्या आणि तुमच्या लग्नाची website तयार होताना पहा. InstaMarathi demo प्रश्नावली.">
+<meta property="og:title" content="तुमच्या लग्नाची Website — 2 मिनिटांची प्रश्नावली">
+<meta property="og:description" content="उत्तरं देत जा — तुमची website इथेच तयार होताना दिसेल.">
+<meta property="og:image" content="https://instamarathi.github.io/assets/og-image.png">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#5c0a16">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Marathi&family=Mukta:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --maroon:#5c0a16;--kumkum:#9e1b23;--haldi:#f2b01e;--marigold:#f28c1e;--gold:#c9a24a;--gold-l:#e8cf8a;
+  --cream:#fff8ec;--paper:#fdf1dc;--ink:#3a1a12;--muted:#7a5a4a;--line:#e6d2ad;
+  --serif:"Tiro Devanagari Marathi","Noto Serif Devanagari",serif;
+  --sans:"Mukta","Noto Sans Devanagari",system-ui,sans-serif;
+  /* preview theme (changes with answer) */
+  --pbg:#5c0a16;--ptx:#fff8ec;--pac:#f2b01e;--pcard:#fdf1dc;--pink:#3a1a12;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.55;font-size:17px;overflow-x:hidden}
+button,input,textarea{font:inherit;color:inherit}
+h1,h2,.serif{font-family:var(--serif);font-weight:400}
+a{color:inherit}
+
+.zari{height:18px;background:
+  linear-gradient(135deg,var(--gold) 25%,transparent 25%) -7px 0/14px 14px,
+  linear-gradient(225deg,var(--gold) 25%,transparent 25%) -7px 0/14px 14px,var(--maroon);
+  background-repeat:repeat-x;border-bottom:3px double var(--gold)}
+header{background:radial-gradient(120% 90% at 50% 0%,#8a1521,var(--maroon) 70%);color:var(--cream);text-align:center;padding:18px 16px 22px}
+header .ganesh{color:var(--gold-l);font-family:var(--serif);font-size:14px}
+header h1{font-size:clamp(24px,7vw,34px);line-height:1.25;color:var(--haldi);margin:6px 0}
+header p{color:var(--gold-l);font-size:16px}
+
+.wrap{max-width:980px;margin:0 auto;padding:16px;display:grid;gap:18px}
+@media(min-width:820px){.wrap{grid-template-columns:1fr 340px;align-items:start}.pv-col{position:sticky;top:16px}}
+
+/* progress */
+.prog{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--muted);margin-bottom:10px}
+.bar{flex:1;height:10px;border-radius:99px;background:#ecdcbc;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--marigold),var(--haldi));transition:width .35s}
+
+.card{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:20px 18px;box-shadow:0 6px 20px rgba(92,10,22,.08)}
+.step{display:none}
+.step.on{display:block;animation:in .35s ease}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.qn{font-size:13px;font-weight:700;color:var(--kumkum);letter-spacing:.5px}
+.step h2{font-size:clamp(21px,5.6vw,26px);line-height:1.3;margin:4px 0 6px;color:var(--maroon)}
+.help{color:var(--muted);font-size:15.5px;margin-bottom:14px}
+label.f{display:block;font-size:14px;font-weight:600;color:var(--muted);margin:12px 0 4px}
+input[type=text],input[type=tel],input[type=date],textarea{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:#fff;font-size:17px;outline:none}
+input:focus,textarea:focus{border-color:var(--marigold);box-shadow:0 0 0 3px rgba(242,140,30,.18)}
+textarea{min-height:84px;resize:vertical}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:380px){.row2{grid-template-columns:1fr}}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{position:relative}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips span{display:inline-block;padding:9px 14px;border:1.5px solid var(--line);border-radius:999px;background:#fff;cursor:pointer;font-size:16px;transition:.15s}
+.chips input:checked+span{background:var(--maroon);border-color:var(--maroon);color:var(--cream)}
+.chips input:focus-visible+span{outline:3px solid var(--haldi);outline-offset:2px}
+.themes span{display:flex;align-items:center;gap:8px}
+.sw{width:22px;height:22px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px #0002;display:inline-block}
+
+.why{margin-top:16px;padding:12px 14px;border-radius:12px;background:#fff3d6;border-left:4px solid var(--haldi);font-size:15.5px}
+.why b{color:var(--kumkum)}
+
+.nav{display:flex;gap:10px;margin-top:18px}
+.btn{flex:1;padding:13px 16px;border-radius:12px;border:0;cursor:pointer;font-weight:700;font-size:17px}
+.btn.pri{background:var(--kumkum);color:#fff}
+.btn.pri:hover{background:var(--maroon)}
+.btn.sec{background:transparent;border:1.5px solid var(--line);color:var(--muted);flex:0 0 auto}
+.btn.wa{background:#1f8f4e;color:#fff;display:block;text-align:center;text-decoration:none}
+.skip{display:block;margin:10px auto 0;background:none;border:0;color:var(--muted);text-decoration:underline;cursor:pointer;font-size:14px}
+
+/* preview phone */
+.pv-lbl{font-size:14px;font-weight:700;color:var(--kumkum);text-align:center;margin-bottom:8px}
+.phone{border:10px solid #2a1712;border-radius:30px;background:#2a1712;max-width:320px;margin:0 auto;box-shadow:0 14px 30px rgba(0,0,0,.25)}
+.screen{height:440px;overflow-y:auto;border-radius:20px;background:var(--pcard);color:var(--pink);scroll-behavior:smooth;position:relative}
+@media(max-width:819px){.screen{height:230px}.pv-col{order:-1}.phone{border-width:7px;border-radius:22px}.screen{border-radius:15px}header{padding:12px 16px 14px}header p{font-size:15px}.pv-lbl{margin-bottom:6px}}
+.ps{padding:14px 14px;border-bottom:1px dashed #0002;transition:background .3s,opacity .3s}
+.ps.empty{opacity:.45}
+.ps.hot{background:rgba(242,176,30,.22);opacity:1}
+.ps h4{font-family:var(--serif);font-weight:400;font-size:17px;color:var(--pbg);margin-bottom:6px}
+.p-hero{background:var(--pbg);color:var(--ptx);text-align:center;padding:22px 12px 18px;border-bottom:0}
+.p-hero.hot{background:var(--pbg);box-shadow:inset 0 0 0 3px var(--pac)}
+.p-hero small{display:block;color:var(--pac);font-family:var(--serif);font-size:13px}
+.p-names{font-family:var(--serif);font-size:28px;line-height:1.2;margin:6px 0;color:var(--pac)}
+.p-date{display:inline-block;font-size:13px;border:1px solid var(--pac);border-radius:99px;padding:3px 12px}
+.p-cd{margin-top:8px;font-size:14px}
+.p-cd b{font-size:22px;color:var(--pac)}
+.p-story{font-size:14px}
+.p-story q{display:block;font-family:var(--serif);font-size:15px;margin-top:6px;color:var(--pbg)}
+.p-ev{list-style:none;font-size:14px;display:grid;gap:6px}
+.p-ev li{background:#fff;border-radius:8px;padding:6px 10px;border-left:3px solid var(--pac)}
+.p-gal{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+.p-gal div{aspect-ratio:3/4;border-radius:6px;display:flex;align-items:flex-end;padding:4px;font-size:10px;color:#fff;line-height:1.2;text-shadow:0 1px 2px #000}
+.p-ven{display:flex;gap:10px;align-items:center;font-size:14px}
+.qr{width:64px;height:64px;flex:0 0 64px;background:#fff;padding:4px;border-radius:6px;display:grid;grid-template-columns:repeat(9,1fr)}
+.qr i{background:#000}.qr i.o{background:transparent}
+.p-btn{display:inline-block;margin-top:6px;font-size:12px;padding:4px 10px;border-radius:99px;background:var(--pbg);color:var(--ptx)}
+.p-ig{display:flex;gap:10px;align-items:center;font-size:14px}
+.p-ig .av{width:44px;height:44px;border-radius:50%;flex:0 0 44px;background:conic-gradient(#f58529,#dd2a7b,#8134af,#515bd4,#f58529);padding:3px}
+.p-ig .av i{display:block;width:100%;height:100%;border-radius:50%;background:var(--pbg)}
+.p-foot{text-align:center;font-size:13px;background:var(--pbg);color:var(--ptx);border-bottom:0}
+
+/* final */
+.pkg{margin-top:14px;padding:14px;border-radius:12px;border:2px solid var(--haldi);background:#fff}
+.pkg b{color:var(--maroon);font-family:var(--serif);font-size:20px;font-weight:400}
+.pkg ul{margin:8px 0 0 20px;font-size:15.5px}
+.done-h{font-size:clamp(22px,6vw,28px);color:var(--maroon);line-height:1.3}
+.demo-note{text-align:center;font-size:14px;color:var(--muted);padding:6px 16px 28px}
+.demo-note a{color:var(--kumkum);font-weight:600}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="zari"></div>
+<header>
+  <div class="ganesh">॥ श्री गणेशाय नमः ॥</div>
+  <h1>तुमच्या लग्नाची Website</h1>
+  <p>12 छोटे प्रश्न. उत्तरं देत जा — तुमची website लगेच तयार होताना दिसेल.</p>
+</header>
+
+<main class="wrap">
+  <section>
+    <div class="prog"><div class="bar"><i id="bar"></i></div><span id="pcount">1 / 12</span></div>
+    <form class="card" id="f" autocomplete="off" onsubmit="return false">
+
+      <div class="step" data-sec="hero">
+        <div class="qn">प्रश्न 1</div>
+        <h2>नवरदेव आणि नवरीचं नाव?</h2>
+        <p class="help">जसं पत्रिकेवर हवं तसं — मराठीत.</p>
+        <div class="row2">
+          <div><label class="f" for="groom">नवरदेव</label><input type="text" id="groom" name="groom" placeholder="उदा. अनिकेत"></div>
+          <div><label class="f" for="bride">नवरी</label><input type="text" id="bride" name="bride" placeholder="उदा. सायली"></div>
+        </div>
+        <div class="why">💡 छापील पत्रिकेत एक चूक झाली तर 500 पत्रिका परत छापाव्या लागतात. <b>Website वर एका मिनिटात दुरुस्त.</b></div>
+      </div>
+
+      <div class="step" data-sec="hero">
+        <div class="qn">प्रश्न 2</div>
+        <h2>शुभ मुहूर्त कधी आहे?</h2>
+        <p class="help">लग्नाची तारीख आणि मुहूर्ताची वेळ.</p>
+        <div class="row2">
+          <div><label class="f" for="date">तारीख</label><input type="date" id="date" name="date"></div>
+          <div><label class="f" for="time">मुहूर्त</label><input type="text" id="time" name="time" placeholder="उदा. दुपारी 12:35"></div>
+        </div>
+        <div class="why">💡 Link उघडणाऱ्या प्रत्येक पाहुण्याला दिसेल — <b>"लग्नाला फक्त <span id="dleft">__</span> दिवस बाकी!"</b> उत्सुकता रोज वाढत जाते.</div>
+      </div>
+
+      <div class="step" data-sec="story">
+        <div class="qn">प्रश्न 3</div>
+        <h2>तुमची पहिली भेट कशी झाली?</h2>
+        <p class="help">लाजू नका 🙂 — हीच तुमच्या website ची सगळ्यात आवडती गोष्ट होणार आहे.</p>
+        <div class="chips">
+          <label><input type="radio" name="meet" value="कॉलेजमध्ये"><span>🎓 कॉलेजमध्ये</span></label>
+          <label><input type="radio" name="meet" value="ऑफिसमध्ये"><span>💼 ऑफिसमध्ये</span></label>
+          <label><input type="radio" name="meet" value="बघण्याच्या कार्यक्रमात"><span>☕ बघण्याच्या कार्यक्रमात</span></label>
+          <label><input type="radio" name="meet" value="एका लग्नात"><span>💐 एका लग्नात</span></label>
+          <label><input type="radio" name="meet" value="Instagram / online"><span>📱 Instagram / online</span></label>
+          <label><input type="radio" name="meet" value="लहानपणापासून ओळख"><span>🏡 लहानपणापासून ओळख</span></label>
+        </div>
+        <div class="why">💡 पत्रिका लोक 5 सेकंद बघतात. <b>गोष्ट 2 मिनिटं वाचतात</b> — आणि पुढे पाठवतात.</div>
+      </div>
+
+      <div class="step" data-sec="story">
+        <div class="qn">प्रश्न 4</div>
+        <h2>त्या दिवसाची एक आठवण — एका ओळीत?</h2>
+        <p class="help">पहिल्यांदा काय जाणवलं? कोण आधी बोललं? काय गंमत झाली?</p>
+        <textarea id="memory" name="memory" maxlength="160" placeholder="उदा. ती चहा घेऊन आली आणि मी कप उलटा धरला..."></textarea>
+        <div class="why">💡 लग्नात सगळे हीच ओळ म्हणून दाखवतील. <b>आजी-आजोबा, मित्र — सगळे हसणार.</b></div>
+      </div>
+
+      <div class="step" data-sec="events">
+        <div class="qn">प्रश्न 5</div>
+        <h2>कोणकोणते कार्यक्रम आहेत?</h2>
+        <p class="help">सगळे निवडा. वेळा आणि ठिकाणं नंतर घेऊ.</p>
+        <div class="chips">
+          <label><input type="checkbox" name="events" value="साखरपुडा"><span>💍 साखरपुडा</span></label>
+          <label><input type="checkbox" name="events" value="हळद"><span>💛 हळद</span></label>
+          <label><input type="checkbox" name="events" value="मेहंदी"><span>🌿 मेहंदी</span></label>
+          <label><input type="checkbox" name="events" value="संगीत"><span>🎶 संगीत</span></label>
+          <label><input type="checkbox" name="events" value="देवदर्शन / गोंधळ"><span>🪔 देवदर्शन / गोंधळ</span></label>
+          <label><input type="checkbox" name="events" value="लग्न"><span>🔥 लग्न</span></label>
+          <label><input type="checkbox" name="events" value="स्वागत समारंभ"><span>🎉 स्वागत समारंभ</span></label>
+        </div>
+        <div class="why">💡 "हळद कधी? संगीत कुठे?" — <b>लग्नघरात येणारे 50 फोन वाचतील.</b> सगळं एका link वर.</div>
+      </div>
+
+      <div class="step" data-sec="venue">
+        <div class="qn">प्रश्न 6</div>
+        <h2>लग्न कुठे आहे?</h2>
+        <p class="help">मंगल कार्यालय / लॉन / मंदिर आणि गाव.</p>
+        <input type="text" id="venue" name="venue" placeholder="उदा. श्री लक्ष्मी मंगल कार्यालय, कोल्हापूर">
+        <div class="why">💡 "कार्यालय कुठंय हो?" — हा फोन लग्नाच्या दिवशी 100 वेळा येतो. <b>पत्रिकेवर एक QR — scan केलं की थेट Google Maps.</b></div>
+      </div>
+
+      <div class="step" data-sec="rsvp">
+        <div class="qn">प्रश्न 7</div>
+        <h2>साधारण किती पाहुणे?</h2>
+        <p class="help">अंदाज पुरे.</p>
+        <div class="chips">
+          <label><input type="radio" name="guests" value="300"><span>300 पर्यंत</span></label>
+          <label><input type="radio" name="guests" value="700"><span>300–700</span></label>
+          <label><input type="radio" name="guests" value="1200"><span>700–1,500</span></label>
+          <label><input type="radio" name="guests" value="2000"><span>1,500 पेक्षा जास्त</span></label>
+        </div>
+        <div class="why" id="guestWhy">💡 छापील पत्रिका जवळच्यांना द्या. <b>बाकी सगळ्यांना एक link</b> — WhatsApp वर एका click मध्ये, आणि "येणार" म्हणणाऱ्यांचा आकडा तुमच्याकडे.</div>
+      </div>
+
+      <div class="step" data-sec="gallery">
+        <div class="qn">प्रश्न 8</div>
+        <h2>Pre-wedding shoot?</h2>
+        <p class="help">आणि जर करायचंच असेल — स्वप्नातली जागा कोणती?</p>
+        <div class="chips" style="margin-bottom:12px">
+          <label><input type="radio" name="prewed" value="झालंय"><span>✅ झालंय</span></label>
+          <label><input type="radio" name="prewed" value="करायचंय"><span>📸 करायचंय</span></label>
+          <label><input type="radio" name="prewed" value="अजून ठरलं नाही"><span>🤔 अजून ठरलं नाही</span></label>
+        </div>
+        <div class="chips">
+          <label><input type="checkbox" name="loc" value="किल्ला"><span>🏰 किल्ला</span></label>
+          <label><input type="checkbox" name="loc" value="हिरवं शेत"><span>🌾 हिरवं शेत</span></label>
+          <label><input type="checkbox" name="loc" value="नदीकाठ / घाट"><span>🌊 नदीकाठ / घाट</span></label>
+          <label><input type="checkbox" name="loc" value="जुना वाडा"><span>🏛️ जुना वाडा</span></label>
+          <label><input type="checkbox" name="loc" value="समुद्रकिनारा"><span>🏖️ समुद्रकिनारा</span></label>
+          <label><input type="checkbox" name="loc" value="पहिली भेट झाली ती जागा"><span>❤️ पहिली भेट झाली ती जागा</span></label>
+        </div>
+        <div class="why">💡 सुंदर फोटो फक्त phone च्या gallery त पडून राहतात. <b>Website वर ते 1,000 लोक बघतात</b> — आणि 20 वर्षांनी तुम्ही.</div>
+      </div>
+
+      <div class="step" data-sec="hero">
+        <div class="qn">प्रश्न 9</div>
+        <h2>तुमच्या लग्नाचा रंग?</h2>
+        <p class="help">एक निवडा — वरची website लगेच बदलेल. 👉</p>
+        <div class="chips themes">
+          <label><input type="radio" name="theme" value="lal"><span><i class="sw" style="background:linear-gradient(135deg,#5c0a16 50%,#f2b01e 50%)"></i>पारंपरिक लाल-सोनेरी</span></label>
+          <label><input type="radio" name="theme" value="paithani"><span><i class="sw" style="background:linear-gradient(135deg,#3b1450 50%,#2f9a63 50%)"></i>पैठणी जांभळा-हिरवा</span></label>
+          <label><input type="radio" name="theme" value="pastel"><span><i class="sw" style="background:linear-gradient(135deg,#e7a6b4 50%,#fff5f0 50%)"></i>गुलाबी pastel</span></label>
+          <label><input type="radio" name="theme" value="navy"><span><i class="sw" style="background:linear-gradient(135deg,#14213d 50%,#e0b44c 50%)"></i>राजेशाही निळा-सोनेरी</span></label>
+        </div>
+        <div class="why">💡 नवरीच्या शालूचा रंग, हळदीचा पिवळा — <b>website तुमच्या लग्नासारखी दिसली पाहिजे</b>, कुठल्याही template सारखी नाही.</div>
+      </div>
+
+      <div class="step" data-sec="insta">
+        <div class="qn">प्रश्न 10</div>
+        <h2>लग्नाचं Instagram page हवं?</h2>
+        <p class="help">English मध्ये नावं लिहा — आम्ही handle आणि hashtag बनवतो.</p>
+        <div class="row2">
+          <div><label class="f" for="en1">नवरदेव (English)</label><input type="text" id="en1" name="en1" placeholder="Aniket"></div>
+          <div><label class="f" for="en2">नवरी (English)</label><input type="text" id="en2" name="en2" placeholder="Sayali"></div>
+        </div>
+        <label class="f">लग्नाच्या दिवशी live stories?</label>
+        <div class="chips">
+          <label><input type="radio" name="live" value="हो"><span>हो, नक्की</span></label>
+          <label><input type="radio" name="live" value="नको"><span>नको</span></label>
+        </div>
+        <div class="why">💡 पुण्यातली मावशी, दुबईतला भाऊ, आजारी आजोबा — <b>जे येऊ शकत नाहीत, तेही हळद आणि मुहूर्त live बघतील.</b></div>
+      </div>
+
+      <div class="step" data-sec="foot">
+        <div class="qn">प्रश्न 11</div>
+        <h2>आशीर्वाद कोणाचे?</h2>
+        <p class="help">दोन्ही घरांची नावं. हवं तर आजी-आजोबांचीही.</p>
+        <input type="text" id="family" name="family" placeholder="उदा. पाटील आणि देशमुख परिवार">
+        <div class="why">💡 आजोबांचं नाव website वर दिसलं की ते <b>ती link गावातल्या प्रत्येकाला स्वतः दाखवतील.</b></div>
+      </div>
+
+      <div class="step" data-sec="none">
+        <div class="qn">प्रश्न 12 — शेवटचा!</div>
+        <h2>तुमची website पाठवायची कुठे?</h2>
+        <p class="help">पहिला draft 48 तासांत WhatsApp वर.</p>
+        <label class="f" for="cname">तुमचं नाव</label><input type="text" id="cname" name="cname" placeholder="नाव">
+        <label class="f" for="cphone">WhatsApp नंबर</label><input type="tel" id="cphone" name="cphone" inputmode="tel" placeholder="98xxxxxxxx">
+        <div class="why">💡 लग्नाचा season भरलाय — <b>तारखा लवकर भरतात.</b></div>
+      </div>
+
+      <div class="step" data-sec="all" id="final">
+        <div class="done-h serif">🎉 <span id="fNames">तुमची</span> website तयार होण्यासाठी सगळं मिळालं!</div>
+        <p class="help" style="margin-top:8px">शेजारी बघा — हा फक्त झलक आहे. खरी website तुमच्या फोटोंनी, music ने आणि पूर्ण गोष्टीने भरलेली असेल.</p>
+        <div class="pkg" id="pkg"></div>
+        <a class="btn wa" id="wa" href="#" target="_blank" rel="noopener" style="margin-top:14px">WhatsApp वर पाठवा →</a>
+        <button type="button" class="skip" id="restart">उत्तरं बदला</button>
+      </div>
+
+      <div class="nav" id="nav">
+        <button type="button" class="btn sec" id="back">←</button>
+        <button type="button" class="btn pri" id="next">पुढे →</button>
+      </div>
+      <button type="button" class="skip" id="skip">हा प्रश्न सोडा</button>
+    </form>
+  </section>
+
+  <aside class="pv-col">
+    <div class="pv-lbl">👇 तुमची website — live तयार होतेय</div>
+    <div class="phone"><div class="screen" id="screen">
+      <div class="ps p-hero empty" data-s="hero">
+        <small>॥ शुभविवाह ॥</small>
+        <div class="p-names" id="pNames">नवरदेव ❤ नवरी</div>
+        <span class="p-date" id="pDate">तारीख</span>
+        <div class="p-cd" id="pCd">लग्नाला <b>__</b> दिवस बाकी</div>
+      </div>
+      <div class="ps empty" data-s="story"><h4>आमची गोष्ट</h4><div class="p-story" id="pStory">आमची पहिली भेट...<q>"एक गोड आठवण"</q></div></div>
+      <div class="ps empty" data-s="events"><h4>कार्यक्रम</h4><ul class="p-ev" id="pEv"><li>हळद</li><li>लग्न</li></ul></div>
+      <div class="ps empty" data-s="gallery"><h4>Pre-wedding</h4><div class="p-gal" id="pGal"></div></div>
+      <div class="ps empty" data-s="venue"><h4>ठिकाण</h4><div class="p-ven"><div class="qr" id="qr" aria-hidden="true"></div><div><div id="pVen">मंगल कार्यालय</div><span class="p-btn">📍 Maps वर पहा</span></div></div></div>
+      <div class="ps empty" data-s="rsvp"><h4>येणार आहात ना?</h4><div style="font-size:14px" id="pRsvp">पाहुणे: __</div><span class="p-btn" style="background:#1f8f4e;color:#fff">✓ WhatsApp वर कळवा</span></div>
+      <div class="ps empty" data-s="insta"><h4>Instagram</h4><div class="p-ig"><div class="av"><i></i></div><div><b id="pHandle">@navardev.weds.navri</b><div id="pTag">#आमचंलग्न</div></div></div></div>
+      <div class="ps p-foot empty" data-s="foot">आशीर्वाद द्यायला नक्की या 🙏<br><span id="pFam">— परिवार</span></div>
+    </div></div>
+  </aside>
+</main>
+
+<p class="demo-note">हा <a href="/blog/lagna-website-business.html">InstaMarathi</a> चा demo आहे — <a href="/demo/lagna/">पूर्ण demo website बघा</a>. ही प्रश्नावली स्वतःच्या धंद्यासाठी कशी वापरायची, ते <a href="/blog/lagna-website-business.html#prashnavali">लेखात</a>.</p>
+
+<script>
+/* === हे बदला: तुमचं नाव आणि WhatsApp नंबर (देशाच्या 91 सह) === */
+var CONFIG = { name: "InstaMarathi Demo", whatsapp: "919999999999" };
+
+(function(){
+  var f=document.getElementById('f'), steps=[].slice.call(f.querySelectorAll('.step')),
+      N=steps.length-1, cur=0, KEY='lagna-prashnavali';
+  var $=function(id){return document.getElementById(id)};
+  var MONTHS='जानेवारी फेब्रुवारी मार्च एप्रिल मे जून जुलै ऑगस्ट सप्टेंबर ऑक्टोबर नोव्हेंबर डिसेंबर'.split(' ');
+  var THEMES={lal:['#5c0a16','#fff8ec','#f2b01e','#fdf1dc','#3a1a12'],paithani:['#3b1450','#fbf3ff','#5fd394','#f5edf8','#2b1038'],
+    pastel:['#e7a6b4','#4a2030','#8e2f4f','#fff5f0','#4a2030'],navy:['#14213d','#fdf8ec','#e0b44c','#f4f1ea','#14213d']};
+  var EV_ICON={'साखरपुडा':'💍','हळद':'💛','मेहंदी':'🌿','संगीत':'🎶','देवदर्शन / गोंधळ':'🪔','लग्न':'🔥','स्वागत समारंभ':'🎉'};
+  var GRAD=['#c0262d,#f2b01e','#1f5f45,#9bc26b','#3b5f8a,#f28c1e','#7a3b1a,#e8cf8a','#8134af,#dd2a7b','#2a6f6f,#f2d06b'];
+
+  // fake QR pattern (decorative)
+  var qr=$('qr'),bits='111011101100101001101110111010010110001011101111011100101001011101110110101';
+  for(var i=0;i<81;i++){var c=document.createElement('i');if(bits[i%bits.length]==='0')c.className='o';qr.appendChild(c);}
+
+  function data(){
+    var d={},fd=new FormData(f);
+    fd.forEach(function(v,k){ if(k==='events'||k==='loc'){(d[k]=d[k]||[]).push(v);} else d[k]=String(v).trim(); });
+    d.events=d.events||[];d.loc=d.loc||[];return d;
+  }
+  function daysLeft(iso){ if(!iso)return null; var t=new Date(iso+'T00:00:00'),n=new Date();n.setHours(0,0,0,0); return Math.round((t-n)/864e5); }
+  function fmt(iso){ var p=iso.split('-'); return (+p[2])+' '+MONTHS[+p[1]-1]+' '+p[0]; }
+  function cap(s){ s=(s||'').replace(/[^A-Za-z]/g,''); return s?s[0].toUpperCase()+s.slice(1).toLowerCase():''; }
+  function txt(id,s){ $(id).textContent=s; }
+  function fill(sec,on){ var el=f.ownerDocument.querySelector('.ps[data-s="'+sec+'"]'); if(el) el.classList.toggle('empty',!on); }
+
+  function render(){
+    var d=data(), names=(d.groom||'नवरदेव')+' ❤ '+(d.bride||'नवरी');
+    txt('pNames',names);
+    var dl=daysLeft(d.date);
+    txt('pDate', d.date? fmt(d.date)+(d.time?' · '+d.time:'') : 'तारीख');
+    $('pCd').innerHTML='';
+    if(dl!==null&&dl>=0){ $('pCd').append('लग्नाला '); var b=document.createElement('b');b.textContent=dl;$('pCd').append(b,' दिवस बाकी'); txt('dleft',dl); }
+    else { $('pCd').textContent= dl!==null ? 'शुभमंगल सावधान 🙏' : 'लग्नाला __ दिवस बाकी'; }
+    fill('hero', d.groom||d.bride||d.date||d.theme);
+
+    var st=$('pStory'); st.textContent='';
+    st.append(d.meet ? 'आमची पहिली भेट '+d.meet+' झाली...' : 'आमची पहिली भेट...');
+    var q=document.createElement('q'); q.textContent=d.memory||'एक गोड आठवण'; st.appendChild(q);
+    fill('story', d.meet||d.memory);
+
+    var ev=$('pEv'); ev.textContent='';
+    (d.events.length?d.events:['हळद','लग्न']).forEach(function(e){var li=document.createElement('li');li.textContent=(EV_ICON[e]||'')+' '+e+(e==='लग्न'&&d.time?' — '+d.time:'');ev.appendChild(li);});
+    fill('events', d.events.length);
+
+    var g=$('pGal'); g.textContent='';
+    var locs=d.loc.length?d.loc:['फोटो','फोटो','फोटो'];
+    for(var k=0;k<6;k++){var t=document.createElement('div');t.style.background='linear-gradient(160deg,'+GRAD[k%6]+')';t.textContent=locs[k%locs.length];g.appendChild(t);}
+    fill('gallery', d.prewed||d.loc.length);
+
+    txt('pVen', d.venue||'मंगल कार्यालय'); fill('venue', d.venue);
+    var gw={'300':'300','700':'700','1200':'1,500','2000':'2,000+'};
+    txt('pRsvp', d.guests? '"येणार" — 0 / '+gw[d.guests]+' (रोज वाढत जाईल)' : 'पाहुणे: __'); fill('rsvp', d.guests);
+
+    var a=cap(d.en1),b2=cap(d.en2);
+    txt('pHandle','@'+((a||'navardev').toLowerCase())+'.weds.'+((b2||'navri').toLowerCase()));
+    txt('pTag', (a&&b2)? '#'+a.slice(0,3)+b2.slice(0,3)+'Lagna' : '#आमचंलग्न');
+    fill('insta', a||b2||d.live);
+
+    txt('pFam', '— '+(d.family||'परिवार')); fill('foot', d.family);
+
+    var th=THEMES[d.theme]||THEMES.lal, r=document.documentElement.style;
+    r.setProperty('--pbg',th[0]);r.setProperty('--ptx',th[1]);r.setProperty('--pac',th[2]);r.setProperty('--pcard',th[3]);r.setProperty('--pink',th[4]);
+    try{localStorage.setItem(KEY,JSON.stringify({d:d,cur:cur}));}catch(e){}
+    return d;
+  }
+
+  var moved=false;
+  function show(i){
+    cur=Math.max(0,Math.min(N,i));
+    steps.forEach(function(s,j){s.classList.toggle('on',j===cur)});
+    $('bar').style.width=(cur/N*100)+'%';
+    txt('pcount', cur<N ? (cur+1)+' / '+N : '✓');
+    var last=cur===N; $('nav').style.display=last?'none':'flex'; $('skip').style.display=last?'none':'block';
+    $('back').style.visibility=cur?'visible':'hidden';
+    txt('next', cur===N-1?'माझी website बघा ✨':'पुढे →');
+    var sec=steps[cur].dataset.sec, sc=$('screen');
+    [].forEach.call(sc.querySelectorAll('.ps'),function(p){p.classList.toggle('hot',p.dataset.s===sec)});
+    var el=sc.querySelector('.ps[data-s="'+sec+'"]'); sc.scrollTop = el ? el.offsetTop-20 : 0;
+    var d=render(); if(last) finish(d);
+    if(moved && window.matchMedia('(max-width:819px)').matches){
+      var top=document.querySelector('.pv-col').getBoundingClientRect().top+window.pageYOffset-8;
+      window.scrollTo({top:top,behavior:window.matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});
+    }
+  }
+
+  function finish(d){
+    txt('fNames', d.groom&&d.bride ? d.groom+' ❤ '+d.bride+' — तुमची' : 'तुमची');
+    var full = d.prewed==='करायचंय' || d.live==='हो', mid = d.prewed==='झालंय' || d.en1 || d.loc.length;
+    var p = full ? ['पूर्ण package','Couple website + "आमची गोष्ट"','Pre-wedding shoot ('+(d.loc[0]||'तुमची आवडती जागा')+')','लग्नाचं Instagram page + live stories','लग्नानंतर photo album page']
+      : mid ? ['Couple Portfolio package','Couple website + "आमची गोष्ट"','Pre-wedding फोटोंचं gallery','लग्नाचं Instagram page (1 महिना) + 2 reels','पत्रिकेसाठी Maps QR']
+      : ['साधं package','एका पानाची website','कार्यक्रम, वेळा, नकाशा','पत्रिकेसाठी Maps QR + WhatsApp RSVP'];
+    var box=$('pkg'); box.textContent='';
+    var s=document.createElement('div');s.style.fontSize='14px';s.style.color='var(--muted)';s.textContent='तुमच्या उत्तरांवरून योग्य:';
+    var h=document.createElement('b');h.textContent=p[0]; var ul=document.createElement('ul');
+    p.slice(1).forEach(function(x){var li=document.createElement('li');li.textContent=x;ul.appendChild(li)});
+    box.append(s,h,ul);
+
+    var L=['🙏 नमस्कार '+CONFIG.name+',','आम्हाला लग्नाची website हवी आहे.','',
+      'नावं: '+(d.groom||'-')+' ❤ '+(d.bride||'-'),
+      'तारीख: '+(d.date?fmt(d.date):'-')+(d.time?' · '+d.time:''),
+      'पहिली भेट: '+(d.meet||'-'), 'आठवण: '+(d.memory||'-'),
+      'कार्यक्रम: '+(d.events.join(', ')||'-'), 'ठिकाण: '+(d.venue||'-'),
+      'पाहुणे: '+(d.guests?gw(d.guests):'-'),
+      'Pre-wedding: '+(d.prewed||'-')+(d.loc.length?' ('+d.loc.join(', ')+')':''),
+      'रंग: '+({lal:'लाल-सोनेरी',paithani:'पैठणी जांभळा-हिरवा',pastel:'गुलाबी pastel',navy:'निळा-सोनेरी'}[d.theme]||'-'),
+      'Instagram: '+(d.en1||d.en2? $('pHandle').textContent+' '+$('pTag').textContent:'-')+(d.live?' · live: '+d.live:''),
+      'परिवार: '+(d.family||'-'), '', 'Package: '+p[0], 'संपर्क: '+(d.cname||'-')+' '+(d.cphone||'')];
+    $('wa').href='https://wa.me/'+CONFIG.whatsapp+'?text='+encodeURIComponent(L.join('\n'));
+  }
+  function gw(v){return {'300':'300 पर्यंत','700':'300–700','1200':'700–1,500','2000':'1,500+'}[v]||v;}
+
+  f.addEventListener('input',render); f.addEventListener('change',render);
+  f.addEventListener('keydown',function(e){ if(e.key==='Enter'&&e.target.tagName==='INPUT'){e.preventDefault();go(cur+1);} });
+  function go(i){moved=true;show(i);}
+  $('next').onclick=function(){go(cur+1)}; $('skip').onclick=function(){go(cur+1)};
+  $('back').onclick=function(){go(cur-1)}; $('restart').onclick=function(){go(0)};
+
+  // restore saved answers
+  try{ var saved=JSON.parse(localStorage.getItem(KEY)||'null');
+    if(saved&&saved.d){ Object.keys(saved.d).forEach(function(k){ var v=saved.d[k];
+      [].forEach.call(f.elements[k] && f.elements[k].length!==undefined && !f.elements[k].tagName ? f.elements[k] : [f.elements[k]].filter(Boolean),function(el){
+        if(el.type==='radio'||el.type==='checkbox') el.checked=Array.isArray(v)?v.indexOf(el.value)>-1:el.value===v; else el.value=v; }); });
+      cur=saved.cur||0; } }catch(e){}
+  show(cur);
+})();
+</script>
+</body>
+</html>
