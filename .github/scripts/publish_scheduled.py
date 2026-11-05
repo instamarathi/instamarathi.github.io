@@ -3,14 +3,15 @@
 Each draft starts with a header comment:
 
 <!--
-publish: 2026-11-09
+publish: 2026-11-09        (goes live at 9:00 AM India time; or add a time: 2026-11-09 18:30)
 tag: mindset            (clients | mindset | content | case-studies | niche | tools)
 category: Mindset & Creativity
 title: Card title
 summary: Card summary
 -->
 
-For every draft whose publish date is today or earlier (India time), this:
+The job runs every hour. A draft goes live on the first run after its publish
+time (India time). This:
   1. moves it to blog/<same-name>.html (header removed)
   2. adds its card at the top of the blog feed in blog/index.html
   3. adds it to sitemap.xml
@@ -30,6 +31,8 @@ BLOG = ROOT / "blog"
 INDEX = BLOG / "index.html"
 SITEMAP = ROOT / "sitemap.xml"
 SITE = "https://instamarathi.github.io"
+IST = zoneinfo.ZoneInfo("Asia/Kolkata")
+DEFAULT_TIME = dt.time(9, 0)
 TAGS = {"clients", "mindset", "content", "case-studies", "niche", "tools"}
 MONTHS = "जानेवारी फेब्रुवारी मार्च एप्रिल मे जून जुलै ऑगस्ट सप्टेंबर ऑक्टोबर नोव्हेंबर डिसेंबर".split()
 HEADER = re.compile(r"\A\s*<!--(.*?)-->\s*", re.S)
@@ -50,7 +53,13 @@ def parse(path):
             sys.exit(f"{path.name}: header is missing '{key}'")
     if meta["tag"] not in TAGS:
         sys.exit(f"{path.name}: tag must be one of {sorted(TAGS)}")
-    meta["date"] = dt.date.fromisoformat(meta["publish"])
+    day, _, clock = meta["publish"].partition(" ")
+    try:
+        meta["date"] = dt.date.fromisoformat(day)
+        at = dt.time.fromisoformat(clock.strip()) if clock.strip() else DEFAULT_TIME
+    except ValueError:
+        sys.exit(f"{path.name}: publish must look like 2026-11-09 or 2026-11-09 18:30")
+    meta["at"] = dt.datetime.combine(meta["date"], at, IST)
     return meta, text[m.end():]
 
 
@@ -68,14 +77,14 @@ def card(slug, meta):
 
 
 def main():
-    today = dt.datetime.now(zoneinfo.ZoneInfo("Asia/Kolkata")).date()
+    now = dt.datetime.now(IST)
     drafts = sorted(DRAFTS.glob("*.html")) if DRAFTS.exists() else []
     due = []
     for path in drafts:
         meta, body = parse(path)  # validates every draft, not just due ones
-        status = "due" if meta["date"] <= today else f"waiting for {meta['date']}"
-        print(f"{path.name}: {status}")
-        if meta["date"] <= today:
+        due_now = meta["at"] <= now
+        print(f"{path.name}: {'due' if due_now else 'waiting for ' + meta['at'].strftime('%Y-%m-%d %H:%M IST')}")
+        if due_now:
             due.append((path, meta, body))
     if not due:
         print("Nothing to publish.")
@@ -83,7 +92,7 @@ def main():
 
     index = INDEX.read_text(encoding="utf-8")
     sitemap = SITEMAP.read_text(encoding="utf-8")
-    for path, meta, body in sorted(due, key=lambda x: x[1]["date"]):
+    for path, meta, body in sorted(due, key=lambda x: x[1]["at"]):
         slug = path.stem
         target = BLOG / path.name
         if target.exists():

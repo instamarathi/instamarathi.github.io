@@ -2,7 +2,7 @@ name: Publish scheduled posts
 
 on:
   schedule:
-    - cron: "30 3 * * *"   # 9:00 AM India time, every day
+    - cron: "17 * * * *"   # every hour; the script decides what is due (default 9:00 AM IST)
   workflow_dispatch:        # "Run workflow" button = publish due posts now
 
 permissions:
