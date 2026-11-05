@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="mr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>अनिकेत ❤ सायली — खेळ आणि शुभेच्छा (Demo)</title>
+<meta name="description" content="अनिकेत-सायलीला तुम्ही किती ओळखता? Quiz खेळा, उखाणा बनवा, शुभेच्छा card पाठवा. InstaMarathi demo.">
+<meta property="og:title" content="अनिकेत-सायलीला तुम्ही किती ओळखता? 🤔">
+<meta property="og:description" content="6 प्रश्न. तुमचा score WhatsApp status वर टाका!">
+<meta property="og:image" content="https://instamarathi.github.io/assets/og-image.png">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#5c0a16">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Marathi&family=Mukta:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--maroon:#5c0a16;--kumkum:#9e1b23;--haldi:#f2b01e;--marigold:#f28c1e;--gold:#c9a24a;--gold-l:#e8cf8a;
+  --cream:#fff8ec;--paper:#fdf1dc;--ink:#3a1a12;--muted:#7a5a4a;--line:#e6d2ad;--green:#1f8f4e;
+  --serif:"Tiro Devanagari Marathi","Noto Serif Devanagari",serif;--sans:"Mukta","Noto Sans Devanagari",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.55;font-size:17px;overflow-x:hidden}
+button,input,textarea{font:inherit;color:inherit}
+h1,h2,.serif{font-family:var(--serif);font-weight:400}
+a{color:inherit}
+.zari{height:18px;background:linear-gradient(135deg,var(--gold) 25%,transparent 25%) -7px 0/14px 14px,linear-gradient(225deg,var(--gold) 25%,transparent 25%) -7px 0/14px 14px,var(--maroon);background-repeat:repeat-x;border-bottom:3px double var(--gold)}
+header{background:radial-gradient(120% 90% at 50% 0%,#8a1521,var(--maroon) 70%);color:var(--cream);text-align:center;padding:16px 16px 0}
+header small{color:var(--gold-l);font-family:var(--serif);font-size:14px}
+header h1{font-size:clamp(26px,8vw,38px);color:var(--haldi);line-height:1.2;margin:4px 0}
+header p{color:var(--gold-l);font-size:15.5px}
+.tabs{display:flex;justify-content:center;gap:6px;margin-top:14px;flex-wrap:wrap}
+.tabs button{border:0;background:rgba(255,248,236,.1);color:var(--gold-l);padding:10px 14px;border-radius:12px 12px 0 0;cursor:pointer;font-weight:600;font-size:16px}
+.tabs button[aria-selected=true]{background:var(--paper);color:var(--maroon)}
+main{max-width:560px;margin:0 auto;padding:18px 16px 8px}
+.panel{display:none}.panel.on{display:block;animation:in .3s ease}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.card{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:20px 18px;box-shadow:0 6px 20px rgba(92,10,22,.08)}
+.kick{font-size:13px;font-weight:700;color:var(--kumkum);letter-spacing:.4px}
+.card h2{font-size:clamp(21px,5.8vw,26px);color:var(--maroon);line-height:1.3;margin:4px 0 12px}
+.muted{color:var(--muted);font-size:15.5px}
+.bar{height:8px;border-radius:99px;background:#ecdcbc;overflow:hidden;margin-bottom:14px}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--marigold),var(--haldi));transition:width .3s}
+.opts{display:grid;gap:10px}
+.opt{text-align:left;padding:13px 16px;border-radius:12px;border:1.5px solid var(--line);background:#fff;cursor:pointer;font-size:17px;transition:.15s}
+.opt:hover:not(:disabled){border-color:var(--marigold)}
+.opt.ok{background:#e3f4e9;border-color:var(--green);font-weight:600}
+.opt.no{background:#fbe3e3;border-color:#c0262d}
+.opt:disabled{cursor:default}
+.reveal{margin-top:12px;padding:12px 14px;border-radius:12px;background:#fff3d6;border-left:4px solid var(--haldi);font-size:15.5px;display:none}
+.btn{display:block;width:100%;margin-top:14px;padding:13px 16px;border-radius:12px;border:0;cursor:pointer;font-weight:700;font-size:17px;text-align:center;text-decoration:none}
+.pri{background:var(--kumkum);color:#fff}.pri:hover{background:var(--maroon)}
+.wa{background:var(--green);color:#fff}
+.ghost{background:transparent;border:1.5px solid var(--line);color:var(--muted)}
+.row{display:flex;gap:10px}.row .btn{flex:1}
+.score{text-align:center}
+.score .big{font-family:var(--serif);font-size:64px;color:var(--kumkum);line-height:1}
+.score .title{font-family:var(--serif);font-size:24px;color:var(--maroon);margin:6px 0}
+.preview{margin:16px auto 0;max-width:240px;border-radius:14px;overflow:hidden;box-shadow:0 10px 26px rgba(0,0,0,.25);background:var(--maroon)}
+.preview img{display:block;width:100%;height:auto}
+.seg{display:flex;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:4px;gap:4px;margin-bottom:14px}
+.seg button{flex:1;border:0;border-radius:9px;padding:9px;background:none;cursor:pointer;font-weight:600}
+.seg button[aria-pressed=true]{background:var(--maroon);color:var(--cream)}
+.ukhana{font-family:var(--serif);font-size:clamp(21px,6vw,25px);line-height:1.6;text-align:center;color:var(--maroon);padding:20px 12px;background:#fff;border-radius:14px;border:1.5px dashed var(--gold);min-height:150px;display:flex;align-items:center;justify-content:center}
+label.f{display:block;font-size:14px;font-weight:600;color:var(--muted);margin:12px 0 4px}
+input[type=text],textarea{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:#fff;font-size:17px;outline:none}
+input:focus,textarea:focus{border-color:var(--marigold);box-shadow:0 0 0 3px rgba(242,140,30,.18)}
+textarea{min-height:90px;resize:vertical}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.chips button{padding:8px 12px;border:1.5px solid var(--line);border-radius:999px;background:#fff;cursor:pointer;font-size:14.5px}
+.hint{font-size:13.5px;color:var(--muted);text-align:center;margin-top:8px}
+.back{display:block;text-align:center;margin:18px 0 6px;color:var(--kumkum);font-weight:600}
+.demo-note{text-align:center;font-size:14px;color:var(--muted);padding:6px 16px 28px}
+.demo-note a{color:var(--kumkum);font-weight:600}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="zari"></div>
+<header>
+  <small>॥ अनिकेत ❤ सायली · 11 डिसेंबर ॥</small>
+  <h1>खेळ आणि शुभेच्छा</h1>
+  <p>खेळा, बनवा आणि तुमच्या status वर टाका 🎉</p>
+  <div class="tabs" role="tablist">
+    <button role="tab" aria-selected="true" data-tab="quiz">🤔 किती ओळखता?</button>
+    <button role="tab" aria-selected="false" data-tab="ukh">💍 उखाणा</button>
+    <button role="tab" aria-selected="false" data-tab="wish">🙏 शुभेच्छा</button>
+  </div>
+</header>
+
+<main>
+  <!-- QUIZ -->
+  <section class="panel on" id="quiz">
+    <div class="card" id="qCard">
+      <div class="bar"><i id="qBar"></i></div>
+      <div class="kick" id="qNum">प्रश्न 1 / 6</div>
+      <h2 id="qText"></h2>
+      <div class="opts" id="qOpts"></div>
+      <div class="reveal" id="qReveal"></div>
+      <button class="btn pri" id="qNext" style="display:none">पुढे →</button>
+    </div>
+    <div class="card score" id="qScore" style="display:none">
+      <div class="kick">तुमचा score</div>
+      <div class="big" id="sBig"></div>
+      <div class="title" id="sTitle"></div>
+      <p class="muted" id="sLine"></p>
+      <div class="preview"><img id="sImg" alt="Score card"></div>
+      <button class="btn wa" data-share="quiz">📲 Status वर टाका</button>
+      <a class="btn ghost" id="qChallenge" target="_blank" rel="noopener">मित्रांना challenge करा (WhatsApp)</a>
+      <button class="btn ghost" id="qAgain">पुन्हा खेळा</button>
+    </div>
+  </section>
+
+  <!-- UKHANA -->
+  <section class="panel" id="ukh">
+    <div class="card">
+      <div class="kick">लग्नात उखाणा तर घ्यावाच लागणार!</div>
+      <h2>नवरा-नवरीसाठी उखाणा सुचवा</h2>
+      <div class="seg" role="group" aria-label="कोण घेणार">
+        <button type="button" aria-pressed="true" data-who="b">सायली घेणार</button>
+        <button type="button" aria-pressed="false" data-who="g">अनिकेत घेणार</button>
+      </div>
+      <div class="ukhana" id="uText"></div>
+      <div class="row"><button class="btn ghost" id="uNext">🔄 दुसरा</button><button class="btn wa" data-share="ukh">📲 Share</button></div>
+      <p class="hint">आवडलेला उखाणा share करा — लग्नात नवरीने तुमचाच घेतला तर? 😄</p>
+    </div>
+  </section>
+
+  <!-- WISH -->
+  <section class="panel" id="wish">
+    <div class="card">
+      <div class="kick">लग्नाला येता येत नसेल तरी</div>
+      <h2>तुमच्या शुभेच्छा card</h2>
+      <label class="f" for="wName">तुमचं नाव</label>
+      <input type="text" id="wName" maxlength="30" placeholder="उदा. सुमन मावशी, पुणे">
+      <label class="f" for="wMsg">शुभेच्छा</label>
+      <textarea id="wMsg" maxlength="120" placeholder="तुमच्या मनातलं दोन ओळीत..."></textarea>
+      <div class="chips" id="wChips">
+        <button type="button">सुखी संसार, भरभरून प्रेम!</button>
+        <button type="button">दोघांची जोडी अशीच हसत राहो!</button>
+        <button type="button">लवकर पार्टी द्या 😄</button>
+      </div>
+      <div class="preview"><img id="wImg" alt="शुभेच्छा card"></div>
+      <button class="btn wa" data-share="wish">📲 Status वर टाका</button>
+      <a class="btn ghost" id="wSend" target="_blank" rel="noopener">नवरा-नवरीला WhatsApp वर पाठवा</a>
+    </div>
+  </section>
+
+  <a class="back" href="/demo/lagna/">← अनिकेत-सायलीच्या website वर परत</a>
+</main>
+<p class="demo-note">हा <a href="/blog/lagna-website-business.html#share">InstaMarathi</a> चा demo आहे — लग्नाच्या website वर invitation शिवाय काय share होतं, ते <a href="/blog/lagna-website-business.html#share">लेखात वाचा</a>.</p>
+
+<script>
+/* === हे बदला: couple ची माहिती === */
+var COUPLE = { g:"अनिकेत", b:"सायली", date:"11 डिसेंबर 2026", tag:"#AniSayLagna",
+  whatsapp:"919999999999", site:"https://instamarathi.github.io/demo/lagna/" };
+var QUIZ = [
+  {q:"अनिकेत-सायलीची पहिली भेट कुठे झाली?", o:["कॉलेजमध्ये","बघण्याच्या कार्यक्रमात","मित्राच्या वाढदिवसाला","Instagram वर"], a:2, r:"पुण्यात मित्राच्या वाढदिवसाला! तिथूनच रोजचे Good morning messages सुरू झाले 😄"},
+  {q:"घरच्यांच्या पोहे-चहा कार्यक्रमात अनिकेतने काय गोंधळ घातला?", o:["पोहे सांडले","चहाचा कप उलटा धरला","नाव विसरला","चुकीच्या घरी गेला"], a:1, r:"चहाचा कप उलटा धरला! सायली अजूनही हसते."},
+  {q:"दोघांपैकी तयार व्हायला जास्त वेळ कोण घेतं?", o:["सायली","अनिकेत","दोघंही सारखेच","आई सांगेल तो"], a:1, r:"अनिकेत! केसांचा set नीट झाल्याशिवाय बाहेर पडत नाही. 💇"},
+  {q:"सायलीचा सगळ्यात आवडता पदार्थ?", o:["पुरणपोळी","पाणीपुरी","कोल्हापुरी मिसळ","वडापाव"], a:2, r:"कोल्हापुरी मिसळ — जितकी तिखट तितकी छान! 🌶️"},
+  {q:"दोघांची पहिली ट्रिप कुठे?", o:["गोवा","महाबळेश्वर","पन्हाळा","कोकण"], a:2, r:"पन्हाळा! आणि घरी सांगितलं होतं — \"देवदर्शनाला जातोय\" 🙊"},
+  {q:"साखरपुड्याला सगळ्यात जास्त कोण रडलं?", o:["सायलीची आई","अनिकेतचे बाबा","सायलीची आजी","अनिकेत स्वतः"], a:1, r:"अनिकेतचे बाबा! \"माझी मुलगी नव्हती, आता मिळाली\" म्हणून. 🥹"}
+];
+var UKH = {
+  b:["चांदीच्या ताटात तुपाचा दिवा, {g}रावांचं नाव घेते, सगळ्यांचा आशीर्वाद हवा",
+     "हळदीचा पिवळा, मेंदीचा लाल रंग, {g}रावांचं नाव घेते, आयुष्यभर राहू संग",
+     "चहाचा कप दिला, थरथरला हात, {g}रावांचं नाव घेते, जन्मोजन्मीची साथ",
+     "सह्याद्रीच्या कुशीत आमचं छोटंसं गाव, सगळ्यांच्या आग्रहाखातर घेते {g}रावांचं नाव",
+     "Phone ला charger, bike ला petrol, {g}राव माझे, पण माझ्या हातात remote control",
+     "पन्हाळ्यावरून दिसतो सूर्य मावळताना, {g}रावांचं नाव घेते, सगळे पाहुणे पाहताना"],
+  g:["भाजीत भाजी मेथीची, {b} माझ्या प्रीतीची",
+     "चांदीच्या ताटात तुपाचा दिवा, {b}चं नाव घेतो, सगळ्यांचा आशीर्वाद हवा",
+     "हळदीचा पिवळा, मेंदीचा लाल रंग, {b}चं नाव घेतो, आयुष्यभर राहू संग",
+     "मिसळीवर फरसाण, त्यावर लिंबाची फोड, {b}चं नाव घेतो, तिच्याइतकं काहीच नाही गोड",
+     "Phone ला charger, bike ला petrol, {b}च्या हातात आता माझा control",
+     "सह्याद्रीच्या कुशीत आमचं छोटंसं गाव, सगळ्यांच्या आग्रहाखातर घेतो {b}चं नाव"]
+};
+
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  var names=COUPLE.g+' ❤ '+COUPLE.b;
+
+  /* ---------- share card (1080×1920, status/story size) ---------- */
+  var fontsReady=(document.fonts&&document.fonts.load)?Promise.all([
+    document.fonts.load('60px "Tiro Devanagari Marathi"','अ'),document.fonts.load('700 40px Mukta','अ')]).catch(function(){}):Promise.resolve();
+  function wrap(ctx,text,max){ var words=text.split(' '),lines=[],line='';
+    words.forEach(function(w){var t=line?line+' '+w:w; if(ctx.measureText(t).width>max&&line){lines.push(line);line=w;}else line=t;});
+    if(line)lines.push(line); return lines; }
+  function card(o){
+    var c=document.createElement('canvas');c.width=1080;c.height=1920;var x=c.getContext('2d');
+    var g=x.createRadialGradient(540,300,100,540,900,1300);g.addColorStop(0,'#8a1521');g.addColorStop(.6,'#5c0a16');g.addColorStop(1,'#3d060e');
+    x.fillStyle=g;x.fillRect(0,0,1080,1920);
+    // toran
+    for(var i=0;i<27;i++){x.fillStyle=i%3===2?'#3f8f4f':(i%2?'#f2b01e':'#f28c1e');x.beginPath();x.ellipse(20+i*40,10,19,i%2?34:44,0,0,Math.PI*2);x.fill();}
+    // gold frame
+    x.strokeStyle='#c9a24a';x.lineWidth=4;x.strokeRect(50,110,980,1760);x.lineWidth=1.5;x.strokeRect(66,126,948,1728);
+    // zigzag bottom
+    x.fillStyle='#c9a24a';for(var j=0;j<54;j++){x.beginPath();x.moveTo(j*20,1920);x.lineTo(j*20+10,1898);x.lineTo(j*20+20,1920);x.fill();}
+    x.textAlign='center';x.textBaseline='alphabetic';
+    var serif='"Tiro Devanagari Marathi","Noto Serif Devanagari",serif',sans='Mukta,"Noto Sans Devanagari",sans-serif';
+    x.fillStyle='#e8cf8a';x.font='40px '+serif;x.fillText('॥ शुभविवाह ॥',540,250);
+    x.fillStyle='#f2b01e';x.font='88px '+serif;x.fillText(names,540,370);
+    x.fillStyle='#fff8ec';x.font='600 40px '+sans;x.fillText(COUPLE.date,540,440);
+    // build blocks, then centre them vertically between the header and the CTA
+    var ts=o.titleSize||76, blocks=[];
+    function add(font,color,lines,lh,gap){blocks.push({font:font,color:color,lines:lines,lh:lh,gap:gap});}
+    if(o.kicker){x.font='600 44px '+sans;add(x.font,'#e8cf8a',wrap(x,o.kicker,860),62,40);}
+    if(o.big){add('230px '+serif,'#f2b01e',[o.big],250,40);}
+    if(o.title){x.font=ts+'px '+serif;add(x.font,'#ffffff',wrap(x,o.title,880),ts*1.45,40);}
+    if(o.sub){x.font='600 44px '+sans;add(x.font,'#e8cf8a',wrap(x,o.sub,860),64,0);}
+    var total=blocks.reduce(function(t,b){return t+b.lines.length*b.lh+b.gap;},0);
+    var y=500+Math.max(0,(1060-total)/2);
+    blocks.forEach(function(b){x.font=b.font;x.fillStyle=b.color;
+      b.lines.forEach(function(l){y+=b.lh;x.fillText(l,540,y-b.lh*0.25);}); y+=b.gap;});
+    // CTA pill
+    x.fillStyle='rgba(242,176,30,.15)';x.strokeStyle='#f2b01e';x.lineWidth=3;
+    x.beginPath();if(x.roundRect)x.roundRect(160,1610,760,120,60);else x.rect(160,1610,760,120);x.fill();x.stroke();
+    x.fillStyle='#fff8ec';x.font='700 42px '+sans;x.fillText(o.cta||'तुम्हीही खेळा 👉 link bio मध्ये',540,1684);
+    x.fillStyle='#e8cf8a';x.font='600 38px '+sans;x.fillText(COUPLE.tag,540,1800);
+    return c;
+  }
+  var current={};
+  function render(kind,o,img){ fontsReady.then(function(){ var c=card(o); current[kind]=c; $(img).src=c.toDataURL('image/png'); }); }
+  function share(kind,text){
+    var c=current[kind]; if(!c)return;
+    c.toBlob(function(blob){
+      var file=new File([blob],'anisay-'+kind+'.png',{type:'image/png'});
+      if(navigator.canShare&&navigator.canShare({files:[file]})){
+        navigator.share({files:[file],text:text+'\n'+COUPLE.site}).catch(function(){});
+      }else{
+        var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=file.name;document.body.appendChild(a);a.click();a.remove();
+        setTimeout(function(){alert('Card download झालं ✅\nआता WhatsApp/Instagram उघडून status वर टाका.');},300);
+      }
+    },'image/png');
+  }
+
+  /* ---------- tabs ---------- */
+  [].forEach.call(document.querySelectorAll('.tabs button'),function(b){
+    b.onclick=function(){ [].forEach.call(document.querySelectorAll('.tabs button'),function(x){x.setAttribute('aria-selected',x===b)});
+      [].forEach.call(document.querySelectorAll('.panel'),function(p){p.classList.toggle('on',p.id===b.dataset.tab)}); };
+  });
+
+  /* ---------- quiz ---------- */
+  var qi=0,score=0;
+  function showQ(){
+    var q=QUIZ[qi]; $('qNum').textContent='प्रश्न '+(qi+1)+' / '+QUIZ.length; $('qText').textContent=q.q;
+    $('qBar').style.width=(qi/QUIZ.length*100)+'%'; $('qReveal').style.display='none'; $('qNext').style.display='none';
+    var box=$('qOpts'); box.textContent='';
+    q.o.forEach(function(t,i){ var b=document.createElement('button');b.className='opt';b.type='button';b.textContent=t;
+      b.onclick=function(){ [].forEach.call(box.children,function(x,k){x.disabled=true;if(k===q.a)x.classList.add('ok');});
+        if(i===q.a)score++; else b.classList.add('no');
+        $('qReveal').textContent=(i===q.a?'✅ बरोबर! ':'❌ नाही! ')+q.r; $('qReveal').style.display='block';
+        $('qNext').textContent= qi===QUIZ.length-1?'माझा score बघा 🎉':'पुढे →'; $('qNext').style.display='block'; };
+      box.appendChild(b); });
+  }
+  function result(){
+    var n=QUIZ.length, t= score===n?'खरे जवळचे! 🏆': score>=n-2?'छान ओळखता! 😎':'लग्नाला या, ओळख होईल 😄';
+    var line= score===n?'तुम्हाला मानाचा पहिला पंगतीचा मान!': score>=n-2?'फक्त थोडक्यात हुकलं — अजून एकदा?':'काही हरकत नाही — मिसळ खाताना सगळं कळेल.';
+    $('qCard').style.display='none'; $('qScore').style.display='block';
+    $('sBig').textContent=score+'/'+n; $('sTitle').textContent=t; $('sLine').textContent=line;
+    render('quiz',{kicker:'मी '+COUPLE.g+'-'+COUPLE.b+'ला किती ओळखतो/ते?',big:score+'/'+n,title:t,sub:'तुमचा score किती? 🤔',cta:'तुम्हीही खेळा 👉 link खाली'},'sImg');
+    $('qChallenge').href='https://wa.me/?text='+encodeURIComponent('मला '+COUPLE.g+'-'+COUPLE.b+'च्या quiz मध्ये '+score+'/'+n+' मिळाले 😎 तुम्ही किती ओळखता? 👇\n'+location.href.split('#')[0]);
+  }
+  $('qNext').onclick=function(){ qi++; if(qi<QUIZ.length)showQ(); else result(); };
+  $('qAgain').onclick=function(){ qi=0;score=0;$('qScore').style.display='none';$('qCard').style.display='block';showQ(); };
+  showQ();
+
+  /* ---------- ukhana ---------- */
+  var who='b',ui=0;
+  function showU(){ var t=UKH[who][ui%UKH[who].length].replace(/\{g\}/g,COUPLE.g).replace(/\{b\}/g,COUPLE.b);
+    $('uText').textContent=t;
+    render('ukh',{kicker:(who==='b'?COUPLE.b:COUPLE.g)+'साठी माझा उखाणा 💍',title:'“'+t+'”',titleSize:68,sub:'तुम्ही कोणता सुचवाल?',cta:'उखाणा सुचवा 👉 link खाली'},'uImgHidden');
+  }
+  // hidden img holder for ukhana (we only need the canvas)
+  var hid=document.createElement('img');hid.id='uImgHidden';hid.alt='';hid.hidden=true;document.body.appendChild(hid);
+  [].forEach.call(document.querySelectorAll('.seg button'),function(b){ b.onclick=function(){ who=b.dataset.who;ui=0;
+    [].forEach.call(document.querySelectorAll('.seg button'),function(x){x.setAttribute('aria-pressed',x===b)}); showU(); }; });
+  $('uNext').onclick=function(){ui++;showU();};
+  showU();
+
+  /* ---------- wish ---------- */
+  var wt;
+  function showW(){ var nm=$('wName').value.trim()||'तुमचं नाव', m=$('wMsg').value.trim()||'सुखी संसार, भरभरून प्रेम!';
+    render('wish',{kicker:'नवीन जोडीला शुभेच्छा 🙏',title:'“'+m+'”',titleSize:68,sub:'— '+nm,cta:'तुम्हीही शुभेच्छा द्या 👉 link खाली'},'wImg');
+    $('wSend').href='https://wa.me/'+COUPLE.whatsapp+'?text='+encodeURIComponent('🙏 '+COUPLE.g+'-'+COUPLE.b+', '+m+'\n— '+nm);
+  }
+  ['wName','wMsg'].forEach(function(id){$(id).addEventListener('input',function(){clearTimeout(wt);wt=setTimeout(showW,250);});});
+  [].forEach.call($('wChips').children,function(b){b.onclick=function(){$('wMsg').value=b.textContent;showW();};});
+  showW();
+
+  [].forEach.call(document.querySelectorAll('[data-share]'),function(b){
+    var k=b.dataset.share;
+    b.onclick=function(){ share(k, k==='quiz'?'मला '+$('sBig').textContent+' मिळाले! तुम्ही '+names+'ला किती ओळखता?':
+      k==='ukh'?'हा उखाणा कसा वाटला? 😄 '+COUPLE.tag:'नवीन जोडीला शुभेच्छा! '+COUPLE.tag); };
+  });
+})();
+</script>
+</body>
+</html>
