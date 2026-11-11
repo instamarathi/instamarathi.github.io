@@ -1,0 +1,307 @@
+<!--
+publish: 2026-11-18
+tag: marketing
+category: Digital Marketing
+title: SEO Basics मराठीत — Google वर website कशी दिसते (धडा 6)
+summary: Google search कसं चालतं, लोक खरंच कोणते शब्द टाइप करतात (बहुतेक English/Minglish!), title आणि meta description, photos आणि speed, आणि Google Search Console step by step — छोट्या दुकानाच्या website साठी, खोट्या वचनांशिवाय.
+path: marketing/seo-basics.html
+-->
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO Basics मराठीत — Google वर website कशी दिसते, Search Console | InstaMarathi</title>
+  <meta name="description" content="SEO basics मराठीत: Google search कसं चालतं (crawl, index, rank), local SEO vs website SEO, keywords — लोक English/Minglish मध्ये काय शोधतात, title tag आणि meta description, headings, image alt text, website speed, backlinks, आणि Google Search Console step by step (verify, sitemap, URL inspection, performance). Digital marketing course चा धडा 6.">
+  <meta name="keywords" content="seo marathi, seo basics in marathi, seo kay aahe, seo for beginners, website seo, local seo vs seo, keyword research free, google autocomplete, title tag, meta description, google search console marathi, search console setup, sitemap submit, request indexing, google sites seo, image alt text, website speed, backlinks">
+  <link rel="canonical" href="https://instamarathi.github.io/marketing/seo-basics.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="InstaMarathi">
+  <meta property="og:locale" content="mr_IN">
+  <meta property="og:title" content="SEO Basics मराठीत — Google वर website कशी दिसते, Search Console | InstaMarathi">
+  <meta property="og:description" content="SEO basics मराठीत: Google search कसं चालतं (crawl, index, rank), local SEO vs website SEO, keywords — लोक English/Minglish मध्ये काय शोधतात, title tag आणि meta description, headings, image alt text, website speed, backlinks, आणि Google Search Console step by step (verify, sitemap, URL inspection, performance). Digital marketing course चा धडा 6.">
+  <meta property="og:url" content="https://instamarathi.github.io/marketing/seo-basics.html">
+  <meta property="og:image" content="https://instamarathi.github.io/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DSX7QN8HXY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DSX7QN8HXY');
+  </script>
+</head>
+<body>
+  <script>
+(function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t)})();
+</script>
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">Insta<span>Marathi</span></a>
+      <button class="nav-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="/shika/business-kya-aahe.html">शिका</a></li>
+        <li><a href="/tools/">Tools</a></li>
+        <li><a href="/playbooks/">Playbooks</a></li>
+        <li><a href="/diy/niche-research.html">स्वतः बनवा</a></li>
+        <li><a href="/sales/">Sales</a></li>
+        <li><a href="/clients/kuthe-shodhayche.html">Clients</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">☀️</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="/">Home</a> / <a href="/marketing/">Digital Marketing</a> / धडा 6</div>
+      <h1>SEO Basics मराठीत — Google वर website कशी दिसते</h1>
+      <p>मागच्या धड्यात श्री बेकरीसाठी एका पानाची website बनवली. आता संजय विचारणार: "Google वर 'cake' शोधलं तर आपली website येईल ना?" प्रामाणिक उत्तर — आपोआप नाही, आणि लगेच तर नाहीच. Google वर website कशी आणि का दिसते, याच्या कामाला SEO (Search Engine Optimization) म्हणतात. नाव मोठं आहे, पण छोट्या दुकानासाठी लागणारा भाग सोपा आहे: Google ला पान सापडू द्या, पान कशाबद्दल आहे ते स्पष्ट सांगा, ग्राहक जे शब्द टाइप करतो ते पानावर ठेवा, आणि पान फोनवर पटकन उघडू द्या. या धड्यात हेच, आणि Google Search Console हे free tool step by step.</p>
+    </div>
+
+    <div class="tip">
+      <strong>या धड्यात काय आहे:</strong>
+      <ol>
+        <li>Google search कसं चालतं — crawl, index, rank</li>
+        <li>Local SEO आणि website SEO — फरक</li>
+        <li>Keywords — लोक खरंच काय टाइप करतात</li>
+        <li>एका पानाचा एक मुख्य विषय</li>
+        <li>Title आणि meta description — श्री बेकरीचं before/after</li>
+        <li>पानावरचं — headings, मजकूर, photos</li>
+        <li>Mobile आणि speed — मोठे photos हा नेहमीचा गुन्हेगार</li>
+        <li>Links — आतले आणि बाहेरचे</li>
+        <li>Google Search Console — step by step</li>
+        <li>काय करू नये, AI चा वापर, आणि किती वेळ लागतो</li>
+        <li>आज करा: title, meta description, headings, keyword check, Search Console</li>
+      </ol>
+    </div>
+
+    <h2>1. Google search कसं चालतं — crawl, index, rank</h2>
+    <p>Google हे तीन टप्प्यांत सांगतं:</p>
+    <table>
+      <thead>
+        <tr><th>टप्पा</th><th>काय होतं</th><th>आपल्यासाठी अर्थ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Crawl</strong> (शोधणं, वाचणं)</td><td>Google चे programs (Googlebot) links पकडत फिरतात आणि नवीन पानं शोधून वाचतात.</td><td>Website पर्यंत रस्ता हवा — Google profile, Instagram bio, दुसऱ्या website वरचा link, किंवा Search Console.</td></tr>
+        <tr><td><strong>Index</strong> (नोंद करणं)</td><td>पान कशाबद्दल आहे ते समजून Google ते आपल्या मोठ्या "वहीत" (index) नोंदवतं.</td><td>पानावर <strong>लिहिलेला मजकूर</strong> हवा — सगळं photo मध्ये असेल तर Google ला कमी कळतं.</td></tr>
+        <tr><td><strong>Rank</strong> (क्रम लावणं)</td><td>कुणी शोधलं की Google सगळ्यात उपयोगी पानं निवडून क्रम लावतं — जागा, भाषा, device नुसार बदलणारा.</td><td>पान शोधणाऱ्याच्या प्रश्नाला खरं उत्तर देणारं हवं. तुमच्या फोनवरचा क्रम सगळ्यांना तसाच दिसत नाही.</td></tr>
+      </tbody>
+    </table>
+    <p>Google दोन गोष्टी स्पष्ट लिहितं: <strong>प्रत्येक पान crawl, index किंवा दाखवलं जाईलच याची guarantee नाही</strong>, आणि <strong>पैसे घेऊन Google नेहमीच्या निकालांत वर आणत नाही</strong>. ("Sponsored" निकाल ads आहेत.) म्हणून "Google वर पहिल्या पानाची guarantee" देणारा एकतर ads बद्दल बोलतोय, किंवा खोटं.</p>
+    <p>काही searches वर सगळ्यात वर AI ने लिहिलेलं उत्तर (AI Overview) दिसतं. Google म्हणतं त्यासाठी वेगळं काही करावं लागत नाही — हेच मूलभूत नियम लागू.</p>
+
+    <h2>2. Local SEO आणि website SEO — फरक</h2>
+    <p><a href="/marketing/google-maps-local-seo.html">धडा 3</a> मध्ये आपण Maps वरची यादी बघितली — तिथे Google <strong>Business Profile</strong> चा क्रम लावतं (relevance, distance, prominence). हा धडा Google search मध्ये <strong>websites ची पानं</strong> (नेहमीचे निळे links) कशी दिसतात, त्याबद्दल आहे. निकालाच्या पानावर Maps ची यादी आणि websites कुठे, कोणत्या क्रमाने दिसतील हे search नुसार बदलतं — आणि दोन्हींचा एकमेकांवर परिणाम होतो.</p>
+    <p>दोन्ही जोडलेले आहेत — profile मधला website link, आणि website वर तेच नाव-पत्ता-फोन. पण bakery सारख्या दुकानासाठी आधी Google profile आणि reviews (धडा 2-4); website चं SEO त्यानंतर. Website SEO चा जास्त फायदा tuition, clinic, hotel, caterer, B2B सारख्यांना — ज्यांचे ग्राहक निर्णयाआधी वाचतात.</p>
+
+    <h2>3. Keywords — लोक खरंच काय टाइप करतात</h2>
+    <p>Keyword म्हणजे ग्राहक Google मध्ये जे शब्द टाइप करतो (किंवा बोलतो). SEO मधला सगळ्यात मोठा धडा हा: <strong>दुकानदार स्वतःच्या माल-सेवेला काय म्हणतो ते नाही, ग्राहक काय शोधतो ते महत्त्वाचं.</strong></p>
+    <p>आणि इथे एक गोष्ट मराठी website बनवणाऱ्यांना माहीत हवी. हा course लिहिण्याआधी मी Google Trends वर महाराष्ट्रातले searches बघितले — लोक "digital marketing", "seo" असे विषय बहुतेक <strong>English किंवा Minglish मध्ये</strong> शोधतात, मराठी लिपीत फारच कमी. दुकानांच्या बाबतीतही माझा अंदाज असाच आहे: साताऱ्यातला माणूस "सातारा केक दुकान" पेक्षा "cake shop in satara", "birthday cake order satara", "eggless cake near me" असं टाइप करण्याची शक्यता जास्त. काही जण हिंदीत किंवा voice search ने बोलतात, काही मराठीतही. प्रत्येक धंद्यासाठी हे वेगळं असू शकतं — म्हणून खालच्या मार्गांनी तुमच्या दुकानासाठी तपासा.</p>
+    <div class="tip">
+      <strong>म्हणजे मराठी website वरही ग्राहक टाइप करतो ते English शब्द हवेत.</strong> Website चा मजकूर मराठीत ठेवा — ग्राहकाशी त्याच्या भाषेत बोला. पण title, headings, menu मध्ये ग्राहक जे शब्द टाइप करतो (बहुतेक English) ते नैसर्गिकपणे असू द्या: "Birthday Cake", "Eggless Cake", "Cake Shop", "Satara".
+    </div>
+
+    <h3>Keywords कसे शोधायचे — चार free मार्ग</h3>
+    <ol>
+      <li><strong>Google autocomplete:</strong> Google मध्ये "cake shop satara" किंवा "birthday cake" टाइप करा आणि थांबा — खाली सुचवणी येतात. त्या लोकांच्या searches वरून येतात — कल्पना मिळवण्यासाठी उत्तम, पण किती लोक शोधतात याचा आकडा नाही. शेवटी a, b, c… किंवा "near", "order", "price" जोडून बघा. (मागच्या धड्यांप्रमाणे incognito मध्ये बघा, म्हणजे तुमच्या स्वतःच्या history चा परिणाम कमी.)</li>
+      <li><strong>"People also ask" (इतर लोक हेही विचारतात):</strong> काही searches वर निकालांमध्ये प्रश्नांचा एक box दिसतो — "eggless cake मध्ये अंडं असतं का?", "1 kg cake किती लोकांना पुरतो?" असे. हे प्रश्न तुमच्या पानावर छोट्या उत्तरांसह लिहिता येतात. (हा box प्रत्येक search वर दिसत नाही.)</li>
+      <li><strong>Search Console मधले queries:</strong> Website चालू झाल्यावर Google दाखवतं की कोणत्या searches मध्ये तुमचं पान निकालात दिसलं (section 9). हा सगळ्यात खरा पुरावा — पण नवीन website वर तो यायला आठवडे लागतात.</li>
+      <li><strong>ग्राहकांना विचारा:</strong> संजयला विचारा — "फोनवर लोक नेमकं काय विचारतात?" Counter वर ग्राहकांना विचारा — "दुकान कसं सापडलं?" WhatsApp वरचे चौकशीचे messages वाचा. तिथले शब्द ("photo cake", "half kg", "same day delivery") हे सोन्याचे keywords.</li>
+    </ol>
+    <p>Paid keyword tools ची छोट्या दुकानाला गरज नाही. गावात search कमी असतो — पण "birthday cake order satara" शोधणारा विकत घ्यायला तयार असतो.</p>
+
+    <h2>4. एका पानाचा एक मुख्य विषय</h2>
+    <p>प्रत्येक पानाला एक मुख्य विषय आणि एक मुख्य keyword. श्री बेकरीच्या एका पानाच्या website चा विषय — "Satara मधली bakery, birthday cakes". पाव, बिस्किटं पण असतील, पण मुख्य ओळख एक.</p>
+    <p>खरंच वेगळं काम असेल (उदा. लग्नाचे मोठे cakes) तर त्याचं वेगळं पान. एकाच पानावर "cake, catering, classes, franchise" सगळं कोंबलं तर ना ग्राहकाला कळतं, ना Google ला.</p>
+
+    <h2>5. Title आणि meta description — श्री बेकरीचं before/after</h2>
+    <p>Google च्या निकालात प्रत्येक website च्या दोन गोष्टी दिसतात: निळ्या अक्षरातली <strong>title</strong>, आणि खाली दोन ओळींचं <strong>वर्णन</strong> (snippet). Title पानाच्या code मध्ये <code>&lt;title&gt;</code> म्हणून असते; वर्णनासाठी आपण meta description लिहू शकतो — Google कधी ते वापरतं, कधी पानावरचा शोधाशी जुळणारा दुसरा भाग.</p>
+    <ul>
+      <li><strong>Title:</strong> पान कशाबद्दल आहे हे सांगणारी सगळ्यात महत्त्वाची ओळ. छोटी, स्पष्ट, दुकानाचं नाव; फोनवर लांब title कापली जाते — म्हणून मुख्य keyword सुरुवातीला.</li>
+      <li><strong>Meta description:</strong> ranking ला थेट मदत नाही, पण वाचून ग्राहक click करतो की नाही ते ठरतं. 1-2 वाक्यं: काय मिळतं, कुठे, पुढे काय करायचं.</li>
+    </ul>
+    <table>
+      <thead>
+        <tr><th></th><th>Before (बहुतेक दुकानांचं असं असतं)</th><th>After</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Title</td><td>Home</td><td>Birthday Cake &amp; Eggless Cake in Satara | श्री बेकरी</td></tr>
+        <tr><td>Meta description</td><td>(रिकामं) — किंवा "Welcome to our website"</td><td>सातारा मधली श्री बेकरी: custom birthday cake, eggless cake, photo cake आणि ताजे पाव. Cake order WhatsApp वर एक दिवस आधी. सकाळी 7 ते रात्री 9.</td></tr>
+      </tbody>
+    </table>
+    <p>"After" मध्ये बघा: ग्राहक टाइप करतो ते शब्द (Birthday Cake, Eggless Cake, Satara) English मध्ये, बाकी वाक्य मराठीत, आणि खरी माहिती. "Best Cake Shop Satara No.1 Cheap Cake" असं नाही (section 10).</p>
+    <div class="warning">
+      <strong>Google तुमचे शब्द बदलू शकतं</strong> — title वेगळी दाखवू शकतं, आणि वर्णनासाठी पानावरचा दुसरा भाग घेऊ शकतं. हे सामान्य आहे. म्हणून पानाच्या पहिल्या paragraph वर पण मेहनत घ्या.
+    </div>
+    <h3>हे कुठे लिहायचं?</h3>
+    <p>WordPress मध्ये SEO plugin (उदा. Yoast) मधून, Wix सारख्या builders मध्ये page च्या "SEO settings" मधून (नाव आणि जागा बदलू शकते). <strong>Google Sites मध्ये मर्यादा आहे:</strong> माझ्या माहितीप्रमाणे तिथे meta description लिहायची सोय नाही, आणि title site चं नाव आणि page चं नाव यातून बनते. म्हणून: site चं नाव नीट ठेवा (उदा. "श्री बेकरी Satara — Birthday Cakes"), आणि पहिला paragraph meta description सारखा लिहा — Google वर्णनासाठी पानावरचाच मजकूर वापरतं (कोणता भाग, हे Google ठरवतं). Google Sites मध्ये नंतर सोय आली तर वापरा.</p>
+
+    <h2>6. पानावरचं — headings, मजकूर, photos</h2>
+    <h3>Headings</h3>
+    <p>Headings म्हणजे पानावरचे मोठ्या अक्षरातले मथळे. ते ग्राहकाला scroll करताना रस्ता दाखवतात, आणि Google ला पानाची रचना. Google ने ठराविक संख्या सांगितलेली नाही; एका पानाच्या website साठी सोपी रचना: वर एक मुख्य heading (H1) — पानाचा विषय — आणि खाली भागांचे headings (H2), जितके भाग तितके. Google Sites मध्ये text निवडून "Title", "Heading", "Subheading" अशा styles असतात; इतर builders मध्ये H1, H2 असं. श्री बेकरीसाठी उदाहरण:</p>
+    <div class="prompt-block"><span class="label">श्री बेकरी — headings</span>H1: श्री बेकरी, सातारा — Birthday Cake आणि Eggless Cake
+H2: Cake Menu आणि किंमती
+H2: Birthday Cake ची order कशी द्यायची
+H2: पत्ता, वेळा आणि Delivery</div>
+    <h3>वाचायला सोपा मजकूर</h3>
+    <ul>
+      <li>छोटे paragraphs; पहिल्या दोन ओळींत — काय मिळतं, कुठे, order कसं.</li>
+      <li>महत्त्वाची माहिती <strong>लिहिलेल्या मजकुरात</strong> — menu, किंमती, वेळा photo मध्येच छापून टाकू नका.</li>
+      <li>ग्राहकांचे खरे प्रश्न-उत्तरं (section 3 मधले) — "Eggless cake मिळतो का? हो, सगळे flavours."</li>
+    </ul>
+    <h3>Photos — alt text आणि file name</h3>
+    <p>Google photo "बघू" शकतं, पण photo कशाचा आहे हे शब्दांत सांगितलं तर त्याला जास्त नीट कळतं. दोन सोप्या गोष्टी:</p>
+    <ul>
+      <li><strong>File name:</strong> upload करण्याआधी नाव बदला. <code>IMG_20261103_184512.jpg</code> ऐवजी <code>chocolate-birthday-cake-satara.jpg</code>. (English अक्षरं, शब्दांमध्ये dash.)</li>
+      <li><strong>Alt text:</strong> photo चं एका ओळीचं वर्णन — जे दृष्टी कमी असलेल्या लोकांचं app मोठ्याने वाचतं, आणि Google पण वाचतं. उदा. "श्री बेकरीतला 1 kg chocolate birthday cake, नावासह". Keywords ची यादी नाही — खरं वर्णन. Google Sites मध्ये photo वर click करून alt text ची सोय असते (तीन टिंबांच्या menu मध्ये); इतर builders मध्ये photo settings मध्ये.</li>
+    </ul>
+
+    <h2>7. Mobile आणि speed — मोठे photos हा नेहमीचा गुन्हेगार</h2>
+    <p>Google आता पानं मुख्यतः <strong>फोनवर कशी दिसतात</strong> त्या नजरेने बघतं. धडा 5 मधल्या mobile first मध्ये SEO साठी एकच भर: <strong>speed</strong>. पान उघडायला वेळ लागला तर ग्राहक मागे जातो.</p>
+    <p>छोट्या websites वर speed बिघडवणारं सगळ्यात नेहमीचं कारण — <strong>फोनच्या camera मधले मोठे photos जसेच्या तसे upload करणं.</strong> एक photo कित्येक MB चा — असे 8 photos म्हणजे कमकुवत 4G वर पान रेंगाळतं.</p>
+    <ul>
+      <li>Upload आधी photo लहान करा — रुंदी साधारण 1200-1600 pixels पुरेशी, आणि size शक्यतो काहीशे KB च्या आत. Canva मधून download करताना size कमी करता येतो, किंवा <a href="https://squoosh.app/" target="_blank" rel="noopener">Squoosh</a> सारखं free browser tool.</li>
+      <li>मोठा video, auto-play music, popups नकोत.</li>
+      <li>तपासायला: Google चं free <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener"><strong>PageSpeed Insights</strong></a> — website चा पत्ता टाका, mobile चा निकाल बघा. लाल आकडे दिसले तर घाबरू नका — खाली दिलेली कारणं (उदा. मोठे photos) दुरुस्त करा. आणि सगळ्यात खरा test — जुन्या स्वस्त फोनवर, mobile data वर उघडून बघा.</li>
+    </ul>
+
+    <h2>8. Links — आतले आणि बाहेरचे</h2>
+    <h3>Internal links — website मधल्या पानांना एकमेकांशी जोडा</h3>
+    <p>Website ला अनेक पानं असतील तर ती एकमेकांना जोडा, आणि link च्या शब्दांत ते पान कशाबद्दल आहे ते लिहा — "इथे click करा" ऐवजी "लग्नाचे cakes आणि किंमती बघा". Google links पकडत पानं शोधतं; कुठूनच link नसलेलं पान सापडायला अवघड. (एका पानाच्या website ला हे लागू नाही.)</p>
+    <h3>Backlinks — इतर websites वरचे उल्लेख</h3>
+    <p>दुसऱ्या website ने तुमच्या website ला दिलेला link म्हणजे backlink. धडा 3 मधल्या "prominence" सारखंच — खऱ्या, ओळखीच्या ठिकाणांवरचे links मदत करतात. छोट्या दुकानासाठी खरे मार्ग:</p>
+    <ul>
+      <li><strong>Local बातम्यांची website:</strong> वर्धापन दिन, सामाजिक उपक्रम, नवीन शाखा — local पेपरच्या online बातमीत उल्लेख. </li>
+      <li><strong>संघटना आणि यादी:</strong> व्यापारी संघटना, bakers association, गावाची / नगरपालिकेची business यादी — तिथे listing असेल तर website link जोडा.</li>
+      <li><strong>Supplier / brand चं पान:</strong> दुकान ज्या company चा dealer किंवा stockist आहे, त्यांच्या "आमचे dealers" पानावर.</li>
+    </ul>
+    <p>Sponsorship (उदा. college fest) ओळखीसाठी आणि ग्राहकांसाठी चांगली — पण तो पैसे देऊन मिळालेला link आहे; Google च्या नियमानुसार असा link "sponsored" म्हणून खूण केलेला असावा, आणि त्याचा ranking साठी फायदा अपेक्षित धरू नका.</p>
+    <div class="warning">
+      <strong>Links विकत घेऊ नका.</strong> "₹999 मध्ये 1,000 backlinks" अशा offers internet वर भरपूर दिसतात. पैसे देऊन ranking साठी links घेणं Google च्या spam नियमांविरुद्ध आहे. असे links बहुतेक कचरा websites वरचे असतात — Google त्यांना किंमत देत नाही, आणि वाईट वेळी पूर्ण website वर परिणाम होऊ शकतो. Client चे पैसे यात घालवू नका.
+    </div>
+
+    <h2>9. Google Search Console — step by step</h2>
+    <p>Google Search Console हे Google चं free tool: website index झाली का, आणि कोणत्या searches मध्ये ती दिसते — हे इथे कळतं. मी स्वतः या site साठी Search Console लावलं आहे — Google ने दिलेली एक छोटी HTML file site वर ठेवून ownership सिद्ध केली, आणि sitemap submit केला. Client साठी पण हेच — पण account दुकानदाराचं.</p>
+    <ol>
+      <li><strong>उघडा:</strong> computer किंवा फोनच्या browser मध्ये <a href="https://search.google.com/search-console" target="_blank" rel="noopener">Google Search Console</a> — दुकानदाराच्या Google account ने (ज्याने website बनवली ते). नंतर Settings → Users and permissions मधून तुम्हाला <strong>Full</strong> user म्हणून जोडायला सांगा (Request indexing साठी हे लागतं). धडा 2 मधला नियम: मालक दुकानदार, तुम्ही मदतनीस.</li>
+      <li><strong>Property निवडा — दोन प्रकार:</strong>
+        <ul>
+          <li><strong>Domain</strong> (उदा. <em>shreebakery.in</em>) — स्वतःचा domain असेल तर हा चांगला; www आणि बिना-www सगळं एकत्र येतं. Verify फक्त <strong>DNS</strong> ने होतं: Google एक TXT record देतं, तो domain कंपनीच्या (GoDaddy, Hostinger वगैरे) DNS settings मध्ये टाकायचा. बदल दिसायला काही तास लागू शकतात.</li>
+          <li><strong>URL prefix</strong> (उदा. <em>https://sites.google.com/view/shree-bakery-satara/</em>) — पूर्ण पत्ता टाकायचा; verify HTML file, HTML tag, Google Analytics वगैरे पद्धतींनी.</li>
+        </ul>
+      </li>
+      <li><strong>Verify — platform नुसार:</strong>
+        <ul>
+          <li><strong>Google Sites, स्वतःचा domain नाही:</strong> Google च्या help नुसार इथे Google Analytics ची पद्धत लागते. त्याच Google account ने (computer वर): Google Analytics मध्ये account आणि property बनवा → <em>Web</em> data stream जोडा (site चा पत्ता टाकून) → तिथला Measurement ID (G-…) copy करा → Google Sites च्या Settings → Analytics मध्ये टाका → पुन्हा Publish → मग Search Console मध्ये "Google Analytics" ने verify. नाहीच जमलं तरी Google profile मधल्या link मुळे Google ला site सापडू शकते — फक्त Search Console चे आकडे दिसणार नाहीत.</li>
+          <li><strong>Google Sites + स्वतःचा domain:</strong> Domain property, DNS ने — हा सगळ्यात सोपा रस्ता.</li>
+          <li><strong>WordPress, Wix वगैरे:</strong> बहुतेक builders मध्ये Search Console जोडायची सोय किंवा HTML tag टाकायची जागा असते. नाहीतर DNS.</li>
+        </ul>
+        Verify झाल्यावर DNS record, HTML file/tag किंवा Analytics जोडणी काढून टाकू नका — काढली तर verification जाऊ शकतं. Menu ची नावं आणि जागा Google बदलत असतं — तुमच्याकडे वेगळं दिसलं तर Search Console च्या help मध्ये "verify" शोधा.</li>
+      <li><strong>Sitemap submit करा:</strong> Sitemap म्हणजे website मधल्या सगळ्या पानांची यादी — Google साठी. WordPress, Wix सारखे platforms तो आपोआप बनवतात (बहुतेक <em>sitemap.xml</em> नावाने — platform च्या help मध्ये पत्ता बघा). Search Console मध्ये Sitemaps → पत्ता टाका → Submit. Google Sites मध्ये स्वतःची sitemap file टाकायची सोय नाही — एका-दोन पानांच्या site ला त्याची फारशी गरजही नाही; हा step वगळा.</li>
+      <li><strong>URL Inspection — "Request indexing":</strong> वरच्या search box मध्ये website चा पूर्ण पत्ता टाका. Google सांगतं पान index झालं आहे का. झालं नसेल तर आधी <strong>कारण</strong> वाचा, आणि "Test live URL" ने Google ला आत्ताचं पान दिसतं का ते बघा. Website login शिवाय उघडते ना ते तपासा; Google Sites मध्ये publish settings मध्ये "search engines ना site दाखवू नका" अशा अर्थाचा पर्याय चालू <strong>नाही</strong> ना, हे नक्की बघा. सगळं ठीक असेल तर "Request indexing" दाबा. हे <strong>विनंती</strong> आहे, guarantee नाही; दिवसाला मर्यादा असते, आणि वारंवार दाबून काही फायदा नाही.</li>
+      <li><strong>Pages report:</strong> कोणती पानं index झाली, कोणती नाही, आणि का. नवीन site वर "Discovered/Crawled – currently not indexed" दिसणं सामान्य — थोडा वेळ द्या. पण "noindex", "404" किंवा access ची अडचण दिसली तर ती चूक आहे — वाट बघून सुटणार नाही, दुरुस्त करा. (Redirect सारखी काही कारणं मुद्दाम असतात, ती चूक नाही.)</li>
+      <li><strong>Performance report — खरा खजिना:</strong> Search results मध्ये चार आकडे दिसतात:
+        <ul>
+          <li><strong>Impressions:</strong> तुमचं पान कितीदा निकालात दिसलं.</li>
+          <li><strong>Clicks:</strong> कितीदा लोकांनी click करून website उघडली.</li>
+          <li><strong>CTR:</strong> दिसलं त्यापैकी किती टक्के लोकांनी click केलं.</li>
+          <li><strong>Average position:</strong> तुमच्या site चा सगळ्यात वरचा निकाल साधारण कितव्या जागी दिसला, त्याची सरासरी — ठिकाणानुसार बदलते, ठराविक "rank" नाही.</li>
+        </ul>
+        खाली <strong>Queries</strong> मध्ये असे searches दिसतात ज्यात तुमचं पान निकालात आलं — section 3 चा तिसरा मार्ग हाच. ही यादी पूर्ण नसते: फार कमी वेळा झालेले searches Google privacy साठी लपवतं, आणि छोट्या गावातल्या दुकानासाठी असे बरेच असतात. एखाद्या शब्दावर impressions भरपूर पण clicks कमी असतील, तर आधी position बघा (खूप खाली असेल तर लोक बघतच नाहीत), आणि तो शब्द खरंच तुमच्या कामाचा आहे का ते बघा; मग title / वर्णन सुधारायचा विचार करा.</li>
+    </ol>
+    <div class="tip">
+      <strong>नवीन website वर संयम:</strong> Search Console जोडल्याबरोबर आकडे येत नाहीत. आकडे साधारण दोन-तीन दिवस उशिरा येतात, आणि नवीन, छोट्या website वर कामाचे आकडे दिसायला <strong>आठवडे ते महिने</strong> लागतात. पहिल्या आठवड्यात "0 clicks" दिसलं तर काही बिघडलं नाही. महिन्यातून एकदा बघणं पुरेसं — रोज नाही.
+    </div>
+
+    <h2>10. काय करू नये, AI चा वापर, आणि किती वेळ लागतो</h2>
+    <p>Google च्या spam नियमांमध्ये या गोष्टी स्पष्ट आहेत — पकडल्या गेल्यावर पान किंवा पूर्ण website निकालांतून खाली जाऊ शकते:</p>
+    <ul>
+      <li><strong>Keyword stuffing:</strong> "Cake shop Satara, best cake Satara, cheap cake Satara, Satara cake shop…" — एकच शब्द पुन्हा पुन्हा, किंवा पानाच्या खाली गावांची लांबलचक यादी. ग्राहकाला वाचायला विचित्र, Google ला spam.</li>
+      <li><strong>Copied content:</strong> दुसऱ्या bakery च्या website वरून मजकूर उचलणं.</li>
+      <li><strong>प्रत्येक गावासाठी खोटं पान (doorway pages):</strong> "Cake shop in Karad", "Cake shop in Wai", "Cake shop in Koregaon" — सगळी पानं सारखीच, फक्त गावाचं नाव बदललेलं. हे Google च्या नियमात नाव घेऊन spam म्हटलं आहे. खरंच तिथे delivery होत असेल, तर एकाच पानावर "Delivery: Satara शहर, Karad, Wai — order एक दिवस आधी" असं लिहा.</li>
+      <li><strong>AI ने भरमसाट पानं:</strong> AI कडून 50 "blog posts" लिहून घेऊन टाकणं — जे कुणाच्या उपयोगाचे नाहीत, फक्त Google साठी आहेत. Google मोठ्या प्रमाणात बनवलेल्या अशा निरुपयोगी मजकुराला (AI ने लिहिलेला असो वा माणसाने) spam मानतं.</li>
+    </ul>
+    <h3>AI ने लिहिलेला मजकूर चालतो का?</h3>
+    <p>हो — मदतनीस म्हणून. Google चं म्हणणं आहे की मजकूर कसा बनवला याहून तो <strong>लोकांना उपयोगी आहे का</strong> हे महत्त्वाचं. AI कडून पहिला मसुदा घ्या, मग: दुकानदाराकडून किंमती, वेळा, माहिती तपासा; AI ने स्वतःहून घातलेले दावे ("सातारा मधली सगळ्यात जुनी bakery") काढा; दुकानाचं खरं काही जोडा — ग्राहकांचे नेहमीचे प्रश्न, खास काय. मराठीत चांगला मसुदा कसा काढायचा — <a href="/blog/marathi-prompting-guide.html">हा लेख</a>.</p>
+    <div class="prompt-block"><span class="label">AI prompt — title आणि meta description चे मसुदे</span>मी एका छोट्या दुकानाच्या website साठी Google search मध्ये दिसणारी title आणि meta description लिहितो आहे.
+दुकान: [नाव, गाव]
+काय विकतो / सेवा: [मुख्य 3-5 गोष्टी]
+ग्राहक Google वर टाइप करतात असे शब्द (autocomplete आणि ग्राहकांकडून): [उदा. cake shop in satara, birthday cake order satara, eggless cake]
+Order / संपर्क कसा: [उदा. WhatsApp वर एक दिवस आधी]
+वेळा: [ ]
+
+मला द्या:
+1. 3 title पर्याय — छोटे, मुख्य keyword सुरुवातीला, शेवटी दुकानाचं नाव. ग्राहक टाइप करतो ते शब्द English मध्ये, बाकी मराठी चालेल.
+2. 3 meta description पर्याय — 1-2 वाक्यं, सोप्या मराठीत: काय मिळतं, कुठे, पुढे काय करायचं.
+नियम: एकच शब्द पुन्हा पुन्हा नको; "best", "No.1", "सगळ्यात स्वस्त" असे दावे नकोत; मी न दिलेली माहिती (किंमती, वर्षं, पुरस्कार) स्वतःहून लिहू नका.</div>
+    <h3>किती वेळ लागतो</h3>
+    <ul>
+      <li><strong>Google ला नवीन website सापडणं, index होणं:</strong> बहुतेक काही दिवस ते काही आठवडे — Google profile, Instagram मधून link आणि Search Console मधली विनंती यामुळे Google ला पान सापडायला मदत होते, पण वेळेची guarantee नाही.</li>
+      <li><strong>दुकानाच्या नावाने शोधल्यावर website दिसणं:</strong> index झाल्यावर बहुतेक लवकर — हे पहिलं, सोपं ध्येय.</li>
+      <li><strong>"cake shop in satara" सारख्या शब्दांवर दिसणं:</strong> महिने. स्पर्धा किती, या शब्दांसाठी Maps ची यादी किती वर आहे, यावर अवलंबून — आणि कधी कधी Maps ची यादीच ग्राहकाला पुरते. Guarantee नाही.</li>
+    </ul>
+    <p>दुकानदाराला मी सांगतो: "Title, मजकूर, photos Google साठी नीट करतो, Search Console लावतो; 2-3 महिन्यांनी कोणत्या searches मध्ये website दिसली आणि किती clicks आले ते दाखवतो." धडा 3 प्रमाणेच — हे website service चा भाग, वेगळं "SEO package, rank guarantee" नाही. किंमत कशी सांगायची — <a href="/clients/pitch-and-pricing.html">Pitch आणि Pricing</a>.</p>
+
+    <h2>11. आज करा — श्री बेकरीच्या website चं SEO</h2>
+    <div class="exercise">
+      <h4>Exercise — धडा 5 मधल्या website साठी (1-2 तास; Search Console साठी दुकानदाराचं account लागेल)</h4>
+      <p>उदाहरण श्री बेकरी (संजय, सातारा); तुम्ही तुमच्या दुकानाची माहिती टाका. Website अजून नसेल तरी 1-3 steps कागदावर करा.</p>
+      <ol>
+        <li><strong>Keyword check (20 मिनिटं):</strong> incognito मध्ये Google उघडा. "cake shop [गाव]", "birthday cake [गाव]", "eggless cake" टाइप करून autocomplete च्या सुचवण्या लिहा. "People also ask" दिसलं तर त्यातले 2-3 प्रश्न. दुकानदाराला विचारा — लोक फोनवर काय विचारतात. शेवटी 5-8 शब्दांची यादी — English, Minglish, मराठी जे खरं आहे ते.</li>
+        <li><strong>Title आणि meta description लिहा:</strong> section 5 चं उदाहरण आणि वरचा AI prompt वापरा. 3 पर्याय बनवा, सगळ्यात स्पष्ट एक निवडा. Google Sites असेल तर site चं नाव आणि पहिला paragraph.</li>
+        <li><strong>3 headings लिहा:</strong> एक H1 (दुकान + गाव + मुख्य काम) आणि दोन-तीन H2 — section 6 प्रमाणे.</li>
+        <li><strong>Photos:</strong> website वरच्या photos ची नावं आणि alt text तपासा; मोठे photos लहान करून पुन्हा टाका. PageSpeed Insights चा mobile निकाल screenshot करून ठेवा.</li>
+        <li><strong>Search Console:</strong> दुकानदारासोबत बसून property बनवा, verify करा, sitemap (असेल तर) submit करा, home page चं URL Inspection करा. आत्ता जमत नसेल तर खालची checklist भरा आणि पुढच्या भेटीत करा.</li>
+        <li><strong>वहीत लिहा:</strong> तारीख, keywords, title. 2-3 महिन्यांनी Search Console च्या Queries शी तुलना करा.</li>
+      </ol>
+    </div>
+
+    <div class="prompt-block"><span class="label">Website SEO checklist — एका पानाची website</span>[ ] Google profile आणि Instagram bio मधून website ला link
+[ ] Title: मुख्य keyword + गाव + दुकानाचं नाव ("Home" नाही)
+[ ] Meta description / पहिला paragraph: काय, कुठे, order कसं
+[ ] स्पष्ट headings (वर एक मुख्य, खाली भागांचे); ग्राहकाचे शब्द नैसर्गिकपणे
+[ ] Menu, किंमती, वेळा लिहिलेल्या मजकुरात — फक्त photo मध्ये नाही
+[ ] Photos लहान, file names आणि alt text नीट; जुन्या फोनवर पटकन उघडतं
+[ ] Keyword stuffing, copied मजकूर, गावागावाची पानं — नाही
+[ ] Search Console: verify (मालक दुकानदार), sitemap (असेल तर), URL Inspection
+[ ] 2-3 महिन्यांनी Queries बघायची तारीख calendar मध्ये</div>
+
+    <div class="summary">
+      <h2>थोडक्यात</h2>
+      <ul>
+        <li>Google: crawl (शोधणं), index (नोंद), rank (क्रम) — guarantee नाही; नेहमीचे निकाल विकत मिळत नाहीत</li>
+        <li>Local SEO (Maps, धडा 3) आणि website SEO (हा धडा) वेगळे, पण जोडलेले</li>
+        <li>Keywords = ग्राहक जे टाइप करतो — बऱ्याचदा English/Minglish; autocomplete, People also ask, Search Console, ग्राहकांकडून तपासा</li>
+        <li>एका पानाचा एक विषय; title मध्ये keyword + गाव + नाव; स्पष्ट headings, लिहिलेला मजकूर, alt text, लहान photos</li>
+        <li>खऱ्या ठिकाणांवरचे links — links विकत कधीच नाही</li>
+        <li>Search Console दुकानदाराच्या account मध्ये: verify, sitemap, URL Inspection, Performance — आकडे यायला आठवडे-महिने</li>
+        <li>Keyword stuffing, copied मजकूर, AI spam, गावागावाची पानं — नाही; AI फक्त मदतनीस</li>
+      </ul>
+    </div>
+
+    <!-- Page Navigation -->
+    <div class="page-nav">
+      <a href="/marketing/dukanasathi-website.html">← धडा 5: दुकानासाठी Website</a>
+      <!--scheduled:copywriting-basics <a href="/marketing/copywriting-basics.html" class="next">धडा 7: Copywriting — विकणारे शब्द →</a> -->
+    </div>
+  </div>
+
+  <footer>
+    <p>InstaMarathi — मराठीत Instagram Business शिका. सगळं free, सगळं open.</p>
+    <p style="font-size: 0.85em; margin-top: 0.5em;">
+      <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener" style="color: inherit;">CC BY-NC-ND 4.0</a> — share freely, credit required, no commercial use, no derivatives.
+    </p>
+  </footer>
+<script>
+function toggleTheme(){var r=document.documentElement,c=r.getAttribute('data-theme')==='dark'?'light':'dark';r.setAttribute('data-theme',c);localStorage.setItem('theme',c);updateToggleIcon()}
+function updateToggleIcon(){var b=document.querySelector('.theme-toggle');if(b)b.textContent=document.documentElement.getAttribute('data-theme')==='dark'?'☀️':'🌙'}
+updateToggleIcon();
+</script>
+</body>
+</html>
